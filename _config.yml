@@ -10,7 +10,3 @@ url:
 sass:
   sass_dir: css
 
-
-# This will require each of these plugins automatically.
-plugins:
-  - jekyll-admin
