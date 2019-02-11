@@ -64,6 +64,22 @@ h3{
     font-weight:400;
 }
 
+h4{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-weight:900;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.34px;
+}
+
+.navbar{
+    padding:24px 0px;
+}
+
+.navbar .btn{
+    margin-left:21px;
+}
+
 .nav-item{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 14px;
@@ -74,6 +90,19 @@ h3{
 
 .navbar-light .navbar-nav .nav-link {
     color:black;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+
+.navbar-brand{
+    height:91px;
+}
+
+.navbar-brand .logo{
+    width:163px;
+    height:91px;
+    background-image: url("../assets/images/memphis-river-parks-logo.png");
+    background-size:163px 91px;
 }
 
 a.btn{
@@ -81,7 +110,6 @@ a.btn{
     font-size: 14px;
     letter-spacing: 0.76px;
     text-transform: uppercase;
-    
     border-radius: 100px;
 }
 
@@ -99,4 +127,49 @@ a.btn.btn-secondary{
     font-weight:900;
     border: 3px solid black;
     padding: 7.5px 17.5px;
+}
+
+a.external:after{
+    display: inline-block;
+  content: ' ';
+  background-image: url(../assets/images/external.svg);
+  background-size: 10px 11px;
+  height: 11px;
+  width: 10px;
+  margin-left:10px;
+}
+
+.dropdown-toggle::before {
+    display: inline-block;
+    width: 12.31px;
+    height: 7.62px;
+    margin-right: 12px;
+    content: ' ';
+    background-image: url(../assets/images/caret.svg);
+    background-size: 12.31px 7.62px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.inverse {
+    background-color:black;
+
+    a.btn.btn-primary{
+        background-color:white;
+        color:black;
+        font-weight:900;
+    }
+    
+    a.btn.btn-secondary{
+        background-color:rgba(0,0,0,0);
+        color:white;
+        border: 3px solid white;
+        font-weight:700;
+    }
+}
+
+.container{
+    padding:0px 50px;
 }

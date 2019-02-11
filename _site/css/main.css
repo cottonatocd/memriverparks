@@ -451,35 +451,35 @@ pre {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
   margin-right: auto;
   margin-left: auto; }
   @media (min-width: 576px) {
     .container {
-      max-width: 540px; } }
+      max-width: 1500px; } }
   @media (min-width: 768px) {
     .container {
-      max-width: 720px; } }
+      max-width: 1500px; } }
   @media (min-width: 992px) {
     .container {
-      max-width: 960px; } }
+      max-width: 1500px; } }
   @media (min-width: 1200px) {
     .container {
-      max-width: 1140px; } }
+      max-width: 1500px; } }
 
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 30px;
+  padding-left: 30px;
   margin-right: auto;
   margin-left: auto; }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
+  margin-right: -30px;
+  margin-left: -30px; }
 
 .no-gutters {
   margin-right: 0;
@@ -498,8 +498,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 30px;
+  padding-left: 30px; }
 
 .col {
   flex-basis: 0;
@@ -3092,25 +3092,25 @@ tbody.collapse.show {
   display: flex;
   flex-direction: column; }
   .card-deck .card {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
   @media (min-width: 576px) {
     .card-deck {
       flex-flow: row wrap;
-      margin-right: -15px;
-      margin-left: -15px; }
+      margin-right: -30px;
+      margin-left: -30px; }
       .card-deck .card {
         display: flex;
         flex: 1 0 0%;
         flex-direction: column;
-        margin-right: 15px;
+        margin-right: 30px;
         margin-bottom: 0;
-        margin-left: 15px; } }
+        margin-left: 30px; } }
 
 .card-group {
   display: flex;
   flex-direction: column; }
   .card-group > .card {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
   @media (min-width: 576px) {
     .card-group {
       flex-flow: row wrap; }
@@ -6535,6 +6535,19 @@ h3 {
   line-height: 33px;
   font-weight: 400; }
 
+h4 {
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0.34px; }
+
+.navbar {
+  padding: 24px 0px; }
+
+.navbar .btn {
+  margin-left: 21px; }
+
 .nav-item {
   font-family: "GT Haptik", Helvetica, sans-serif;
   font-size: 14px;
@@ -6543,7 +6556,18 @@ h3 {
   text-transform: uppercase; }
 
 .navbar-light .navbar-nav .nav-link {
-  color: black; }
+  color: black;
+  padding-left: 21px;
+  padding-right: 21px; }
+
+.navbar-brand {
+  height: 91px; }
+
+.navbar-brand .logo {
+  width: 163px;
+  height: 91px;
+  background-image: url("../assets/images/memphis-river-parks-logo.png");
+  background-size: 163px 91px; }
 
 a.btn {
   font-family: "GT Haptik", Helvetica, sans-serif;
@@ -6565,3 +6589,39 @@ a.btn.btn-secondary {
   font-weight: 900;
   border: 3px solid black;
   padding: 7.5px 17.5px; }
+
+a.external:after {
+  display: inline-block;
+  content: ' ';
+  background-image: url(../assets/images/external.svg);
+  background-size: 10px 11px;
+  height: 11px;
+  width: 10px;
+  margin-left: 10px; }
+
+.dropdown-toggle::before {
+  display: inline-block;
+  width: 12.31px;
+  height: 7.62px;
+  margin-right: 12px;
+  content: ' ';
+  background-image: url(../assets/images/caret.svg);
+  background-size: 12.31px 7.62px; }
+
+.dropdown-toggle::after {
+  display: none; }
+
+.inverse {
+  background-color: black; }
+  .inverse a.btn.btn-primary {
+    background-color: white;
+    color: black;
+    font-weight: 900; }
+  .inverse a.btn.btn-secondary {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: 3px solid white;
+    font-weight: 700; }
+
+.container {
+  padding: 0px 50px; }

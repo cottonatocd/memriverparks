@@ -1,2 +1,23 @@
 // $primary: #8d021f; // burgundy
 
+$grid-gutter-width: 60px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 1500px,
+  md: 1500px,
+  lg: 1500px,
+  xl: 1500px
+);

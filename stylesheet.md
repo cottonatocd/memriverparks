@@ -6,26 +6,26 @@ title: Stylesheet
 # H1
 ## H2
 ### H3
+### Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 #### H4
-##### H5
-###### H6
 
-Alternatively, for H1 and H2, an underline-ish style:
+<p class="lead">Body large paragraph styling. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et mi leo. Donec sit amet hendrerit quam. Aliquam a mi vel felis pulvinar tincidunt feugiat et ligula. Vestibulum feugiat vehicula enim, interdum lacinia nibh pretium eu. Curabitur euismod urna non enim tempor eleifend. Mauris molestie erat id tellus luctus mollis. Ut sit amet purus maximus, vehicula urna maximus, dignissim arcu. Morbi ornare, ante id luctus sagittis, tellus risus viverra massa, vel hendrerit nunc dui vel nibh.</p>
 
-Alt-H1
-======
+<div class="col-3">
+<p>Body regular paragraph styling.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et mi leo. Donec sit amet hendrerit quam. Aliquam a mi vel felis pulvinar tincidunt feugiat et ligula. Vestibulum feugiat vehicula enim, interdum lacinia nibh pretium eu. Curabitur euismod urna non enim tempor eleifend. Mauris molestie erat id tellus luctus mollis. Ut sit amet purus maximus, vehicula urna maximus, dignissim arcu. Morbi ornare, ante id luctus sagittis, tellus risus viverra massa, vel hendrerit nunc dui vel nibh.</p>
+</div>
 
-Alt-H2
-------
-
-<p class="lead">Body large paragraph styling.</p>
-
-<ul>
-<li class="nav-item">Nav Item</li>
-</ul>
 
 <a href="#" class="btn btn-primary">Button Primary</a>
 <a href="#" class="btn btn-secondary">Button Secondary</a>
+
+<div class="inverse">
+    <a href="#" class="btn btn-primary">Button Primary</a>
+    <a href="#" class="btn btn-secondary">Button Secondary</a>
+</div>
+
+
 
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
@@ -61,6 +61,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 [I'm a relative reference to a repository file](../blob/master/LICENSE)
 
 [You can use numbers for reference-style link definitions][1]
+
+<a href="#" class="external">External Link</a>
 
 Or leave it empty and use the [link text itself].
 
