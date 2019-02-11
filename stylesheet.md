@@ -20,6 +20,13 @@ Alt-H2
 
 <p class="lead">Body large paragraph styling.</p>
 
+<ul>
+<li class="nav-item">Nav Item</li>
+</ul>
+
+<a href="#" class="btn btn-primary">Button Primary</a>
+<a href="#" class="btn btn-secondary">Button Secondary</a>
+
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.

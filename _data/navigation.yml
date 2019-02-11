@@ -1,6 +1,28 @@
-- name: Home
-  link: /
-- name: About
-  link: /about.html
-- name: Stylesheet
-  link: /stylesheet.html
+- title: Parks
+  url: /parks.html
+- title: Events
+  url: /events.html
+- title: Partnership
+  url: /support.html
+  sublinks:
+    - title: About
+      url: /about.html
+    - title: News
+      url: /news.html
+    - title: FAQ
+      url: /faq.html
+    - title: Contact
+      url: /contact.html
+- title: Participate
+  url: /support.html
+  sublinks:
+    - title: River Parks People
+      url: /faq.html
+    - title: Work With Us
+      url: /documentation.html
+      type: external
+    - title: Donate
+      url: /customer-support.html
+      type: external
+- title: Stylesheet
+  url: /stylesheet.html

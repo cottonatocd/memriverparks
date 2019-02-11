@@ -1,7 +1,69 @@
-<nav>
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-faded">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" {% if page.url == item.link %}style="color: green;"{% endif %}>
-          {{ item.name }}
-        </a>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ item.link }} {% if page.url == item.link %}style="color: green;"{% endif %}">{{ item.name }}<span class="sr-only">(current)</span></a>
+      </li>
       {% endfor %}
-    </nav>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Logo</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="nav navbar-nav">
+        {% assign links = site.data.navigation %}
+        {% for link in links %}
+            {% assign class = nil %}
+            {% if page.url contains link.url %}
+                {% assign class = 'active' %}
+            {% endif %}
+            {% if link.sublinks %}
+                <li class="nav-item dropdown">
+                    <!-- <a href="{{ site.baseurl }}{{ link.url }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+                    <ul class="dropdown-menu">
+                        {% for sublink in link.sublinks %}
+                            {% if sublink.title == 'separator' %}
+                                <li role="separator" class="divider"></li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>        
+            {% else %}
+                <li class="nav-item {% if page.url == link.url %} active {% endif %}">
+                    <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link external" href="#">Shop</a>
+      </li>
+      <li class="nav-item">
+          <a class="btn btn-primary" href="#" role="button">Join Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>

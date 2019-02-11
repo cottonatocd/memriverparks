@@ -6493,17 +6493,17 @@ a.text-dark:hover, a.text-dark:focus {
 @font-face {
   font-family: 'GT Haptik';
   src: url("../assets/fonts/GT-Haptik-Medium.woff2") format("woff2"), url("../assets/fonts/GT-Haptik-Medium.woff") format("woff"), url("../assets/fonts/GT-Haptik-Medium.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: 'GT Haptik';
   src: url("../assets/fonts/GT-Haptik-Bold.woff2") format("woff2"), url("../assets/fonts/GT-Haptik-Bold.woff") format("woff"), url("../assets/fonts/GT-Haptik-Bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal; }
 @font-face {
   font-family: 'GT Haptik';
   src: url("../assets/fonts/GT-Haptik-Black.woff2") format("woff2"), url("../assets/fonts/GT-Haptik-Black.woff") format("woff"), url("../assets/fonts/GT-Haptik-Black.ttf") format("truetype");
-  font-weight: bolder;
+  font-weight: 900;
   font-style: normal; }
 body, p {
   font-family: 'Lora', serif;
@@ -6519,10 +6519,49 @@ p.lead {
   letter-spacing: 0.39px;
   line-height: 24px;
   margin-bottom: 10px;
-  font-weight: normal; }
+  font-weight: 400; }
 
 h2 {
   font-family: "GT Haptik", Helvetica, sans-serif;
   font-size: 50px;
   letter-spacing: 0.86px;
-  line-height: 50px; }
+  line-height: 50px;
+  font-weight: 700; }
+
+h3 {
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.6px;
+  line-height: 33px;
+  font-weight: 400; }
+
+.nav-item {
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+.navbar-light .navbar-nav .nav-link {
+  color: black; }
+
+a.btn {
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  text-transform: uppercase;
+  border-radius: 100px; }
+
+a.btn.btn-primary {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  border: 0px;
+  padding: 10px 20px; }
+
+a.btn.btn-secondary {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-weight: 900;
+  border: 3px solid black;
+  padding: 7.5px 17.5px; }
