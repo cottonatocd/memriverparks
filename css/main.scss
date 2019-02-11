@@ -2,3 +2,55 @@
 ---
 
 @import 'bootstrap/bootstrap';
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Medium.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Medium.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Medium.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Bold.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Bold.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Black.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Black.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Black.ttf") format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+body, p{
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    letter-spacing: 0.19px;
+    line-height: 20px;
+    margin-bottom:10px;
+}
+
+p.lead{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 21px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 24px;
+    margin-bottom:10px;
+    font-weight:normal;
+}
+
+h2{
+font-family: "GT Haptik", Helvetica, sans-serif;
+font-size: 50px;
+letter-spacing: 0.86px;
+line-height: 50px;
+}
