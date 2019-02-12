@@ -6580,27 +6580,31 @@ a.btn {
   text-transform: uppercase;
   border-radius: 100px; }
 
-a.btn:hover {
+a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .inverse a.btn.btn-secondary:hover {
   color: black !important;
   font-weight: 900 !important;
   -webkit-animation: bgcolorchange 2s infinite step-end;
   /* Chrome, Safari, Opera */
   animation: 2s infinite step-end bgcolorchange;
-  animation-delay: -2s; }
+  animation-delay: -2s;
+  border: 0px;
+  padding: 10px 20px;
+  letter-spacing: 0.76px; }
 
 a.btn.btn-primary {
   background-color: black;
   color: white;
   font-weight: 700;
   border: 0px;
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  letter-spacing: 0.87px; }
 
 a.btn.btn-secondary {
   background-color: rgba(0, 0, 0, 0);
   color: black;
   font-weight: 900;
   border: 3px solid black;
-  padding: 7.5px 17.5px; }
+  padding: 7.1px 17.2px; }
 
 a.external:after {
   display: inline-block;
@@ -6669,7 +6673,8 @@ a.external:after {
   .inverse a.btn.btn-primary {
     background-color: white;
     color: black;
-    font-weight: 900; }
+    font-weight: 900;
+    letter-spacing: 0.76px; }
   .inverse a.btn.btn-secondary {
     background-color: rgba(0, 0, 0, 0);
     color: white;

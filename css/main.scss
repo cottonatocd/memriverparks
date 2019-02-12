@@ -118,12 +118,15 @@ a.btn{
     border-radius: 100px;
 }
 
-a.btn:hover{
+a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .inverse a.btn.btn-secondary:hover{
     color:black !important;
     font-weight:900 !important;
     -webkit-animation: bgcolorchange 2s infinite step-end; /* Chrome, Safari, Opera */ 
     animation: 2s infinite step-end bgcolorchange;
     animation-delay: -2s;
+    border: 0px;
+    padding: 10px 20px;
+    letter-spacing: 0.76px;
 }
 
 a.btn.btn-primary{
@@ -132,6 +135,7 @@ a.btn.btn-primary{
     font-weight:700;
     border: 0px;
     padding: 10px 20px;
+    letter-spacing: 0.87px;
 }
 
 a.btn.btn-secondary{
@@ -139,7 +143,7 @@ a.btn.btn-secondary{
     color:black;
     font-weight:900;
     border: 3px solid black;
-    padding: 7.5px 17.5px;
+    padding: 7.1px 17.2px;
 }
 
 a.external:after{
@@ -234,6 +238,7 @@ a.external:after{
         background-color:white;
         color:black;
         font-weight:900;
+        letter-spacing: 0.76px;
     }
     
     a.btn.btn-secondary{
