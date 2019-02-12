@@ -38,6 +38,11 @@ body, p{
     margin-bottom:10px;
 }
 
+a:not(.btn):not(.nav-link){
+    color:inherit;
+    text-decoration: underline;
+}
+
 p.lead{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 21px;
@@ -121,9 +126,14 @@ a.btn{
 a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .inverse a.btn.btn-secondary:hover{
     color:black !important;
     font-weight:900 !important;
-    -webkit-animation: bgcolorchange 2s infinite step-end; /* Chrome, Safari, Opera */ 
-    animation: 2s infinite step-end bgcolorchange;
-    animation-delay: -2s;
+    animation-name: bgcolorchange1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    -webkit-animation-name: bgcolorchange1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-end;
     border: 0px;
     padding: 10px 20px;
     letter-spacing: 0.76px;
@@ -256,11 +266,14 @@ a.external:after{
 .dropdown-menu.show li a.btn:hover{
     color:black;
     font-weight:900;
-    -webkit-animation-name: bgcolorchange;
-    animation-name:bgcolorchange;
-    -webkit-animation: bgcolorchange 2s infinite step-end; /* Chrome, Safari, Opera */ 
-    animation: 2s infinite step-end bgcolorchange;
-    animation-delay: -2s;
+    animation-name: bgcolorchange1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    -webkit-animation-name: bgcolorchange1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-end;
     left: 0px;
     visibility: visible
     //   background-image:url('join-us-black.svg');
@@ -287,41 +300,41 @@ a.external:after{
     
 }
 
-@keyframes bgcolorchange {
-  0% {
-    background-color: #44b549;
-  }
-  25% {
-    background-color: #ffc818;
-  }
-  50% {
-    background-color: #f05f22;
-  }
-  75% {
-    background-color: #298fce;
-  }
-  100% {
-    background-color: #e684a1;
-  }
+@keyframes bgcolorchange1 {
+  0% {background-color: #f05f22;}
+  25% {background-color: #ffc818;}
+  50% {background-color: #298fce;}
+  75% {background-color: #e684a1;}
+  100% {background-color: #44b549;}
 }
-/* Chrome, Safari, Opera */
- @-webkit-keyframes bgcolorchange {
-    0% {
-        background-color: #44b549;
-      }
-      25% {
-        background-color: #ffc818;
-      }
-      50% {
-        background-color: #f05f22;
-      }
-      75% {
-        background-color: #298fce;
-      }
-      100% {
-        background-color: #e684a1;
-      }
- }
+@keyframes bgcolorchange2 {
+    0% {background-color: #ffc818;}
+    25% {background-color: #298fce;}
+    50% {background-color: #e684a1;}
+    75% {background-color: #44b549;}
+    100% {background-color: #f05f22;}
+}
+@keyframes bgcolorchange3 {
+    0% {background-color: #298fce;}
+    25% {background-color: #e684a1;}
+    50% {background-color: #44b549;}
+    75% {background-color: #f05f22;}
+    100% {background-color: #ffc818;}
+}
+@keyframes bgcolorchange4 {
+    0% {background-color: #e684a1;}
+    25% {background-color: #44b549;}
+    50% {background-color: #f05f22;}
+    75% {background-color: #ffc818;}
+    100% {background-color: #298fce;}
+}
+@keyframes bgcolorchange5 {
+    0% {background-color: #44b549;}
+    25% {background-color: #f05f22;}
+    50% {background-color: #ffc818;}
+    75% {background-color: #298fce;}
+    100% {background-color: #e684a1;}
+}
 
  @keyframes slideIn1 { 
     0% {
