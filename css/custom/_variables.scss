@@ -21,3 +21,15 @@ $container-max-widths: (
   lg: 1500px,
   xl: 1500px
 );
+
+$spacers: (
+  0: 0px,
+  1: 10px,
+  2: 20px,
+  3: 30px,
+  4: 50px,
+  5: 100px
+);
+
+$dark: #000000;
+$light: #f7f7f7;

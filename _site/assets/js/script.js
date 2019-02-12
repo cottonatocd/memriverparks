@@ -38,7 +38,7 @@ $(document).ready(function(){
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
     $("a.btn").mouseleave(function(){
-        var css = 'a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .inverse a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
+        var css = 'a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
         var style = document.createElement('style');
     
         if (style.styleSheet) {
