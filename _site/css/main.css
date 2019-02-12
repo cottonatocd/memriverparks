@@ -6664,7 +6664,7 @@ a.external:after {
   border-radius: 0px; }
   .dropdown-menu.show li {
     margin-top: 10px;
-    margin-left: 50px;
+    margin-left: 40px;
     overflow: hidden;
     border-radius: 100px; }
     .dropdown-menu.show li a.btn {
