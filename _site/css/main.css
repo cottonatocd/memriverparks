@@ -6561,7 +6561,8 @@ h4 {
   padding-right: 21px; }
 
 .navbar-brand {
-  height: 91px; }
+  height: 91px;
+  width: 34%; }
 
 .navbar-brand .logo {
   width: 163px;
@@ -6569,12 +6570,23 @@ h4 {
   background-image: url("../assets/images/memphis-river-parks-logo.png");
   background-size: 163px 91px; }
 
+.nav-right {
+  width: 34%; }
+
 a.btn {
   font-family: "GT Haptik", Helvetica, sans-serif;
   font-size: 14px;
   letter-spacing: 0.76px;
   text-transform: uppercase;
   border-radius: 100px; }
+
+a.btn:hover {
+  color: black !important;
+  font-weight: 900 !important;
+  -webkit-animation: bgcolorchange 2s infinite step-end;
+  /* Chrome, Safari, Opera */
+  animation: 2s infinite step-end bgcolorchange;
+  animation-delay: -2s; }
 
 a.btn.btn-primary {
   background-color: black;
@@ -6606,10 +6618,51 @@ a.external:after {
   margin-right: 12px;
   content: ' ';
   background-image: url(../assets/images/caret.svg);
-  background-size: 12.31px 7.62px; }
+  background-size: 12.31px 7.62px;
+  transition: transform 300ms; }
 
 .dropdown-toggle::after {
   display: none; }
+
+.dropdown-toggle[aria-expanded="true"]::before {
+  transform: rotate(180deg); }
+
+.dropdown-menu.show {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  border-radius: 0px; }
+  .dropdown-menu.show li {
+    margin-top: 10px;
+    margin-left: 50px;
+    overflow: hidden;
+    border-radius: 100px; }
+    .dropdown-menu.show li a.btn {
+      animation-duration: 500ms;
+      -webkit-animation-duration: 500ms;
+      animation-timing-function: ease;
+      -webkit-animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      position: relative;
+      margin-left: 0px;
+      left: -100%;
+      visibility: hidden; }
+  .dropdown-menu.show li:nth-child(1) a.btn {
+    animation-name: slideIn1;
+    -webkit-animation-name: slideIn1;
+    animation-delay: 0s; }
+  .dropdown-menu.show li:nth-child(2) a.btn {
+    animation-name: slideIn2;
+    -webkit-animation-name: slideIn2;
+    animation-delay: .1s; }
+  .dropdown-menu.show li:nth-child(3) a.btn {
+    animation-name: slideIn3;
+    -webkit-animation-name: slideIn3;
+    animation-delay: .2s; }
+  .dropdown-menu.show li:nth-child(4) a.btn {
+    animation-name: slideIn4;
+    -webkit-animation-name: slideIn4;
+    animation-delay: .3s; }
 
 .inverse {
   background-color: black; }
@@ -6625,3 +6678,91 @@ a.external:after {
 
 .container {
   padding: 0px 50px; }
+
+.dropdown-menu.show li a.btn:hover {
+  color: black;
+  font-weight: 900;
+  -webkit-animation-name: bgcolorchange;
+  animation-name: bgcolorchange;
+  -webkit-animation: bgcolorchange 2s infinite step-end;
+  /* Chrome, Safari, Opera */
+  animation: 2s infinite step-end bgcolorchange;
+  animation-delay: -2s;
+  left: 0px;
+  visibility: visible; }
+
+@keyframes bgcolorchange {
+  0% {
+    background-color: #44b549; }
+  25% {
+    background-color: #ffc818; }
+  50% {
+    background-color: #f05f22; }
+  75% {
+    background-color: #298fce; }
+  100% {
+    background-color: #e684a1; } }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bgcolorchange {
+  0% {
+    background-color: #44b549; }
+  25% {
+    background-color: #ffc818; }
+  50% {
+    background-color: #f05f22; }
+  75% {
+    background-color: #298fce; }
+  100% {
+    background-color: #e684a1; } }
+@keyframes slideIn1 {
+  0% {
+    left: -100%;
+    color: rgba(0, 0, 0, 0);
+    background-color: #f05f22; }
+  50% {
+    color: rgba(0, 0, 0, 0);
+    background-color: #f05f22; }
+  100% {
+    left: 0px;
+    color: white;
+    background-color: black;
+    visibility: visible; } }
+@keyframes slideIn2 {
+  0% {
+    left: -100%;
+    color: rgba(0, 0, 0, 0);
+    background-color: #ffc818; }
+  50% {
+    color: rgba(0, 0, 0, 0);
+    background-color: #ffc818; }
+  100% {
+    left: 0px;
+    color: white;
+    background-color: black;
+    visibility: visible; } }
+@keyframes slideIn3 {
+  0% {
+    left: -100%;
+    color: rgba(0, 0, 0, 0);
+    background-color: #298fce; }
+  50% {
+    color: rgba(0, 0, 0, 0);
+    background-color: #298fce; }
+  100% {
+    left: 0px;
+    color: white;
+    background-color: black;
+    visibility: visible; } }
+@keyframes slideIn4 {
+  0% {
+    left: -100%;
+    color: rgba(0, 0, 0, 0);
+    background-color: #e684a1; }
+  50% {
+    color: rgba(0, 0, 0, 0);
+    background-color: #e684a1; }
+  100% {
+    left: 0px;
+    color: white;
+    background-color: black;
+    visibility: visible; } }
