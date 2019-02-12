@@ -1,15 +1,54 @@
 
+// $(window).scroll(function(){
+//     if ($(window).scrollTop() >= 200) {
+//         $('nav').addClass('sticky-nav');
+//     }
+//     else {
+//         $('nav').removeClass('sticky-nav');
+//     }
+// });
+
+
 
 
 
 $(document).ready(function(){
 
 
+    
+    // $('#myDropdown').on('show.bs.dropdown', function () {
+    //     // do something…
+    //     console.log("shown");
+    // });
 
-    $('#myDropdown').on('show.bs.dropdown', function () {
-        // do something…
-        console.log("shown");
+
+    // cache the element
+    var $navBar = $('.nav-wrapper');
+
+    // find original navigation bar position
+    var navPos = $navBar.outerHeight();
+
+    $('.nav-placeholder').css('height', navPos);
+
+    console.log(navPos);
+
+    // on scroll
+    $(window).scroll(function() {
+
+        // get scroll position from top of the page
+        var scrollPos = $(this).scrollTop();
+
+        // check if scroll position is >= the nav position
+        if (scrollPos >= navPos) {
+            $navBar.addClass('fixed');
+        } else {
+            $navBar.removeClass('fixed');
+        }
+
     });
+
+
+
 
     var palette = ['#44b549', '#ffc818', '#f05f22', '#298fce', '#e684a1'];
 

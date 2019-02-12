@@ -6691,6 +6691,22 @@ a.external:after {
   left: 0px;
   visibility: visible; }
 
+.nav-wrapper.fixed {
+  height: 78px;
+  background-color: #F7F7F7;
+  position: fixed;
+  top: 0;
+  left: 0; }
+  .nav-wrapper.fixed nav {
+    height: 78px; }
+  .nav-wrapper.fixed .navbar-brand {
+    height: auto; }
+    .nav-wrapper.fixed .navbar-brand .logo {
+      width: 97px;
+      height: 54px;
+      background-image: url("../assets/images/memphis-river-parks-logo.png");
+      background-size: 97px 54px; }
+
 @keyframes bgcolorchange {
   0% {
     background-color: #44b549; }

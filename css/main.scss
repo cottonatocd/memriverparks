@@ -225,8 +225,6 @@ a.external:after{
             animation-delay: .3s; 
         }
     }
-    
-    
 }
 
 .inverse {
@@ -261,6 +259,27 @@ a.external:after{
     left: 0px;
     visibility: visible
     //   background-image:url('join-us-black.svg');
+}
+
+.nav-wrapper.fixed{
+    height:78px;
+    background-color:#F7F7F7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    nav{
+        height:78px;
+    }
+    .navbar-brand {
+        height:auto;
+        .logo{
+            width:97px;
+            height:54px;
+            background-image: url("../assets/images/memphis-river-parks-logo.png");
+            background-size:97px 54px;
+        }
+    }
+    
 }
 
 @keyframes bgcolorchange {
