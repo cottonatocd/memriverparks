@@ -30,7 +30,7 @@
     font-style: normal;
 }
 
-body, p{
+p{
     font-family: 'Lora', serif;
     font-size: 16px;
     letter-spacing: 0.19px;
@@ -48,6 +48,9 @@ p{
 
 .bg-dark *{
     color:white;
+    p{
+        color:white !important;
+    }
 }
 
 a:not(.btn):not(.nav-link){
@@ -285,6 +288,10 @@ a.external:after{
     padding:0px 50px;
 }
 
+.container-fluid{
+    padding:0px;
+}
+
 .dropdown-menu.show li a.btn:hover{
     color:black;
     font-weight:900;
@@ -330,6 +337,27 @@ a.external:after{
         width:auto;
     }
 }
+
+.hero{
+    text-align:center;
+}
+
+.hero-img{
+    height:622px;
+    width:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+// CONTACT PAGE
+#contact-hero{
+
+}
+
+
+
 
 @keyframes bgcolorchange1 {
   0% {background-color: #f05f22;}

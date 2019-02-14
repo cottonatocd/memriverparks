@@ -11,7 +11,7 @@
 $(document).ready(function(){
 
     // cache the element
-    var $navBar = $('.nav-wrapper');
+    var $navBar = $('.nav-placeholder .nav-wrapper');
 
     // find original navigation bar position
     var navPos = $navBar.outerHeight();
