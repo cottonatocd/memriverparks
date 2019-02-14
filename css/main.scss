@@ -351,9 +351,13 @@ a.external:after{
 }
 
 
-// CONTACT PAGE
-#contact-hero{
-
+// ABOUT PAGE
+#about-hero{
+    height:800px;
+    h1{
+        max-width: 900px;
+        margin: auto;
+    }
 }
 
 
