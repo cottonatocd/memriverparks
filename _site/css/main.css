@@ -6766,6 +6766,24 @@ a.external:after {
   background-repeat: no-repeat;
   background-position: center; }
 
+.district {
+  width: 20%; }
+
+.greenbelt {
+  background-color: #f05f22; }
+
+.mud-island {
+  background-color: #ffc818; }
+
+.fourth-bluff {
+  background-color: #298fce; }
+
+.big-river {
+  background-color: #e684a1; }
+
+.mlk {
+  background-color: #44b549; }
+
 #about-hero {
   height: 800px; }
   #about-hero h1 {
@@ -6786,8 +6804,24 @@ a.external:after {
   background-repeat: no-repeat; }
 
 #parks-hero {
-  height: 100vh;
-  background-color: red; }
+  height: 100vh; }
+
+.district-link .district-logo {
+  display: block; }
+.district-link .district-logo-hover {
+  display: none; }
+
+.district-link:hover .district-logo {
+  display: none; }
+.district-link:hover .district-logo-hover {
+  display: block; }
+
+.landing-hero {
+  background-image: url("../assets/images/landing.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
 
 @keyframes bgcolorchange1 {
   0% {

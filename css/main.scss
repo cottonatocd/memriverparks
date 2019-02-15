@@ -359,6 +359,26 @@ a.external:after{
     background-position: center;
 }
 
+.district{
+    width:20%;
+}
+
+.greenbelt{
+    background-color: $greenbelt;
+}
+.mud-island{
+    background-color: $mud-island;
+}
+.fourth-bluff{
+    background-color: $fourth-bluff;
+}
+.big-river{
+    background-color: $big-river;
+}
+.mlk{
+    background-color: $mlk;
+}
+
 
 // ABOUT PAGE
 #about-hero{
@@ -390,7 +410,32 @@ a.external:after{
 
 #parks-hero{
     height:100vh;
-    background-color:red;
+}
+
+.district-link{
+    .district-logo{
+        display: block;
+    }
+    .district-logo-hover{
+        display:none;
+    }
+}
+
+.district-link:hover{
+    .district-logo{
+        display: none;
+    }
+    .district-logo-hover{
+        display:block;
+    }
+}
+
+.landing-hero{
+    background-image: url('../assets/images/landing.png');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100vh;
 }
 
 
