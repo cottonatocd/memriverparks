@@ -6520,8 +6520,11 @@ p {
 
 .bg-dark * {
   color: white; }
-  .bg-dark * p {
+  .bg-dark * p, .bg-dark * h1, .bg-dark * h2, .bg-dark * h3 {
     color: white !important; }
+
+.text-decoration-none {
+  text-decoration: none !important; }
 
 a:not(.btn):not(.nav-link) {
   color: inherit;
@@ -6753,7 +6756,8 @@ a.external:after {
     width: auto; }
 
 .hero {
-  text-align: center; }
+  text-align: center;
+  padding: 0px; }
 
 .hero-img {
   height: 622px;
@@ -6767,6 +6771,23 @@ a.external:after {
   #about-hero h1 {
     max-width: 900px;
     margin: auto; }
+
+#faq-section .faq {
+  border-bottom: 1px solid #C8C8C8; }
+  #faq-section .faq a {
+    text-decoration: none; }
+  #faq-section .faq h2 {
+    margin: 0px; }
+
+.seasonal-img {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#parks-hero {
+  height: 100vh;
+  background-color: red; }
 
 @keyframes bgcolorchange1 {
   0% {

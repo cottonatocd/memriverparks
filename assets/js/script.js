@@ -16,7 +16,7 @@ $(document).ready(function(){
     // find original navigation bar position
     var navPos = $navBar.outerHeight();
 
-    $('.nav-placeholder').css('height', navPos);
+    // $('.nav-placeholder').css('height', navPos);
 
     // on scroll
     $(window).scroll(function() {
@@ -51,5 +51,24 @@ $(document).ready(function(){
     });
 
 
+    $('.collapse').on('show.bs.collapse', function(){
+        var p = $(this).parent();
+        $(p).find( '.plus' ).text("-");
+    });
+
+    $('.collapse').on('hide.bs.collapse', function(){
+        var p = $(this).parent();
+        $(p).find( '.plus' ).text("+");
+    });
+
 
  });
+
+
+//  $(document).on('shown.bs.collapse', 'faq .collapse', function (e) {
+//     
+//  });
+
+//  $(document).on('hidden.bs.collapse', '#collapseExample', function (e) {
+//     $('.plus').text("+");
+//  });
