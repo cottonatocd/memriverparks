@@ -18,21 +18,26 @@
           FB.api('/870962136249359/events', {
             access_token : pageAccessToken },
             function (response) {
-                // console.log(response);
+
+                var today  = new Date();
+
                 if (response && !response.error) {
                     /* handle the result */
-                    // console.log("success");
                     // const renderedEvents = document.createDocumentFragment();
-                    var renderedEvents;
+                    var renderedEvents = '';
 
                     // loop through the events
                     response.data.forEach((item) => {
                     
-                    // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
-                    // need to pass the manipulated data to this function
-                    // renderedEvents.appendChild( createSingleEvent() );
-                    renderedEvents += createSingleEvent(item);
-                    // console.log(createSingleEvent(item));
+                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
+                        // need to pass the manipulated data to this function
+
+                        var date = new Date(item.start_time);
+
+                        if (date > today){
+                            renderedEvents += createSingleEvent(item, date);
+                        }
+
                     });
 
                     // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
@@ -40,7 +45,6 @@
 
                     // inject the rendered events into the dom 
                     eventsContainer.innerHTML = renderedEvents;
-                    // console.log(renderedEvents);
 
                 } // make sure to handle errors
             }
@@ -56,8 +60,10 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-        function createSingleEvent(item){
-            return "<div class='col-4'><a class='text-decoration-none' href='https://www.facebook.com/events/" + item.id +" '><div><img class='img-fluid mb-3' src='../assets/images/event-placeholder.png'><h3>Tues Jan 23, 2O19<br>1O:3O AM – 1:3O PM</h3><h2>" + item.name +"</h2></div></a></div>"
+        function createSingleEvent(item, date){
+            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            console.log(date);
+            return "<div class='col-4'><a class='text-decoration-none' href='https://www.facebook.com/events/" + item.id +" '><div><img class='img-fluid mb-3' src='../assets/images/event-placeholder.png'><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – 1:3O PM</h3><h2>" + item.name +"</h2></div></a></div>"
         }
 
 </script>
