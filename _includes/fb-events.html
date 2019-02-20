@@ -7,19 +7,18 @@
             version          : 'v3.2'
           });
 
-          FB.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-                var accessToken = response.authResponse.accessToken;
-            } 
-          } );
+        //   FB.getLoginStatus(function(response) {
+        //     if (response.status === 'connected') {
+        //         var accessToken = response.authResponse.accessToken;
+        //     } 
+        //   } );
 
           var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
 
-          FB.api('/870962136249359/events', {
+          FB.api('/870962136249359/events?time_filter=upcoming', {
             access_token : pageAccessToken },
+            
             function (response) {
-
-                var today  = new Date();
 
                 if (response && !response.error) {
                     /* handle the result */
@@ -32,13 +31,33 @@
                         // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
                         // need to pass the manipulated data to this function
 
-                        console.log(item);
+                        var apiStr = "/" + item.id + "/picture";
 
+                        FB.api(
+                            apiStr, {
+                                access_token : pageAccessToken
+                            },
+                            function (response) {
+                                if (response && !response.error) {
+                                    /* handle the result */
+                                    console.log(response.data);
+                                }
+                            }
+                        );
+
+                        // FB.api(apiStr, {
+                        // access_token : pageAccessToken },
+                        // function (response) {
+                        //     if (response && !response.error) {
+                        //         console.log(response);   
+                        //     }
+                        // });
+
+                        var today  = new Date();
                         var date = new Date(item.start_time);
-
-                        if (date > today){
+                        // if (date > today){
                             renderedEvents += createSingleEvent(item, date);
-                        }
+                        // }
 
                     });
 
