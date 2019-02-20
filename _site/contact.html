@@ -14,7 +14,7 @@
     <script>
         window.fbAsyncInit = function() {
           FB.init({
-            appId            : '240429843506262',
+            appId            : '556297018114224',
             autoLogAppEvents : true,
             xfbml            : true,
             version          : 'v3.2'
@@ -26,15 +26,15 @@
             } 
           } );
 
-          var pageAccessToken = 'EAADaq29qZAFYBAAzxtWeiIyahUjVZCRO7QZCZBq7ZCbLbn6ZB0itUBfyM2YfBNwycZCUCZAEn1j3v62Hd6b4iNHhsqZCoR9PVbGL8ykfpIxswg6p71EzVSd8Xq5vLSe8n4P5HqmyaymK9SzNEZCzv2lYZCaNZAf1cW6u1PhpYUUigDiNx8aRt1QsmiUEid9ZAKdjZBPeAN9Df6cwHr9ZCXqWaIhONrZB';
+          var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
 
-          FB.api('/2050537751913828/events', {
+          FB.api('/870962136249359/events', {
             access_token : pageAccessToken },
             function (response) {
-                console.log(response.data);
+                // console.log(response);
                 if (response && !response.error) {
                     /* handle the result */
-                    console.log("success");
+                    // console.log("success");
                     // const renderedEvents = document.createDocumentFragment();
                     var renderedEvents;
 
@@ -45,7 +45,7 @@
                     // need to pass the manipulated data to this function
                     // renderedEvents.appendChild( createSingleEvent() );
                     renderedEvents += createSingleEvent(item);
-                    console.log(createSingleEvent(item));
+                    // console.log(createSingleEvent(item));
                     });
 
                     // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
@@ -53,7 +53,7 @@
 
                     // inject the rendered events into the dom 
                     eventsContainer.innerHTML = renderedEvents;
-                    console.log(renderedEvents);
+                    // console.log(renderedEvents);
 
                 } // make sure to handle errors
             }
