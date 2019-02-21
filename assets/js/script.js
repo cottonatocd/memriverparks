@@ -76,12 +76,12 @@ $(document).ready(function(){
         xhr.send();
     };
 
-    getJSON('https://medium.com/memriverparks/latest?format=json',
+    getJSON('https://cors.io/?https://medium.com/memriverparks/latest?format=json',
     function(err, data) {
     if (err !== null) {
         console.log('Something went wrong: ' + err);
     } else {
-        console.log('Your query count: ' + data);
+        console.log(data);
     }
     });
     
