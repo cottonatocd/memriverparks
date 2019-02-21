@@ -111,44 +111,29 @@ $(document).ready(function(){
       const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
 
       // Functions to create a short text out of whole blog's content
-      function toText(node) {
-         let tag = document.createElement('div')
-         tag.innerHTML = node
-         node = tag.innerText
-         return node
-      }
+    //   function toText(node) {
+    //      let tag = document.createElement('div')
+    //      tag.innerHTML = node
+    //      node = tag.innerText
+    //      return node
+    //   }
       function shortenText(text,startingPoint ,maxLength) {
          return text.length > maxLength?
          text.slice(startingPoint, maxLength):
          text
       }
 
-      // Put things in right spots of markup
       let output = '';
       posts.forEach((item) => {
-        //  output += `
-        //  <li class="blog__post">
-        //     <a href="${item.link}">
-        //        <img src="${item.thumbnail}" class="blog__topImg"></img>
-        //        <div class="blog__content">
-        //           <div class="blog_preview">
-        //              <h2 class="blog__title">${shortenText(item.title, 0, 30)+ '...'}</h2>
-        //              <p class="blog__intro">${'...' + shortenText(toText(item.content),60, 300)+ '...'}</p>
-        //           </div>
-        //           <hr>
-        //           <div class="blog__info">
-        //              <span class="blog__author">${item.author}</span>
-        //              <span class="blog__date">${shortenText(item.pubDate,0 ,10)}</span>
-        //           </div>
-        //        </div>
-        //     <a/>
-        //  </li>`
+        var pubDate = new Date(item.pubDate);
+        var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+
         output += `
         <div class="row pt-4 pb-2">
             <div class="col-5 offset-1">
                 <div class="row">
                     <div class="col-10">
-                            <h3 class="mb-2">${shortenText(item.pubDate,0,10)}</h3>
+                            <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
                             <h2>${item.title}</h2>
                     </div>
                 </div>
@@ -164,26 +149,33 @@ $(document).ready(function(){
             </div>
         </div>
         `
-        //console.log(new Date(item.pubDate));
-        console.log(item);
       })
-      document.querySelector('#news-items').innerHTML = output
-    //console.log(output);
+      document.querySelector('#news-items').innerHTML = output;
+
 })
+
+    //INSTAGRAM
+    var token = '1537913266.ff0987d.2d654495e5a54058a67e7dfdce65cb7a', // learn how to obtain it below
+        userid = 1537913266, // User ID - get it in source HTML of your Instagram profile or look at the next example :)
+        num_photos = 18, // how much photos do you want to get
+        instagramContent = '';
+    
+    $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent', // or /users/self/media/recent for Sandbox
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {access_token: token, count: num_photos},
+        success: function(data){
+            for( x in data.data ){
+                instagramContent += '<div class="col-2 mb-1"><a href="' + data.data[x].link + '" target="_blank"><img class="img-fluid mb-3" src="' + data.data[x].images.standard_resolution.url + '"></a></div>';
+            }
+            document.getElementById('instaFeed').innerHTML = instagramContent;
+
+        },
+        error: function(data){
+            console.log(data); // send the error notifications to console
+        }
+    });
     
 
  });
-
-
-
-
-
-
-
-//  $(document).on('shown.bs.collapse', 'faq .collapse', function (e) {
-//     
-//  });
-
-//  $(document).on('hidden.bs.collapse', '#collapseExample', function (e) {
-//     $('.plus').text("+");
-//  });
