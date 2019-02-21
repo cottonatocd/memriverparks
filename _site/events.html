@@ -20,12 +20,6 @@
             version          : 'v3.2'
         });
 
-        //   FB.getLoginStatus(function(response) {
-        //     if (response.status === 'connected') {
-        //         var accessToken = response.authResponse.accessToken;
-        //     } 
-        //   } );
-
         var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
 
         FB.api('/870962136249359/events?time_filter=upcoming', {
@@ -63,10 +57,10 @@
                         var date = new Date(item.start_time);
 
                         if (item.event_times){
-                            console.log(item);
-                            for(var i=0;i<item.event_times.length;i++){
-                                console.log(new Date(item.event_times[i].start_time));
-                            }
+                            // console.log(item);
+                            // for(var i=0;i<item.event_times.length;i++){
+                            //     console.log(new Date(item.event_times[i].start_time));
+                            // }
                         }
                         // if (date > today){
                             renderedEvents += createSingleEvent(item, date);
@@ -149,8 +143,13 @@
         function createSingleEvent(item, date){
             var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
             var end = new Date(item.end_time);
-            return "<div class='col-4'><a class='text-decoration-none' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><img class='img-fluid mb-3' src='../assets/images/event-placeholder.png'><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+            return "<div class='col-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
         }
+
+
+
+
+
 
 </script>
 
@@ -278,23 +277,23 @@
         </div>
        
     <div class="container-fluid" style="margin-top:78px;">
-        <div class="container-fluid">
-    <div class="container hero  bg-dark">
-    <div class="row">
-        <div class="col-4 my-auto">
-            <div class="p-4">
-                <h1 class="text-primary mb-4">We post all our events on Facebook first.</h1>
-                <a href="#" class="btn btn-primary mt-2 mr-2">Get connected</a>
-                <a href="#" class="btn btn-secondary mt-2">Host your event</a>
+        <div class="container-fluid hero bg-dark">
+        <div class="row">
+            <div class="col-4 my-auto">
+                <div class="p-4 left-content">
+                    <h1 class="text-primary mb-4">We post all our events on Facebook first.</h1>
+                    <a href="#" class="btn btn-primary mt-2 mr-2">Get connected</a>
+                    <a href="#" class="btn btn-secondary mt-2">Host your event</a>
+                </div>
+            </div>
+            
+            <div class="col-8 p-0">
+                <div class="hero-img" style="background-image:url('../assets/images/events.png')"></div>
             </div>
         </div>
-        
-        <div class="col-8 p-0">
-            <div class="hero-img" style="background-image:url('../assets/images/events.png')"></div>
-        </div>
-    </div>
 </div>
 
+<div class="container-fluid">
 <div class="container py-5">
     <div class="row" id="upcoming-events">
         <!-- Insert Events Here -->
@@ -310,24 +309,7 @@
             </div>
             
             <div class="row" id="past-events">
-                <div class="col-4">
-                    <a class="text-decoration-none" href="#">
-                        <div>
-                            <img class="img-fluid mb-3" src="../assets/images/event-placeholder.png">
-                            <h3>Tues Jan 23, 2O19<br>1O:3O AM – 1:3O PM</h3>
-                            <h2>42nd Annual Ski Freeze 2O19</h2>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-4">
-                    <a class="text-decoration-none" href="#">
-                        <div>
-                            <img class="img-fluid mb-3" src="../assets/images/event-placeholder.png">
-                            <h3>Tues Jan 23, 2O19<br>1O:3O AM – 1:3O PM</h3>
-                            <h2>42nd Annual Ski Freeze 2O19</h2>
-                        </div>
-                    </a>
-                </div>
+                <!-- Insert Past Events Here -->
             </div>
             <div class="row">
                 <div class="col-12 text-center">
@@ -390,7 +372,7 @@
 </div>
     </div>
     <footer>
-<div class="container-fluid bg-grey text-center py-4 mt-5">
+<div class="container-fluid bg-grey text-center py-4">
     <h2>Questions, comments or feedback?</h2>
     <a href="#" class="btn btn-primary">Let Us Know</a>
 </div>

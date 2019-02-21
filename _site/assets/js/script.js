@@ -8,12 +8,9 @@
 //     }
 // });
 
+
+
 $(document).ready(function(){
-
-
-
-
-
 
     // cache the element
     var $navBar = $('.nav-placeholder .nav-wrapper');
@@ -38,7 +35,7 @@ $(document).ready(function(){
 
     });
 
-    // var palette = ['#44b549', '#ffc818', '#f05f22', '#298fce', '#e684a1'];
+    var palette = ['#44b549', '#ffc818', '#f05f22', '#298fce', '#e684a1'];
     
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
@@ -54,6 +51,53 @@ $(document).ready(function(){
     
         document.getElementsByTagName('head')[0].appendChild(style);
     });
+    
+    $("a").mouseleave(function(){
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var style = document.createElement('style');
+        if (style.styleSheet) {
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+    
+        document.getElementsByTagName('head')[0].appendChild(style);
+    });
+
+
+
+    var lastContainer = $( "#main-parent .container-fluid:last-child" );
+    if (lastContainer.hasClass('bg-grey')){
+        console.log("has class");
+        $('footer .container-fluid').removeClass('bg-grey');
+    }
+
+
+   
+
+ 
+
+
+
+    //var origColor = $(".event-image .img-container").css("color");
+
+
+
+        // $( "p" ).mouseout(function() {
+        // $(this).css("color", origColor);
+        // });
+
+        // function getRandomColor () {
+        // var letters = '0123456789ABCDEF'.split('');
+        // var color = '#';
+        // for (var i = 0; i < 6; i++) {
+        //     color += letters[Math.floor(Math.random() * 16)];
+        // }
+        // return color;
+
+    
+
+
 
 
     $('.collapse').on('show.bs.collapse', function(){
@@ -66,42 +110,10 @@ $(document).ready(function(){
         $(p).find( '.plus' ).text("+");
     });
 
-    // var getJSON = function(url, callback) {
-    //     var xhr = new XMLHttpRequest();
-    //     xhr.open('GET', url, true);
-    //     xhr.responseType = 'json';
-    //     xhr.onload = function() {
-    //       var status = xhr.status;
-    //       if (status === 200) {
-    //         callback(null, xhr.response);
-    //       } else {
-    //         callback(status, xhr.response);
-    //       }
-    //     };
-    //     xhr.send();
-    // };
-
-    // getJSON('https://cors.io/?https://medium.com/memriverparks/latest?format=json',
-    // function(err, data) {
-    // if (err !== null) {
-    //     console.log('Something went wrong: ' + err);
-    // } else {
-    //     console.log(JSON.parse(data));
-    // }
-    // });
 
 
-    // $.ajax({
-    //     type: "POST", //rest Type
-    //     dataType: 'jsonp', //mispelled
-    //     url: "http://cors.io/?https://medium.com/memriverparks/latest?format=json",
-    //     async: false,
-    //     contentType: "application/json; charset=utf-8",
-    //     success: function (msg) {
-    //         console.log(JSON.parse(msg));                
-    //     }
-    // });
 
+    //MEDIUM
 
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/memriverparks')
    .then((res) => res.json())
@@ -110,23 +122,14 @@ $(document).ready(function(){
       const res = data.items //This is an array with the content. No feed, no info about author etc..
       const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
 
-      // Functions to create a short text out of whole blog's content
-    //   function toText(node) {
-    //      let tag = document.createElement('div')
-    //      tag.innerHTML = node
-    //      node = tag.innerText
-    //      return node
-    //   }
-      function shortenText(text,startingPoint ,maxLength) {
-         return text.length > maxLength?
-         text.slice(startingPoint, maxLength):
-         text
-      }
-
       let output = '';
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
         var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+        var desc = item.description;
+        var stripped = $(desc).text();
+        var firstLine = stripped.split('.')[0];
+        firstLine += ".";
 
         output += `
         <div class="row pt-4 pb-2">
@@ -139,7 +142,7 @@ $(document).ready(function(){
                 </div>
                 <div class="row">
                     <div class="col-6">
-                        <p class="mb-3">Foundation’s support to be celebrated this Friday at Grand Opening of the River Line and River Garden.</p>
+                        <p class="mb-3">${firstLine}</p>
                         <a href="${item.link}" class="btn btn-secondary" target='_blank'>Read More</a>
                     </div>
                 </div>
@@ -152,7 +155,10 @@ $(document).ready(function(){
       })
       document.querySelector('#news-items').innerHTML = output;
 
-})
+    })
+
+
+
 
     //INSTAGRAM
     var token = '1537913266.ff0987d.2d654495e5a54058a67e7dfdce65cb7a', // learn how to obtain it below

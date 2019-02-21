@@ -144,7 +144,7 @@ h3{
     width:34%;
 }
 
-a.btn{
+a.btn, span.btn{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 14px;
     letter-spacing: 0.76px;
@@ -172,7 +172,8 @@ a.btn.btn-primary.external:after{
     background-image: url(../assets/images/external-white.svg);
 }
 
-a.btn.btn-primary{
+
+a.btn.btn-primary, span.btn.btn-primary{
     background-color:black;
     color:white;
     font-weight:700;
@@ -189,7 +190,15 @@ a.btn.btn-secondary{
     padding: 7.1px 17.2px;
 }
 
-a.external:after{
+span.btn.btn-secondary{
+    background-color:rgba(0,0,0,0);
+    color:black;
+    font-weight:900;
+    border: 3px solid black;
+    padding: 7.1px 17.2px;
+}
+
+a.external:after, svg.external:after{
     display: inline-block;
   content: ' ';
   background-image: url(../assets/images/external.svg);
@@ -349,6 +358,11 @@ a.external:after{
 .hero{
     text-align:center;
     padding: 0px;
+
+    .left-content{
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
 
 .hero-img{
@@ -438,6 +452,58 @@ a.external:after{
     height:100vh;
 }
 
+.img-container{
+    span.btn{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 28%;
+        left: 50%;
+        display:none;
+    }
+}
+
+a.event-image:hover {
+    .img-container {
+        animation-name: bgcolorchange5;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-end;
+        -webkit-animation-name: bgcolorchange5;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: step-end;
+
+        span.btn{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 28%;
+            left: 50%;
+            display:inherit;
+        }
+    }
+    img{
+        visibility:hidden;
+    }
+    h3, h2{
+        animation-name: event-hover-text;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-end;
+        -webkit-animation-name: event-hover-text;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: step-end;
+    }
+}
+
+
+    
+
+
+.navbar-light .navbar-nav .nav-link:hover, a:hover{ 
+    color: #f05f22 !important; 
+}
+
 
 
 @keyframes bgcolorchange1 {
@@ -474,6 +540,14 @@ a.external:after{
     50% {background-color: #ffc818;}
     75% {background-color: #298fce;}
     100% {background-color: #e684a1;}
+}
+
+@keyframes event-hover-text {
+    0% {color: #44b549;}
+    25% {color: #f05f22;}
+    50% {color: #ffc818;}
+    75% {color: #298fce;}
+    100% {color: #e684a1;}
 }
 
  @keyframes slideIn1 { 
@@ -547,3 +621,9 @@ a.external:after{
       visibility:visible;
     }
   }
+
+  @media (min-width: 1700px) {   
+        .hero-img{
+            height:1000px;
+        } 
+    }

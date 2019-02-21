@@ -6597,7 +6597,7 @@ h3 {
 .nav-right {
   width: 34%; }
 
-a.btn {
+a.btn, span.btn {
   font-family: "GT Haptik", Helvetica, sans-serif;
   font-size: 14px;
   letter-spacing: 0.76px;
@@ -6622,7 +6622,7 @@ a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary
 a.btn.btn-primary.external:after {
   background-image: url(../assets/images/external-white.svg); }
 
-a.btn.btn-primary {
+a.btn.btn-primary, span.btn.btn-primary {
   background-color: black;
   color: white;
   font-weight: 700;
@@ -6637,7 +6637,14 @@ a.btn.btn-secondary {
   border: 3px solid black;
   padding: 7.1px 17.2px; }
 
-a.external:after {
+span.btn.btn-secondary {
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  font-weight: 900;
+  border: 3px solid black;
+  padding: 7.1px 17.2px; }
+
+a.external:after, svg.external:after {
   display: inline-block;
   content: ' ';
   background-image: url(../assets/images/external.svg);
@@ -6758,6 +6765,9 @@ a.external:after {
 .hero {
   text-align: center;
   padding: 0px; }
+  .hero .left-content {
+    max-width: 500px;
+    margin: 0 auto; }
 
 .hero-img {
   height: 622px;
@@ -6823,6 +6833,43 @@ a.external:after {
   background-repeat: no-repeat;
   height: 100vh; }
 
+.img-container span.btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 28%;
+  left: 50%;
+  display: none; }
+
+a.event-image:hover .img-container {
+  animation-name: bgcolorchange5;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+  -webkit-animation-name: bgcolorchange5;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: step-end; }
+  a.event-image:hover .img-container span.btn {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 28%;
+    left: 50%;
+    display: inherit; }
+a.event-image:hover img {
+  visibility: hidden; }
+a.event-image:hover h3, a.event-image:hover h2 {
+  animation-name: event-hover-text;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: step-end;
+  -webkit-animation-name: event-hover-text;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: step-end; }
+
+.navbar-light .navbar-nav .nav-link:hover, a:hover {
+  color: #f05f22 !important; }
+
 @keyframes bgcolorchange1 {
   0% {
     background-color: #f05f22; }
@@ -6878,6 +6925,17 @@ a.external:after {
     background-color: #298fce; }
   100% {
     background-color: #e684a1; } }
+@keyframes event-hover-text {
+  0% {
+    color: #44b549; }
+  25% {
+    color: #f05f22; }
+  50% {
+    color: #ffc818; }
+  75% {
+    color: #298fce; }
+  100% {
+    color: #e684a1; } }
 @keyframes slideIn1 {
   0% {
     left: -100%;
@@ -6930,3 +6988,6 @@ a.external:after {
     color: white;
     background-color: black;
     visibility: visible; } }
+@media (min-width: 1700px) {
+  .hero-img {
+    height: 1000px; } }
