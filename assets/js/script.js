@@ -61,8 +61,37 @@ $(document).ready(function(){
         $(p).find( '.plus' ).text("+");
     });
 
+    var getJSON = function(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'json';
+        xhr.onload = function() {
+          var status = xhr.status;
+          if (status === 200) {
+            callback(null, xhr.response);
+          } else {
+            callback(status, xhr.response);
+          }
+        };
+        xhr.send();
+    };
+
+    getJSON('https://medium.com/memriverparks/latest?format=json',
+    function(err, data) {
+    if (err !== null) {
+        console.log('Something went wrong: ' + err);
+    } else {
+        console.log('Your query count: ' + data);
+    }
+    });
+    
 
  });
+
+
+
+
+
 
 
 //  $(document).on('shown.bs.collapse', 'faq .collapse', function (e) {

@@ -18,7 +18,7 @@
             autoLogAppEvents : true,
             xfbml            : true,
             version          : 'v3.2'
-          });
+        });
 
         //   FB.getLoginStatus(function(response) {
         //     if (response.status === 'connected') {
@@ -26,11 +26,10 @@
         //     } 
         //   } );
 
-          var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
+        var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
 
-          FB.api('/870962136249359/events?time_filter=upcoming', {
+        FB.api('/870962136249359/events?time_filter=upcoming', {
             access_token : pageAccessToken },
-            
             function (response) {
 
                 if (response && !response.error) {
@@ -46,28 +45,29 @@
 
                         var apiStr = "/" + item.id + "/picture";
 
-                        FB.api(
-                            apiStr, {
-                                access_token : pageAccessToken
-                            },
-                            function (response) {
-                                if (response && !response.error) {
-                                    /* handle the result */
-                                    console.log(response.data);
-                                }
-                            }
-                        );
-
-                        // FB.api(apiStr, {
-                        // access_token : pageAccessToken },
-                        // function (response) {
-                        //     if (response && !response.error) {
-                        //         console.log(response);   
+                        // FB.api(
+                        //     apiStr, {
+                        //         access_token : pageAccessToken
+                        //     },
+                        //     function (response) {
+                        //         if (response && !response.error) {
+                        //             /* handle the result */
+                        //             console.log(response);
+                        //         }
                         //     }
-                        // });
+                        // );
+
+                        // console.log(item);
 
                         var today  = new Date();
                         var date = new Date(item.start_time);
+
+                        if (item.event_times){
+                            console.log(item);
+                            for(var i=0;i<item.event_times.length;i++){
+                                console.log(new Date(item.event_times[i].start_time));
+                            }
+                        }
                         // if (date > today){
                             renderedEvents += createSingleEvent(item, date);
                         // }
@@ -81,10 +81,62 @@
                     eventsContainer.innerHTML = renderedEvents;
 
                 } // make sure to handle errors
-            }
-        );
+            });
+
+
+
+            FB.api('/870962136249359/events?time_filter=past&limit=9 ', {
+            access_token : pageAccessToken },
+            function (response) {
+
+                if (response && !response.error) {
+                    /* handle the result */
+                    // const renderedEvents = document.createDocumentFragment();
+                    var renderedEvents = '';
+
+                    // loop through the events
+                    response.data.forEach((item) => {
+                    
+                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
+                        // need to pass the manipulated data to this function
+
+                        var apiStr = "/" + item.id + "/picture";
+
+                        // FB.api(
+                        //     apiStr, {
+                        //         access_token : pageAccessToken
+                        //     },
+                        //     function (response) {
+                        //         if (response && !response.error) {
+                        //             /* handle the result */
+                        //             console.log(response);
+                        //         }
+                        //     }
+                        // );
+                    
+                        
+
+                        var today  = new Date();
+                        var date = new Date(item.start_time);
+                        // if (date > today){
+                            renderedEvents += createSingleEvent(item, date);
+                        // }
+
+                    });
+
+                    // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
+                    const eventsContainer = document.getElementById('past-events');
+
+                    // inject the rendered events into the dom 
+                    eventsContainer.innerHTML = renderedEvents;
+
+                } // make sure to handle errors
+            });
+
+
 
         };
+
 
         (function(d, s, id){
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -97,7 +149,7 @@
         function createSingleEvent(item, date){
             var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
             var end = new Date(item.end_time);
-            return "<div class='col-4'><a class='text-decoration-none' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div><img class='img-fluid mb-3' src='../assets/images/event-placeholder.png'><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+            return "<div class='col-4'><a class='text-decoration-none' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><img class='img-fluid mb-3' src='../assets/images/event-placeholder.png'><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
         }
 
 </script>
@@ -257,7 +309,7 @@
                 </div>
             </div>
             
-            <div class="row">
+            <div class="row" id="past-events">
                 <div class="col-4">
                     <a class="text-decoration-none" href="#">
                         <div>
@@ -279,7 +331,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="#" class="btn btn-secondary external mt-4">
+                    <a href="#" class="btn btn-secondary external">
                         View More
                     </a>
                 </div>
