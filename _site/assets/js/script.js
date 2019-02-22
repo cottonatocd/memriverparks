@@ -109,8 +109,6 @@ $(document).ready(function(){
       let output = '';
       let outputLanding = '';
       let iteration = 0;
-
-      console.log(res);
       
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
@@ -194,8 +192,10 @@ $(document).ready(function(){
             for( x in data.data ){
                 instagramContent += '<div class="col-2 mb-1"><a href="' + data.data[x].link + '" target="_blank"><img class="img-fluid mb-3" src="' + data.data[x].images.standard_resolution.url + '"></a></div>';
             }
-            document.getElementById('instaFeed').innerHTML = instagramContent;
-
+            var instaElement =  document.getElementById('instaFeed');
+            if (typeof(instaElement) != 'undefined' && instaElement != null) {
+                document.getElementById('instaFeed').innerHTML = instagramContent;
+            } 
         },
         error: function(data){
             console.log(data); // send the error notifications to console
