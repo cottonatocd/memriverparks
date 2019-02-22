@@ -99,6 +99,7 @@ $(document).ready(function(){
 
 
     //MEDIUM
+    
 
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/memriverparks')
    .then((res) => res.json())
