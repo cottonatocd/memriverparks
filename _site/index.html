@@ -4,12 +4,156 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Testing Development</title>
+        <title>Memphis River Parks</title>
       
         <link rel="stylesheet" href="/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
 </head>
   <body>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '556297018114224',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.2'
+        });
+
+        var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
+
+        FB.api('/870962136249359/events?time_filter=upcoming', {
+            access_token : pageAccessToken },
+            function (response) {
+
+                if (response && !response.error) {
+                    /* handle the result */
+                    // const renderedEvents = document.createDocumentFragment();
+                    var renderedEvents = '';
+
+                    // loop through the events
+                    response.data.forEach((item) => {
+                    
+                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
+                        // need to pass the manipulated data to this function
+
+                        var apiStr = "/" + item.id + "/picture";
+
+                        // FB.api(
+                        //     apiStr, {
+                        //         access_token : pageAccessToken
+                        //     },
+                        //     function (response) {
+                        //         if (response && !response.error) {
+                        //             /* handle the result */
+                        //             console.log(response);
+                        //         }
+                        //     }
+                        // );
+
+                        // console.log(item);
+
+                        var today  = new Date();
+                        var date = new Date(item.start_time);
+
+                        if (item.event_times){
+                            // console.log(item);
+                            // for(var i=0;i<item.event_times.length;i++){
+                            //     console.log(new Date(item.event_times[i].start_time));
+                            // }
+                        }
+                        // if (date > today){
+                            renderedEvents += createSingleEvent(item, date);
+                        // }
+
+                    });
+
+                    // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
+                    const eventsContainer = document.getElementById('upcoming-events');
+
+                    // inject the rendered events into the dom 
+                    eventsContainer.innerHTML = renderedEvents;
+
+                } // make sure to handle errors
+            });
+
+
+
+            FB.api('/870962136249359/events?time_filter=past&limit=2 ', {
+            access_token : pageAccessToken },
+            function (response) {
+
+                if (response && !response.error) {
+                    /* handle the result */
+                    // const renderedEvents = document.createDocumentFragment();
+                    var renderedEvents = `<div class="col-3">
+                        <p class="lead mb-3">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
+                        <a href="events.html" class="btn btn-primary">View Events</a>
+                    </div><div class="col-1"></div>`;
+
+                    // loop through the events
+                    response.data.forEach((item) => {
+                    
+                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
+                        // need to pass the manipulated data to this function
+
+                        var apiStr = "/" + item.id + "/picture";
+
+                        // FB.api(
+                        //     apiStr, {
+                        //         access_token : pageAccessToken
+                        //     },
+                        //     function (response) {
+                        //         if (response && !response.error) {
+                        //             /* handle the result */
+                        //             console.log(response);
+                        //         }
+                        //     }
+                        // );
+                    
+                        
+
+                        var today  = new Date();
+                        var date = new Date(item.start_time);
+                        // if (date > today){
+                            renderedEvents += createSingleEvent(item, date);
+                        // }
+
+                    });
+
+                    // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
+                    const eventsContainer = document.getElementById('past-events');
+
+                    // inject the rendered events into the dom 
+                    eventsContainer.innerHTML = renderedEvents;
+
+                } // make sure to handle errors
+            });
+
+
+
+        };
+
+
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function createSingleEvent(item, date){
+            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            var end = new Date(item.end_time);
+            return "<div class='col-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+        }
+
+
+
+
+
+
+</script>
     <div class="nav-placeholder">
 <div class="container-fluid nav-wrapper position-fixed">
   <div class="container">
@@ -187,6 +331,45 @@
             </div>
         </a>
 </div>
+<div class="container-fluid bg-white">
+    <div class="container py-5">
+        <div class="row" id="past-events">
+            <div class="col-3">
+                <p class="lead mb-3">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
+                <a href="events.html" class="btn btn-primary">View Events</a>
+            </div>
+            <!-- Insert Events Here -->
+        </div>
+    </div>
+</div>
+<div class="container-fluid text-left bg-light">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-3">
+                    <h2>Host your next event at the river.</h2>
+                    <p>There are many options to host weddings, birthday parties, family reunions and more at the riverfront. We charge rental fees based on the impact to the park and to the public.</p>
+                    <a href="#" class="btn btn-primary mt-3">Get Started</a>
+                </div>
+                <div class="col-8 offset-1">
+                    <img class="img-fluid" src="../assets/images/rent-1.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-white">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-3">
+                        <p class="lead mb-3">See the latest news from the Partnership here.</p>
+                        <a href="news.html" class="btn btn-primary">See What's New</a>
+                    </div>
+                    
+                    <div id="news-items-selection" class="col-8 offset-1">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     
     <footer>
 <div class="container-fluid bg-grey text-center py-4">

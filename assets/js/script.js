@@ -73,7 +73,11 @@ $(document).ready(function(){
 
     // FOOTER BG COLOR
 
-    var lastContainer = $( "#main-parent .container-fluid:last-child" );
+    if($('#main-parent').length){
+        var lastContainer = $( "#main-parent .container-fluid:last-child" );
+    } else {
+        var lastContainer = $('footer').prev('div');
+    }
     if (lastContainer.hasClass('bg-grey')){
         $('footer .container-fluid').removeClass('bg-grey');
     }
@@ -103,6 +107,9 @@ $(document).ready(function(){
       const posts = res.filter(item => item.categories.length > 0)
 
       let output = '';
+      let outputLanding = '';
+      let iteration = 0;
+      
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
         var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -131,9 +138,37 @@ $(document).ready(function(){
                 <img class="img-fluid" src="${item.thumbnail}">
             </div>
         </div>
-        `
-      })
-      document.querySelector('#news-items').innerHTML = output;
+        `;
+
+        if (iteration<2){
+            outputLanding += `
+                <div class="row mb-5">
+                    <div class="col-6">
+                        <img class="img-fluid" src="${item.thumbnail}">
+                    </div>
+                    <div class="col-6">
+                        <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
+                        <h2>${item.title}</h2>
+                        <p class="mb-3">${firstLine}</p>
+                        <a href="${item.link}" class="btn btn-secondary" target='_blank'>Read More</a>
+                    </div>
+                </div>
+                `;
+            }
+
+            iteration+=1 ;
+
+      });
+      
+        var newsFeed =  document.getElementById('news-items');
+        var newsSelection =  document.getElementById('news-items-selection');
+
+        if (typeof(newsFeed) != 'undefined' && newsFeed != null) {
+            document.querySelector('#news-items').innerHTML = output;
+        }
+        if (typeof(newsSelection) != 'undefined' && newsSelection != null) {
+            document.querySelector('#news-items-selection').innerHTML = outputLanding;
+        }
 
     })
 

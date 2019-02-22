@@ -6741,6 +6741,11 @@ a.external:after, svg.external:after {
   left: 0px;
   visibility: visible; }
 
+.nav-wrapper, .nav-wrapper * {
+  transition: 300ms; }
+  .nav-wrapper nav, .nav-wrapper * nav {
+    height: 130px; }
+
 .nav-wrapper.fixed {
   height: 78px;
   background-color: #F7F7F7;

@@ -327,6 +327,13 @@ a.external:after, svg.external:after{
     //   background-image:url('join-us-black.svg');
 }
 
+.nav-wrapper, .nav-wrapper *{
+    transition: 300ms;
+    nav{
+        height:130px;
+    }
+}
+
 .nav-wrapper.fixed{
     height:78px;
     background-color:#F7F7F7;
