@@ -37,24 +37,31 @@
                         // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
                         // need to pass the manipulated data to this function
 
-                        var apiStr = "/" + item.id + "/picture";
-
-                        // FB.api(
-                        //     apiStr, {
-                        //         access_token : pageAccessToken
-                        //     },
-                        //     function (response) {
-                        //         if (response && !response.error) {
-                        //             /* handle the result */
-                        //             console.log(response);
-                        //         }
-                        //     }
-                        // );
-
                         // console.log(item);
+
+                        //var apiStr = "/" + item.id + "/picture";
+                        let image = '';
+
+                        FB.api('/' + item.id + '?fields=cover', {
+                            access_token : pageAccessToken },
+                            function (response) {
+                                if (response && !response.error) {
+                                    /* handle the result */
+                                    //console.log(response.cover.source);
+                                    image = response.cover.source;
+                                    console.log(image);
+                                } else {
+                                    console.log(response.error);
+                                }
+                            }
+                            
+                        );
+
+                        //console.log(item);
 
                         var today  = new Date();
                         var date = new Date(item.start_time);
+        
 
                         if (item.event_times){
                             // console.log(item);
@@ -63,7 +70,7 @@
                             // }
                         }
                         // if (date > today){
-                            renderedEvents += createSingleEvent(item, date);
+                            renderedEvents += createSingleEvent(item, date, image);
                         // }
 
                     });
@@ -78,7 +85,7 @@
             });
 
 
-
+            
             FB.api('/870962136249359/events?time_filter=past&limit=9 ', {
             access_token : pageAccessToken },
             function (response) {
@@ -87,7 +94,7 @@
                     /* handle the result */
                     // const renderedEvents = document.createDocumentFragment();
                     var renderedEvents = '';
-
+                    
                     // loop through the events
                     response.data.forEach((item) => {
                     
@@ -96,17 +103,6 @@
 
                         var apiStr = "/" + item.id + "/picture";
 
-                        // FB.api(
-                        //     apiStr, {
-                        //         access_token : pageAccessToken
-                        //     },
-                        //     function (response) {
-                        //         if (response && !response.error) {
-                        //             /* handle the result */
-                        //             console.log(response);
-                        //         }
-                        //     }
-                        // );
                     
                         
 
@@ -124,7 +120,9 @@
                     // inject the rendered events into the dom 
                     eventsContainer.innerHTML = renderedEvents;
 
-                } // make sure to handle errors
+                } else {
+                    console.log("error");// make sure to handle errors
+                }
             });
 
 
@@ -140,10 +138,11 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
 
-        function createSingleEvent(item, date){
+        function createSingleEvent(item, date, image){
             var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
             var end = new Date(item.end_time);
-            return "<div class='col-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+            console.log(image);
+            return "<div class='col-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='" + image + "'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
         }
 
 

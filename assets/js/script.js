@@ -109,6 +109,8 @@ $(document).ready(function(){
       let output = '';
       let outputLanding = '';
       let iteration = 0;
+
+      console.log(res);
       
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
@@ -117,6 +119,8 @@ $(document).ready(function(){
         var stripped = $(desc).text();
         var firstLine = stripped.split('.')[0];
         firstLine += ".";
+
+        
 
         output += `
         <div class="row pt-4 pb-2">
