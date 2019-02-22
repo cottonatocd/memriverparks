@@ -42,7 +42,7 @@ $(document).ready(function(){
         $(this).find('.after-click').removeClass('d-none');
         $(this).find('.before-click').addClass('d-none');
 
-        var url = "../../mud-island.html";
+        var url = "../../" + this.id + ".html";
         $("#district-content").html("<p>loading...</p>").load(url);
     });
 
