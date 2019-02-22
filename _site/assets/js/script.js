@@ -1,3 +1,4 @@
+//NAV WILL PROBABLY NEED THIS
 
 // $(window).scroll(function(){
 //     if ($(window).scrollTop() >= 200) {
@@ -12,21 +13,15 @@
 
 $(document).ready(function(){
 
-    // cache the element
-    var $navBar = $('.nav-placeholder .nav-wrapper');
+    //SHRINK NAV
 
-    // find original navigation bar position
+    var $navBar = $('.nav-placeholder .nav-wrapper');
     var navPos = $navBar.outerHeight();
 
-    // $('.nav-placeholder').css('height', navPos);
-
-    // on scroll
     $(window).scroll(function() {
 
-        // get scroll position from top of the page
         var scrollPos = $(this).scrollTop();
 
-        // check if scroll position is >= the nav position
         if (scrollPos >= navPos) {
             $navBar.addClass('fixed');
         } else {
@@ -35,8 +30,27 @@ $(document).ready(function(){
 
     });
 
+
+    //PARKS TRANSITION & LOAD
+
+    $('#parks-hero a').click(function(e){
+        e.preventDefault(); 
+        $('#parks-hero').addClass('clicked');
+        $('#parks-hero').find('.district').addClass('hidden');
+        $(this).addClass('disabled');
+        $(this).find('.district').removeClass('hidden').addClass('clicked');
+        $(this).find('.after-click').removeClass('d-none');
+        $(this).find('.before-click').addClass('d-none');
+
+        var url = "../../mud-island.html";
+        $("#district-content").html("<p>loading...</p>").load(url);
+    });
+
+
+
+    //HOVER COLOR EFFECTS & ANIMATIONS
+
     var palette = ['#44b549', '#ffc818', '#f05f22', '#298fce', '#e684a1'];
-    
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
     $("a.btn").mouseleave(function(){
@@ -66,39 +80,16 @@ $(document).ready(function(){
 
 
 
+    // FOOTER BG COLOR
+
     var lastContainer = $( "#main-parent .container-fluid:last-child" );
     if (lastContainer.hasClass('bg-grey')){
-        console.log("has class");
         $('footer .container-fluid').removeClass('bg-grey');
     }
 
 
-   
 
- 
-
-
-
-    //var origColor = $(".event-image .img-container").css("color");
-
-
-
-        // $( "p" ).mouseout(function() {
-        // $(this).css("color", origColor);
-        // });
-
-        // function getRandomColor () {
-        // var letters = '0123456789ABCDEF'.split('');
-        // var color = '#';
-        // for (var i = 0; i < 6; i++) {
-        //     color += letters[Math.floor(Math.random() * 16)];
-        // }
-        // return color;
-
-    
-
-
-
+    //FAQ COLLAPSE
 
     $('.collapse').on('show.bs.collapse', function(){
         var p = $(this).parent();
@@ -112,15 +103,13 @@ $(document).ready(function(){
 
 
 
-
     //MEDIUM
 
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/memriverparks')
    .then((res) => res.json())
    .then((data) => {
-      // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
-      const res = data.items //This is an array with the content. No feed, no info about author etc..
-      const posts = res.filter(item => item.categories.length > 0) // That's the main trick* !
+      const res = data.items
+      const posts = res.filter(item => item.categories.length > 0)
 
       let output = '';
       posts.forEach((item) => {

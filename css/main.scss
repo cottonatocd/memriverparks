@@ -36,9 +36,6 @@ p{
     letter-spacing: 0.19px;
     line-height: 20px;
     color:black;
-}
-
-p{
     margin-bottom:10px;
 }
 
@@ -61,6 +58,11 @@ a:not(.btn):not(.nav-link){
     color:inherit;
     text-decoration: underline;
 }
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+ }
 
 p.lead{
     font-family: "GT Haptik", Helvetica, sans-serif;
@@ -375,6 +377,7 @@ a.external:after, svg.external:after{
 
 .district{
     width:20%;
+    transition: width 500ms;
 }
 
 .greenbelt{
@@ -424,6 +427,23 @@ a.external:after, svg.external:after{
 
 #parks-hero{
     height:100vh;
+}
+
+#districts-section{
+    height:600px;
+}
+
+#parks-hero.clicked{
+    .district.hidden{
+        width:0px;
+    }
+    .district.clicked{
+        width:100%;
+        img{
+            margin:auto;
+        }
+    }
+
 }
 
 .district-link{
