@@ -6691,19 +6691,19 @@ a.external:after, svg.external:after {
       margin-left: 0px;
       left: -100%;
       visibility: hidden; }
-  .dropdown-menu.show li:nth-child(1) a.btn {
+  .dropdown-menu.show li:nth-child(1) a.btn.animate-me {
     animation-name: slideIn1;
     -webkit-animation-name: slideIn1;
     animation-delay: 0s; }
-  .dropdown-menu.show li:nth-child(2) a.btn {
+  .dropdown-menu.show li:nth-child(2) a.btn.animate-me {
     animation-name: slideIn2;
     -webkit-animation-name: slideIn2;
     animation-delay: .1s; }
-  .dropdown-menu.show li:nth-child(3) a.btn {
+  .dropdown-menu.show li:nth-child(3) a.btn.animate-me {
     animation-name: slideIn3;
     -webkit-animation-name: slideIn3;
     animation-delay: .2s; }
-  .dropdown-menu.show li:nth-child(4) a.btn {
+  .dropdown-menu.show li:nth-child(4) a.btn.animate-me {
     animation-name: slideIn4;
     -webkit-animation-name: slideIn4;
     animation-delay: .3s; }
