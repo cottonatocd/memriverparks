@@ -400,10 +400,11 @@ a.external:after, svg.external:after{
 // ABOUT PAGE
 #about-hero{
     height:800px;
-    h1{
-        max-width: 900px;
-        margin: auto;
-    }
+}
+
+#about-hero h1, #mission h1 {
+    max-width: 900px;
+    margin: auto;
 }
 
 #faq-section{

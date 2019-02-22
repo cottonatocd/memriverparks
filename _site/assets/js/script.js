@@ -1,28 +1,19 @@
-//NAV WILL PROBABLY NEED THIS
-
-// $(window).scroll(function(){
-//     if ($(window).scrollTop() >= 200) {
-//         $('nav').addClass('sticky-nav');
-//     }
-//     else {
-//         $('nav').removeClass('sticky-nav');
-//     }
-// });
-
-
-
 $(document).ready(function(){
 
     //SHRINK NAV
-
     var $navBar = $('.nav-placeholder .nav-wrapper');
-    var navPos = $navBar.outerHeight();
+
+    if ($('.round').length){
+        var shrinkPos = $('.round').offset().top;
+    } else {
+        var shrinkPos = 200;
+    }
 
     $(window).scroll(function() {
 
         var scrollPos = $(this).scrollTop();
 
-        if (scrollPos >= navPos) {
+        if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
         } else {
             $navBar.removeClass('fixed');

@@ -6799,9 +6799,10 @@ a.external:after, svg.external:after {
 
 #about-hero {
   height: 800px; }
-  #about-hero h1 {
-    max-width: 900px;
-    margin: auto; }
+
+#about-hero h1, #mission h1 {
+  max-width: 900px;
+  margin: auto; }
 
 #faq-section .faq {
   border-bottom: 1px solid #C8C8C8; }
