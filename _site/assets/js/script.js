@@ -146,10 +146,10 @@ $(document).ready(function(){
         if (iteration<2){
             outputLanding += `
                 <div class="row mb-5">
-                    <div class="col-6">
+                    <div class="col-sm-6 mb-3 mb-md-0">
                         <img class="img-fluid" src="${item.thumbnail}">
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
                         <h2>${item.title}</h2>
                         <p class="mb-3">${firstLine}</p>

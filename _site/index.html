@@ -85,10 +85,14 @@
                 if (response && !response.error) {
                     /* handle the result */
                     // const renderedEvents = document.createDocumentFragment();
-                    var renderedEvents = `<div class="col-3">
-                        <p class="lead mb-3">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
-                        <a href="events.html" class="btn btn-primary">View Events</a>
-                    </div><div class="col-1"></div>`;
+                    var renderedEvents = `
+                    <div class="col-10 col-sm-6 col-lg-4 col-xl-3">
+                        <p class="lead mb-3">
+                            The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.
+                            </p>
+                        <a href="events.html" class="btn btn-primary mb-4">View Events</a>
+                    </div>
+                    <div class="d-none d-sm-block col-sm-6 d-lg-none d-xl-block col-lg-1"></div>`;
 
                     // loop through the events
                     response.data.forEach((item) => {
@@ -145,7 +149,7 @@
         function createSingleEvent(item, date){
             var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
             var end = new Date(item.end_time);
-            return "<div class='col-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+            return "<div class='col-12 col-sm-6 col-lg-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
         }
 
 
@@ -161,16 +165,27 @@
       <div class="col">
 
      
-        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+        <nav class="navbar navbar-light navbar-expand-lg bg-faded justify-content-center">
             
             <a href="/" class="navbar-brand d-flex mr-auto">
               <div class="logo"></div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                  <path
+                        class="line top"
+                        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                  <path
+                        class="line middle"
+                        d="m 70,50 h -40" />
+                  <path
+                        class="line bottom"
+                        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                </svg>
             </button>
 
-            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <div class="navbar-collapse  collapse w-100" id="collapsingNavbar3">
               <ul class="navbar-nav w-100 justify-content-center">
                   
                   
@@ -284,7 +299,7 @@
 <div class="container half-height">
     <div class="round bg-dark text-center d-flex">
         <div class="m-auto">
-                <h1 class="mb-4">Come<br>to<br>the<br>River</h1>
+                <h1 class="mb-3 mb-md-4">Come<br>to<br>the<br>River</h1>
                 <a href="#" class="btn btn-primary">Join</a>
         </div>
     </div>
@@ -292,7 +307,7 @@
 <div class="container-fluid bg-white py-5" id="mission">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-8 offset-2 text-center my-auto">
+                <div class="col-12 col-md-8 offset-md-2 text-center my-auto">
                     <div>
                         <h1 class="mb-4">
                             Memphis River Parks Partnership works with and for the people of Memphis to trigger the transformative power of our river.
@@ -303,38 +318,43 @@
         </div>
 </div>
 <div class="container-fluid" id="districts-section">
-        <a href="greenbelt.html" class="text-decoration-none h-100 district-link">
-            <div class="district my-auto text-center h-100 greenbelt float-left">
-                    Greenbelt
-            </div>
+    
+        <a href="greenbelt.html" class="text-decoration-none h-auto h-md-100 district-link">
+                <div class="district text-center h-auto h-md-100 greenbelt float-left align-items-center d-flex">
+                    <img class="img-fluid before-click" src="assets/images/districts/greenbelt.png" onmouseenter="this.src ='assets/images/districts/greenbelt.gif';" onmouseout="this.src = 'assets/images/districts/greenbelt.png';" />
+                    <img class="img-fluid after-click d-none" src="assets/images/districts/greenbelt.png" />
+                </div>
         </a>
-        <a href="mud-island.html" class="text-decoration-none h-100 district-link">
-            <div class="district text-center h-100 mud-island float-left align-items-center h-100 d-flex">
-                <img class="img-fluid before-click" src="assets/images/MLK_Frame_1.png" onmouseenter="this.src ='assets/images/MLK_Test_3.gif';" onmouseout="this.src = 'assets/images/MLK_Frame_1.png';" />
-                <img class="img-fluid after-click d-none" src="assets/images/MLK_Frame_1.png" />
+        <a href="mud-island.html" class="text-decoration-none h-auto h-md-100 district-link">
+            <div class="district text-center h-auto h-md-100 mud-island float-left align-items-center d-flex">
+                    <img class="img-fluid before-click" src="assets/images/districts/mud-island.png" onmouseenter="this.src ='assets/images/districts/mud-island.gif';" onmouseout="this.src = 'assets/images/districts/mud-island.png';" />
+                    <img class="img-fluid after-click d-none" src="assets/images/districts/mud-island.png" />
             </div>
         </a>
         <a href="fourth-bluff.html" class="text-decoration-none district-link">
-            <div class="district my-auto text-center h-100 fourth-bluff float-left">
-                    Fourth Bluff
+                <div class="district text-center h-auto h-md-100 fourth-bluff float-left align-items-center d-flex">
+                    <img class="img-fluid before-click" src="assets/images/districts/fourth-bluff.png" onmouseenter="this.src ='assets/images/districts/fourth-bluff.gif';" onmouseout="this.src = 'assets/images/districts/fourth-bluff.png';" />
+                    <img class="img-fluid after-click d-none" src="assets/images/districts/fourth-bluff.png" />
+                </div>
+        </a>
+        <a href="big-river.html" class="text-decoration-none h-auto h-md-100 district-link">
+            <div class="district text-center h-auto h-md-100 big-river float-left align-items-center d-flex">
+                <img class="img-fluid before-click" src="assets/images/districts/big-river.png" onmouseenter="this.src ='assets/images/districts/big-river.gif';" onmouseout="this.src = 'assets/images/districts/big-river.png';" />
+                <img class="img-fluid after-click d-none" src="assets/images/districts/big-river.png" />
             </div>
         </a>
-        <a href="big-river.html" class="text-decoration-none h-100 district-link">
-            <div class="district text-center h-100 big-river float-left">
-                Big River
+        <a href="mlk.html" class="text-decoration-none h-auto h-md-100 district-link">
+            <div class="district text-center h-auto h-md-100 mlk float-left align-items-center d-flex">
+                <img class="img-fluid before-click" src="assets/images/districts/mlk.png" onmouseenter="this.src ='assets/images/districts/mlk.gif';" onmouseout="this.src = 'assets/images/districts/mlk.png';" />
+                <img class="img-fluid after-click d-none" src="assets/images/districts/mlk.png" />
             </div>
         </a>
-        <a href="mlk.html" class="text-decoration-none h-100 district-link">
-            <div class="district text-center h-100 mlk float-left align-items-center h-100 d-flex">
-                <img class="img-fluid before-click" src="assets/images/MLK_Frame_1.png" onmouseenter="this.src ='assets/images/MLK_Test_3.gif';" onmouseout="this.src = 'assets/images/MLK_Frame_1.png';" />
-                <img class="img-fluid after-click d-none" src="assets/images/MLK_Frame_1.png" />
-            </div>
-        </a>
+    
 </div>
 <div class="container-fluid bg-white">
-    <div class="container py-5">
+    <div class="container py-4 py-lg-5">
         <div class="row" id="past-events">
-            <div class="col-3">
+            <div class="col-10 col-md-3">
                 <p class="lead mb-3">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
                 <a href="events.html" class="btn btn-primary">View Events</a>
             </div>
@@ -343,14 +363,14 @@
     </div>
 </div>
 <div class="container-fluid text-left bg-light">
-        <div class="container p-4">
+        <div class="container py-4">
             <div class="row">
-                <div class="col-3">
+                <div class="col-10 col-sm-6 col-lg-3 order-2 order-md-1">
                     <h2>Host your next event at the river.</h2>
                     <p>There are many options to host weddings, birthday parties, family reunions and more at the riverfront. We charge rental fees based on the impact to the park and to the public.</p>
                     <a href="#" class="btn btn-primary mt-3">Get Started</a>
                 </div>
-                <div class="col-8 offset-1">
+                <div class="col-md-6 col-lg-8 offset-lg-1 order-1 order-md-2 mb-3 mb-md-0">
                     <img class="img-fluid" src="../assets/images/rent-1.png" />
                 </div>
             </div>
@@ -359,12 +379,12 @@
     <div class="container-fluid bg-white">
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-10 col-sm-6 col-lg-3">
                         <p class="lead mb-3">See the latest news from the Partnership here.</p>
-                        <a href="news.html" class="btn btn-primary">See What's New</a>
+                        <a href="news.html" class="btn btn-primary mb-4 mb-lg-0">See What's New</a>
                     </div>
                     
-                    <div id="news-items-selection" class="col-8 offset-1">
+                    <div id="news-items-selection" class="col-lg-8 offset-lg-1">
                         
                     </div>
                 </div>

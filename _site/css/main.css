@@ -6741,6 +6741,9 @@ a.external:after, svg.external:after {
   left: 0px;
   visibility: visible; }
 
+.collapse.show {
+  padding-top: 40px; }
+
 .nav-wrapper, .nav-wrapper * {
   transition: 300ms; }
   .nav-wrapper nav, .nav-wrapper * nav {
@@ -6762,6 +6765,47 @@ a.external:after, svg.external:after {
       height: 54px;
       background-image: url("../assets/images/memphis-river-parks-logo.png");
       background-size: 97px 54px; }
+
+button.navbar-toggler:focus {
+  outline: 0px auto -webkit-focus-ring-color; }
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.hamRotate.active {
+  transform: rotate(45deg); }
+
+.hamRotate180.active {
+  transform: rotate(180deg); }
+
+.ham4 .top {
+  stroke-dasharray: 40 121; }
+
+.ham4 .bottom {
+  stroke-dasharray: 40 121; }
+
+.ham4.active .top {
+  stroke-dashoffset: -68px; }
+
+.ham4.active .bottom {
+  stroke-dashoffset: -68px; }
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round; }
+
+.navbar-light .navbar-toggler {
+  color: black !important;
+  border: 0px solid black !important; }
 
 .icons a {
   margin: 10px; }
@@ -6786,6 +6830,8 @@ a.external:after, svg.external:after {
 .district {
   width: 20%;
   transition: width 500ms; }
+  .district img {
+    mix-blend-mode: multiply; }
 
 .greenbelt {
   background-color: #f05f22; }
@@ -7023,6 +7069,37 @@ a.event-image:hover h3, a.event-image:hover h2 {
     color: white;
     background-color: black;
     visibility: visible; } }
+@media (max-width: 991px) {
+  .nav-wrapper nav, .nav-wrapper * nav {
+    height: auto; } }
+@media (max-width: 768px) {
+  .container {
+    padding: 0px 30px; }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 0.86px;
+    line-height: 36px; }
+
+  h2 {
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    line-height: 28px; }
+
+  h3 {
+    font-size: 16px; }
+
+  .round {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin-bottom: calc(50vh - 150px); }
+
+  #districts-section {
+    height: 300px; }
+
+  .district {
+    width: 100%; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }

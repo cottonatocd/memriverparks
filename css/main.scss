@@ -327,6 +327,10 @@ a.external:after, svg.external:after{
     //   background-image:url('join-us-black.svg');
 }
 
+.collapse.show {
+    padding-top: 40px;
+}
+
 .nav-wrapper, .nav-wrapper *{
     transition: 300ms;
     nav{
@@ -354,6 +358,53 @@ a.external:after, svg.external:after{
         }
     }
     
+}
+
+button.navbar-toggler:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    
+
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .ham4 .top {
+    stroke-dasharray: 40 121;
+  }
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
+  }
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+  }
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+
+  .navbar-light .navbar-toggler {
+    color: black !important;
+    //border-color: rgba(0, 0, 0, 0.1);
+    border:0px solid black !important;
 }
 
 .icons a{
@@ -385,6 +436,9 @@ a.external:after, svg.external:after{
 .district{
     width:20%;
     transition: width 500ms;
+    img{
+        mix-blend-mode: multiply;
+    }
 }
 
 .greenbelt{
@@ -668,6 +722,45 @@ a.event-image:hover {
       color: white;
       background-color:black;
       visibility:visible;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .nav-wrapper nav, .nav-wrapper * nav {
+        height: auto;
+    }
+    
+  }
+
+  @media (max-width: 768px){
+    .container {
+        padding: 0px 30px;
+    }
+    h1{
+        font-size: 36px;
+        letter-spacing: 0.86px;
+        line-height: 36px;
+
+    }
+    h2{
+        font-size: 26px;
+        letter-spacing: 0.6px;
+        line-height: 28px;
+    }
+    h3{
+        font-size:16px;
+    }
+    .round {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin-bottom: calc(50vh - 150px);
+    }
+    #districts-section {
+        height: 300px;
+    }
+    .district {
+        width: 100%;
     }
   }
 
