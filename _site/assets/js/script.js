@@ -191,7 +191,7 @@ $(document).ready(function(){
         data: {access_token: token, count: num_photos},
         success: function(data){
             for( x in data.data ){
-                instagramContent += '<div class="col-2 mb-1"><a href="' + data.data[x].link + '" target="_blank"><img class="img-fluid mb-3" src="' + data.data[x].images.standard_resolution.url + '"></a></div>';
+                instagramContent += '<div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-1"><a href="' + data.data[x].link + '" target="_blank"><img class="img-fluid mb-3" src="' + data.data[x].images.standard_resolution.url + '"></a></div>';
             }
             var instaElement =  document.getElementById('instaFeed');
             if (typeof(instaElement) != 'undefined' && instaElement != null) {
