@@ -6741,9 +6741,6 @@ a.external:after, svg.external:after {
   left: 0px;
   visibility: visible; }
 
-.collapse.show {
-  padding-top: 40px; }
-
 .nav-wrapper, .nav-wrapper * {
   transition: 300ms; }
   .nav-wrapper nav, .nav-wrapper * nav {
@@ -7106,7 +7103,15 @@ a.event-image:hover h3, a.event-image:hover h2 {
     height: auto; }
 
   .district-link {
-    height: auto; } }
+    height: auto; }
+
+  .hero-img {
+    height: 450px; }
+
+  p.lead {
+    font-size: 18px;
+    letter-spacing: 0.39px;
+    line-height: 20px; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }

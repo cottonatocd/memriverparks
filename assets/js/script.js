@@ -123,21 +123,21 @@ $(document).ready(function(){
 
         output += `
         <div class="row pt-4 pb-2">
-            <div class="col-5 offset-1">
+            <div class="col-md-6 col-lg-5 offset-lg-1 order-2 order-md-1">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-10 col-sm-6 col-md-12 col-lg-8 col-xl-6">
                             <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
                             <h2>${item.title}</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-10 col-sm-6 col-md-12 col-lg-8 col-xl-6">
                         <p class="mb-3">${firstLine}</p>
                         <a href="${item.link}" class="btn btn-secondary" target='_blank'>Read More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="mb-2 mb-md-0 col-sm-10 col-md-6 col-lg-5 order-1 order-md-2">
                 <img class="img-fluid" src="${item.thumbnail}">
             </div>
         </div>
