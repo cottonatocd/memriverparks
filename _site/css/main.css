@@ -7098,7 +7098,7 @@ a.event-image:hover h3, a.event-image:hover h2 {
     height: 300px;
     margin-bottom: calc(50vh - 150px); }
 
-  #districts-section {
+  #districts-section, #parks-hero {
     height: auto; }
 
   .district {
