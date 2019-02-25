@@ -6829,7 +6829,8 @@ button.navbar-toggler:focus {
 
 .district {
   width: 20%;
-  transition: width 500ms; }
+  transition: width 500ms;
+  height: 100%; }
   .district img {
     mix-blend-mode: multiply; }
 
@@ -6881,10 +6882,12 @@ button.navbar-toggler:focus {
   #parks-hero.clicked .district.clicked img {
     margin: auto; }
 
-.district-link .district-logo {
-  display: block; }
-.district-link .district-logo-hover {
-  display: none; }
+.district-link {
+  height: 100%; }
+  .district-link .district-logo {
+    display: block; }
+  .district-link .district-logo-hover {
+    display: none; }
 
 .district-link:hover .district-logo {
   display: none; }
@@ -7096,10 +7099,14 @@ a.event-image:hover h3, a.event-image:hover h2 {
     margin-bottom: calc(50vh - 150px); }
 
   #districts-section {
-    height: 300px; }
+    height: auto; }
 
   .district {
-    width: 100%; } }
+    width: 100%;
+    height: auto; }
+
+  .district-link {
+    height: auto; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }

@@ -436,10 +436,13 @@ button.navbar-toggler:focus {
 .district{
     width:20%;
     transition: width 500ms;
+    height:100%;
     img{
         mix-blend-mode: multiply;
     }
 }
+
+
 
 .greenbelt{
     background-color: $greenbelt;
@@ -509,6 +512,9 @@ button.navbar-toggler:focus {
 }
 
 .district-link{
+
+    height:100%;
+
     .district-logo{
         display: block;
     }
@@ -757,10 +763,14 @@ a.event-image:hover {
         margin-bottom: calc(50vh - 150px);
     }
     #districts-section {
-        height: 300px;
+        height: auto;
     }
     .district {
         width: 100%;
+        height:auto;
+    }
+    .district-link{
+        height:auto;
     }
   }
 
