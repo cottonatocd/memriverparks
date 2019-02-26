@@ -40,36 +40,14 @@ title: About
         </div>
     </div>
     <div class="row">
+        {% assign staff = site.data.staff %}
+        {% for staffmember in staff %}
             <div class="col-6 col-sm-4 col-md-3 mb-4">
-                    <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-                    <p class="lead editable">Lauren Ipson</p>
-                    <p class="editable">Title of Titling Dolor sit Amet</p>
-                </div>
-        <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-                <p class="lead editable">Lauren Ipson</p>
-                <p class="editable">Title of Titling Dolor sit Amet</p>
+                <img class="img-fluid mb-3" src="../assets/images/{{ staffmember.image }}">
+                <p class="lead">{{ staffmember.name }}</p>
+                <p>{{ staffmember.title }}</p>
             </div>
-        <div class="col-6 col-sm-4 col-md-3 mb-4">
-            <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-            <p class="lead editable">Lauren Ipson</p>
-            <p class="editable">Title of Titling Dolor sit Amet</p>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-                <p class="lead editable">Lauren Ipson</p>
-                <p class="editable">Title of Titling Dolor sit Amet</p>
-            </div>
-        <div class="col-6 col-sm-4 col-md-3 mb-4">
-            <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-            <p class="lead">Lauren Ipson</p>
-            <p>Title of Titling Dolor sit Amet</p>
-        </div>
-        <div class="col-6 col-sm-4 col-md-3 mb-4">
-            <img class="img-fluid mb-3" src="../assets/images/headshot-placeholder.png">
-            <p class="lead">Lauren Ipson</p>
-            <p>Title of Titling Dolor sit Amet</p>
-        </div>
+        {% endfor %}
     </div>
 </div>
 <div class="container-fluid bg-grey py-4">
