@@ -2,3 +2,789 @@
 ---
 
 @import 'bootstrap/bootstrap';
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Medium.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Medium.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Medium.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Bold.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Bold.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT Haptik';
+    src:  url("../assets/fonts/GT-Haptik-Black.woff2") format('woff2'),
+          url("../assets/fonts/GT-Haptik-Black.woff") format('woff'),
+          url("../assets/fonts/GT-Haptik-Black.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+p{
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    letter-spacing: 0.19px;
+    line-height: 20px;
+    color:black;
+    margin-bottom:10px;
+}
+
+.bg-grey{
+    background-color:#F7F7F7;
+}
+
+.bg-dark *{
+    color:white;
+    p, h1, h2, h3{
+        color:white !important;
+    }
+}
+
+.text-decoration-none{
+    text-decoration:none !important;
+}
+
+a:not(.btn):not(.nav-link){
+    color:inherit;
+    text-decoration: underline;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+ }
+
+p.lead{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 21px;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: 24px;
+    margin-bottom:10px;
+    font-weight:400;
+}
+
+h1{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 50px;
+    letter-spacing: 0.86px;
+    line-height: 50px;
+    font-weight:700;
+    margin-bottom:30px;
+    color:black;
+}
+
+h2{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.6px;
+    line-height: 33px;
+    font-weight:400;
+    margin-bottom:20px;
+    color:black;
+}
+
+h3{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-weight:900;
+    font-size: 18px;
+    color: #000000;
+    letter-spacing: 0.34px;
+    text-transform: uppercase;
+    color:black;
+}
+// .nav-placeholder{
+//     position:fixed;
+//     top:0px;
+// }
+
+.navbar{
+    padding:24px 0px;
+}
+
+.navbar .btn{
+    margin-left:21px;
+}
+
+.nav-item{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    font-weight:900;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:black;
+    padding-left: 21px;
+    padding-right: 21px;
+}
+
+.navbar-brand{
+    height:91px;
+    width:34%;
+}
+
+.navbar-brand .logo{
+    width:163px;
+    height:91px;
+    background-image: url("../assets/images/memphis-river-parks-logo.png");
+    background-size:163px 91px;
+}
+
+.nav-right{
+    width:34%;
+}
+
+a.btn, span.btn{
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover{
+    color:black !important;
+    font-weight:900 !important;
+    animation-name: bgcolorchange1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    -webkit-animation-name: bgcolorchange1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-end;
+    border: 0px;
+    padding: 10px 20px;
+    letter-spacing: 0.76px;
+}
+
+a.btn.btn-primary.external:after{
+    background-image: url(../assets/images/external-white.svg);
+}
+
+
+a.btn.btn-primary, span.btn.btn-primary{
+    background-color:black;
+    color:white;
+    font-weight:700;
+    border: 0px;
+    padding: 10px 20px;
+    letter-spacing: 0.87px;
+}
+
+a.btn.btn-secondary{
+    background-color:rgba(0,0,0,0);
+    color:black;
+    font-weight:900;
+    border: 3px solid black;
+    padding: 7.1px 17.2px;
+}
+
+span.btn.btn-secondary{
+    background-color:rgba(0,0,0,0);
+    color:black;
+    font-weight:900;
+    border: 3px solid black;
+    padding: 7.1px 17.2px;
+}
+
+a.external:after, svg.external:after{
+    display: inline-block;
+  content: ' ';
+  background-image: url(../assets/images/external.svg);
+  background-size: 10px 11px;
+  height: 11px;
+  width: 10px;
+  margin-left:10px;
+}
+
+.dropdown-toggle::before {
+    display: inline-block;
+    width: 12.31px;
+    height: 7.62px;
+    margin-right: 12px;
+    content: ' ';
+    background-image: url(../assets/images/caret.svg);
+    background-size: 12.31px 7.62px;
+    transition: transform 300ms;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-toggle[aria-expanded="true"]::before{
+    transform: rotate(180deg);
+  }
+
+.dropdown-menu.show {
+    list-style: none;
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+    border-radius: 0px;
+
+    li {
+        margin-top: 10px;
+        margin-left: 40px;
+        overflow: hidden;
+        border-radius: 100px;
+
+        a.btn{
+            animation-duration: 500ms;	
+	        -webkit-animation-duration: 500ms;
+	        animation-timing-function: ease;	
+            -webkit-animation-timing-function: ease;	
+            animation-fill-mode:forwards;
+            position:relative;
+            margin-left:0px;
+            left: -100%;
+            visibility:hidden;
+
+        }
+    }
+
+    li:nth-child(1) {
+        a.btn.animate-me { 
+            animation-name: slideIn1;
+            -webkit-animation-name: slideIn1;
+            animation-delay: 0s; 
+        }
+    }
+    li:nth-child(2) {
+        a.btn.animate-me { 
+            animation-name: slideIn2;
+            -webkit-animation-name: slideIn2;
+            animation-delay: .1s; 
+        }
+    }
+    li:nth-child(3) {
+        a.btn.animate-me { 
+            animation-name: slideIn3;
+            -webkit-animation-name: slideIn3;
+            animation-delay: .2s; 
+        }
+    }
+    li:nth-child(4) {
+        a.btn.animate-me { 
+            animation-name: slideIn4;
+            -webkit-animation-name: slideIn4;
+            animation-delay: .3s; 
+        }
+    }
+}
+
+.bg-dark {
+    background-color:black;
+
+    a.btn.btn-primary{
+        background-color:white;
+        color:black;
+        font-weight:900;
+        letter-spacing: 0.76px;
+    }
+    
+    a.btn.btn-secondary{
+        background-color:rgba(0,0,0,0);
+        color:white;
+        border: 3px solid white;
+        font-weight:700;
+    }
+}
+
+.container{
+    padding:0px 50px;
+}
+
+.container-fluid{
+    padding:0px;
+}
+
+.dropdown-menu.show li a.btn:hover{
+    color:black;
+    font-weight:900;
+    animation-name: bgcolorchange1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end;
+    -webkit-animation-name: bgcolorchange1;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-end;
+    left: 0px;
+    visibility: visible
+    //   background-image:url('join-us-black.svg');
+}
+
+.collapse.show {
+    // padding-top: 40px;
+}
+
+.nav-wrapper, .nav-wrapper *{
+    transition: 300ms;
+    nav{
+        height:130px;
+    }
+}
+
+.nav-wrapper.fixed{
+    height:78px;
+    background-color:#F7F7F7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    nav{
+        height:78px;
+    }
+    .navbar-brand {
+        height:auto;
+        .logo{
+            width:97px;
+            height:54px;
+            background-image: url("../assets/images/memphis-river-parks-logo.png");
+            background-size:97px 54px;
+        }
+    }
+    
+}
+
+button.navbar-toggler:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+    
+
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .ham4 .top {
+    stroke-dasharray: 40 121;
+  }
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
+  }
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+  }
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#000;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+
+  .navbar-light .navbar-toggler {
+    color: black !important;
+    //border-color: rgba(0, 0, 0, 0.1);
+    border:0px solid black !important;
+}
+
+.icons a{
+    margin:10px;
+    img{
+        height:20px;
+        width:auto;
+    }
+}
+
+.hero{
+    text-align:center;
+    padding: 0px;
+
+    .left-content{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+.hero-img{
+    height:622px;
+    width:100%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.district{
+    width:20%;
+    transition: width 500ms;
+    height:100%;
+    img{
+        mix-blend-mode: multiply;
+    }
+}
+
+
+
+.greenbelt{
+    background-color: $greenbelt;
+}
+.mud-island{
+    background-color: $mud-island;
+}
+.fourth-bluff{
+    background-color: $fourth-bluff;
+}
+.big-river{
+    background-color: $big-river;
+}
+.mlk{
+    background-color: $mlk;
+}
+
+
+// ABOUT PAGE
+#about-hero{
+    height:800px;
+}
+
+#about-hero h1, #mission h1 {
+    max-width: 900px;
+    margin: auto;
+}
+
+#faq-section{
+    .faq{
+        border-bottom: 1px solid #C8C8C8;
+        a{
+            text-decoration: none;
+        }
+        h2{
+            margin:0px;
+        }
+    }
+}
+
+.seasonal-img{
+    height:450px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#parks-hero{
+    height:100vh;
+}
+
+#districts-section{
+    height:600px;
+}
+
+#parks-hero.clicked{
+    .district.hidden{
+        width:0px;
+    }
+    .district.clicked{
+        width:100%;
+        img{
+            margin:auto;
+        }
+    }
+
+}
+
+.district-link{
+
+    height:100%;
+
+    .district-logo{
+        display: block;
+    }
+    .district-logo-hover{
+        display:none;
+    }
+}
+
+.district-link:hover{
+    .district-logo{
+        display: none;
+    }
+    .district-logo-hover{
+        display:block;
+    }
+}
+
+// .half-height{
+//     height:80vh;
+// }
+
+.round{
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    margin:auto;
+    margin-bottom:calc(50vh - 225px);
+}
+
+.landing-hero{
+    background-image: url('../assets/images/landing.png');
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:100vh;
+    width:100vw;
+    position:fixed;
+    top:0px;
+    left:0px;
+    z-index:-1;
+}
+.landing-hero-after{
+    height:100vh;
+    width:100vw;
+}
+
+.img-container{
+    span.btn{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 28%;
+        left: 50%;
+        display:none;
+    }
+}
+
+a.event-image:hover {
+    .img-container {
+        animation-name: bgcolorchange5;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-end;
+        -webkit-animation-name: bgcolorchange5;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: step-end;
+
+        span.btn{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 28%;
+            left: 50%;
+            display:inherit;
+        }
+    }
+    img{
+        visibility:hidden;
+    }
+    h3, h2{
+        animation-name: event-hover-text;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-end;
+        -webkit-animation-name: event-hover-text;
+        -webkit-animation-duration: 2s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: step-end;
+    }
+}
+
+
+    
+
+
+.navbar-light .navbar-nav .nav-link:hover, a:hover{ 
+    color: #f05f22 !important; 
+}
+
+
+
+@keyframes bgcolorchange1 {
+  0% {background-color: #f05f22;}
+  25% {background-color: #ffc818;}
+  50% {background-color: #298fce;}
+  75% {background-color: #e684a1;}
+  100% {background-color: #44b549;}
+}
+@keyframes bgcolorchange2 {
+    0% {background-color: #ffc818;}
+    25% {background-color: #298fce;}
+    50% {background-color: #e684a1;}
+    75% {background-color: #44b549;}
+    100% {background-color: #f05f22;}
+}
+@keyframes bgcolorchange3 {
+    0% {background-color: #298fce;}
+    25% {background-color: #e684a1;}
+    50% {background-color: #44b549;}
+    75% {background-color: #f05f22;}
+    100% {background-color: #ffc818;}
+}
+@keyframes bgcolorchange4 {
+    0% {background-color: #e684a1;}
+    25% {background-color: #44b549;}
+    50% {background-color: #f05f22;}
+    75% {background-color: #ffc818;}
+    100% {background-color: #298fce;}
+}
+@keyframes bgcolorchange5 {
+    0% {background-color: #44b549;}
+    25% {background-color: #f05f22;}
+    50% {background-color: #ffc818;}
+    75% {background-color: #298fce;}
+    100% {background-color: #e684a1;}
+}
+
+@keyframes event-hover-text {
+    0% {color: #44b549;}
+    25% {color: #f05f22;}
+    50% {color: #ffc818;}
+    75% {color: #298fce;}
+    100% {color: #e684a1;}
+}
+
+ @keyframes slideIn1 { 
+    0% {
+      left: -100%;
+      color: rgba(0,0,0,0);
+      background-color:#f05f22;
+    }
+    50%{
+        color: rgba(0,0,0,0);
+        background-color:#f05f22;
+    }
+    100% {
+      left: 0px;
+      color: white;
+      background-color:black;
+      visibility:visible;
+    }
+  }
+
+  @keyframes slideIn2 { 
+    0% {
+      left: -100%;
+      color: rgba(0,0,0,0);
+      background-color:#ffc818;
+    }
+    50%{
+        color: rgba(0,0,0,0);
+        background-color:#ffc818;
+    }
+    100% {
+      left: 0px;
+      color: white;
+      background-color:black;
+      visibility:visible;
+    }
+  }
+
+  @keyframes slideIn3 { 
+    0% {
+      left: -100%;
+      color: rgba(0,0,0,0);
+      background-color:#298fce;
+    }
+    50%{
+        color: rgba(0,0,0,0);
+        background-color:#298fce;
+    }
+    100% {
+      left: 0px;
+      color: white;
+      background-color:black;
+      visibility:visible;
+    }
+  }
+
+  @keyframes slideIn4 { 
+    0% {
+      left: -100%;
+      color: rgba(0,0,0,0);
+      background-color:#e684a1;
+    }
+    50%{
+        color: rgba(0,0,0,0);
+        background-color:#e684a1;
+    }
+    100% {
+      left: 0px;
+      color: white;
+      background-color:black;
+      visibility:visible;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .nav-wrapper nav, .nav-wrapper * nav {
+        height: auto;
+    }
+    
+  }
+
+  @media (max-width: 768px){
+    .container {
+        padding: 0px 30px;
+    }
+    h1{
+        font-size: 36px;
+        letter-spacing: 0.86px;
+        line-height: 36px;
+
+    }
+    h2{
+        font-size: 26px;
+        letter-spacing: 0.6px;
+        line-height: 28px;
+    }
+    h3{
+        font-size:16px;
+    }
+    .round {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        margin-bottom: calc(50vh - 150px);
+    }
+    #districts-section, #parks-hero {
+        height: auto;
+    }
+    .district {
+        width: 100%;
+        height:auto;
+    }
+    .district-link{
+        height:auto;
+    }
+    .hero-img{
+        height:450px;
+    }
+    p.lead {
+        font-size: 18px;
+        letter-spacing: 0.39px;
+        line-height: 20px;
+    }
+  }
+
+
+  @media (min-width: 1700px) {   
+        .hero-img{
+            height:1000px;
+        } 
+    }

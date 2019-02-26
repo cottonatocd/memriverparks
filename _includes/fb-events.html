@@ -1,0 +1,108 @@
+<script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '556297018114224',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v3.2'
+        });
+
+        var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
+
+        FB.api('/870962136249359/events?time_filter=upcoming', {
+            access_token : pageAccessToken },
+            function (response) {
+
+                if (response && !response.error) {
+
+                    var renderedEvents = '';
+
+                    response.data.forEach((item) => {
+
+                        let today  = new Date();
+                        let date = new Date(item.start_time);
+                        let image = '';
+
+                        FB.api('/' + item.id + '?fields=cover', {
+                            access_token : pageAccessToken },
+                            function (response) {
+                                if (response && !response.error) {
+                                    image = response.cover.source;
+                                    renderedEvents += createSingleEvent(item, date, image);
+                                    const eventsContainer = document.getElementById('upcoming-events');
+                                    eventsContainer.innerHTML = renderedEvents;
+                                } else {
+                                    console.log(response.error);
+                                }
+                            }
+                        );
+
+                    });
+
+                } else {
+                    console.log(response.error);// make sure to handle errors
+                }
+
+            });
+
+
+            
+            FB.api('/870962136249359/events?time_filter=past&limit=9 ', {
+            access_token : pageAccessToken },
+            function (response) {
+
+                if (response && !response.error) {
+
+                    var renderedEvents = '';
+
+                    response.data.forEach((item) => {
+
+                        let today  = new Date();
+                        let date = new Date(item.start_time);
+                        let image = '';
+
+                        FB.api('/' + item.id + '?fields=cover', {
+                            access_token : pageAccessToken },
+                            function (response) {
+                                if (response && !response.error) {
+                                    image = response.cover.source;
+                                    renderedEvents += createSingleEvent(item, date, image);
+                                    const eventsContainer = document.getElementById('past-events');
+                                    eventsContainer.innerHTML = renderedEvents;
+                                } else {
+                                    console.log(response.error);
+                                }
+                            }
+                        );
+                    });
+
+                } else {
+                    console.log(response.error);// make sure to handle errors
+                }
+            });
+
+
+
+        };
+
+
+        (function(d, s, id){
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {return;}
+          js = d.createElement(s); js.id = id;
+          js.src = "https://connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function createSingleEvent(item, date, img){
+            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+            var end = new Date(item.end_time);
+            return "<div class='col-12 col-sm-6 col-md-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id + " ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='" + img + "'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+        }
+
+
+
+
+
+
+</script>
