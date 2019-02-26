@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     //PARKS TRANSITION & LOAD
 
-    $('#parks-hero a').click(function(e){
+    $('.districts a').click(function(e){
         e.preventDefault(); 
         $('#parks-hero').addClass('clicked');
         $('#parks-hero').find('.district').addClass('hidden');
@@ -33,7 +33,9 @@ $(document).ready(function(){
         $(this).find('.after-click').removeClass('d-none');
         $(this).find('.before-click').addClass('d-none');
 
-        var url = "../../" + this.id + ".html";
+        var url = "../../parks/" + this.id;
+        console.log("id: " + this.id);
+        console.log(url);
         $("#district-content").html("<p>loading...</p>").load(url);
     });
 
