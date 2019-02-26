@@ -1,9 +1,16 @@
 # Site settings
-title:
-email:
+title: Memphis River Parks Partnership
+email: info@memphisriverparks.org
 author:
 description:
 url:
+
+# Social links
+facebook: https://www.facebook.com/memriverparks/
+instagram: https://www.instagram.com/memriverparks/
+twitter: https://twitter.com/memriverparks
+medium: https://medium.com/memriverparks
+
 
 # Build settings
 # permalink: :title/
