@@ -43,7 +43,7 @@ title: About
         {% assign staff = site.data.staff %}
         {% for staffmember in staff %}
             <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <img class="img-fluid mb-3" src="../assets/images/{{ staffmember.image }}">
+                <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="../assets/images/{{ staffmember.image }}">
                 <p class="lead">{{ staffmember.name }}</p>
                 <p>{{ staffmember.title }}</p>
             </div>
