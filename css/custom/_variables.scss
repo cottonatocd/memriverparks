@@ -1,1 +1,41 @@
-$primary: #8d021f; // burgundy
+$primary: #000000; // burgundy
+
+$greenbelt: #f05f22;
+$mud-island: #ffc818;
+$fourth-bluff: #298fce;
+$big-river: #e684a1;
+$mlk: #44b549;
+
+$grid-gutter-width: 60px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1600px
+);
+
+$container-max-widths: (
+  sm: 1600px,
+  md: 1600px,
+  lg: 1600px,
+  xl: 1600px
+);
+
+$spacers: (
+  0: 0px,
+  1: 10px,
+  2: 20px,
+  3: 30px,
+  4: 50px,
+  5: 100px
+);
+
+$dark: #000000;
+$light: #f7f7f7;
