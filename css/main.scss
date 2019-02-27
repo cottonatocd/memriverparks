@@ -546,6 +546,73 @@ button.navbar-toggler:focus {
     height: 450px;
     margin:auto;
     margin-bottom:calc(50vh - 225px);
+
+    position:relative;
+
+    .form{
+        display:none;
+    }
+    .tagline{
+        display:block;
+    }
+    .join{
+        position:absolute;
+        bottom:70px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+.round.form-active{
+    background-color:white !important;
+    .tagline{
+        display:none;
+    }
+    .form{
+        display:block;
+    }
+}
+
+input.btn.btn-primary{
+    background-color: $mud-island;
+    color:black;
+    border:0px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-weight:900;
+    padding: 10px 20px;
+    position:absolute;
+    bottom:70px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+input.btn.btn-primary:hover{
+    background-color: $mlk;
+}
+
+input#mce-EMAIL {
+    text-align: center;
+    font-family: GTHaptik-Medium;
+    font-size: 32px;
+    color:black;
+    letter-spacing: 0.6px;
+    text-align: center;
+    line-height: 50px;
+    border:0px;
+    width:100%;
+    outline:none;
+}
+
+input#mce-Email:focus{
+    outline: none !important;
+}
+
+input#mce-EMAIL::placeholder{
+    color: #CCCCCC;
 }
 
 .landing-hero{

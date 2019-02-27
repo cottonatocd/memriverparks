@@ -78,6 +78,12 @@ $(document).ready(function(){
     });
 
 
+    // ROUND SUBSCRIBE ACTION HOME PAGE
+    $('.join').on('click', function(e){
+        e.preventDefault(); 
+        $('.round').addClass("form-active");
+    })
+
     // DROPDOWN MENU EVENTS
 
     $(".dropdown-menu li a.btn").mouseenter(
