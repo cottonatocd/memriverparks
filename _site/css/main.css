@@ -6923,6 +6923,12 @@ button.navbar-toggler:focus {
   left: 50%;
   display: none; }
 
+a.event-image span {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  display: none; }
+
 a.event-image:hover .img-container {
   animation-name: bgcolorchange5;
   animation-duration: 2s;
@@ -6932,11 +6938,7 @@ a.event-image:hover .img-container {
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: step-end; }
-  a.event-image:hover .img-container span.btn {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 28%;
-    left: 50%;
+  a.event-image:hover .img-container span {
     display: inherit; }
 a.event-image:hover img {
   visibility: hidden; }

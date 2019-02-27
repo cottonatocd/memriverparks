@@ -575,6 +575,15 @@ button.navbar-toggler:focus {
     }
 }
 
+a.event-image{
+    span{
+        position: absolute;
+        top: 10px;
+        right: 45px;
+        display:none;
+    }
+}
+
 a.event-image:hover {
     .img-container {
         animation-name: bgcolorchange5;
@@ -586,11 +595,7 @@ a.event-image:hover {
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: step-end;
 
-        span.btn{
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 28%;
-            left: 50%;
+        span{
             display:inherit;
         }
     }
