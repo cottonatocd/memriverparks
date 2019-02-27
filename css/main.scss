@@ -160,11 +160,11 @@ a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary
     animation-name: bgcolorchange1;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: step-end;
+    //animation-timing-function: step-end;
     -webkit-animation-name: bgcolorchange1;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: step-end;
+    //-webkit-animation-timing-function: step-end;
     border: 0px;
     padding: 10px 20px;
     letter-spacing: 0.76px;
@@ -249,9 +249,12 @@ a.external:after, svg.external:after{
             animation-fill-mode:forwards;
             position:relative;
             margin-left:0px;
-            left: -100%;
-            visibility:hidden;
-
+           left: -100%;
+           visibility:hidden;
+        }
+        a.btn.post-animation{
+            visibility:visible;
+            left: 0px;
         }
     }
 
@@ -322,8 +325,8 @@ a.external:after, svg.external:after{
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: step-end;
-    left: 0px;
-    visibility: visible
+    left: 0px !important;
+    visibility: visible !important;
     //   background-image:url('join-us-black.svg');
 }
 
@@ -611,7 +614,7 @@ a.event-image:hover {
 
 
 .navbar-light .navbar-nav .nav-link:hover, a:hover{ 
-    color: #f05f22 !important; 
+  //  color: #f05f22 !important; 
 }
 
 

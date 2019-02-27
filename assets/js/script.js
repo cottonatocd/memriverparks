@@ -18,7 +18,6 @@ $(document).ready(function(){
         } else {
             $navBar.removeClass('fixed');
         }
-
     });
 
 
@@ -76,6 +75,21 @@ $(document).ready(function(){
         }
     
         document.getElementsByTagName('head')[0].appendChild(style);
+    });
+
+
+    // DROPDOWN MENU EVENTS
+
+    $(".dropdown-menu li a.btn").mouseenter(
+        function() {
+            $(this).removeClass("animate-me").addClass("post-animation");
+        }
+    );
+
+    $('.dropdown-toggle').dropdown();
+
+    $(document).on("shown.bs.dropdown", ".dropdown", function (e) {
+        $(".dropdown-menu li a.btn").removeClass("post-animation").addClass("animate-me");
     });
 
 
