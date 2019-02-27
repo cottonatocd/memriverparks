@@ -6532,6 +6532,9 @@ a.disabled {
   pointer-events: none;
   cursor: default; }
 
+.full-height {
+  height: 100vh; }
+
 p.lead {
   font-family: "GT Haptik", Helvetica, sans-serif;
   font-size: 21px;
@@ -6605,6 +6608,10 @@ a.btn, span.btn {
   letter-spacing: 0.76px;
   text-transform: uppercase;
   border-radius: 100px; }
+
+.page-404 {
+  background: #44b549;
+  transition: 1s; }
 
 a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover {
   color: black !important;

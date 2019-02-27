@@ -78,6 +78,27 @@ $(document).ready(function(){
     });
 
 
+    // 404 BG COLOR CHANGE
+    var colors = palette;
+    var currentColor = 0;
+    var lis = document.getElementById("#page-404");
+
+    console.log(lis);
+    
+    function changeColor() {
+      ++currentColor
+      if (currentColor < 0) {
+          currentColor = colors.length -1
+      }
+      
+        lis.style.background = colors[currentColor];
+      
+    }
+    
+    setInterval(changeColor, 2000);
+
+
+
     // ROUND SUBSCRIBE ACTION HOME PAGE
     $('.join').on('click', function(e){
         e.preventDefault(); 

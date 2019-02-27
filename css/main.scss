@@ -64,6 +64,10 @@ a.disabled {
     cursor: default;
  }
 
+.full-height{
+    height:100vh;
+}
+
 p.lead{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 21px;
@@ -152,6 +156,18 @@ a.btn, span.btn{
     letter-spacing: 0.76px;
     text-transform: uppercase;
     border-radius: 100px;
+}
+
+.page-404{
+    // animation-name: bgcolorchange1;
+    // animation-duration: 15s;
+    // animation-iteration-count: infinite;
+    // -webkit-animation-name: bgcolorchange1;
+    // -webkit-animation-duration: 15s;
+    // -webkit-animation-iteration-count: infinite;
+    background:#44b549;
+    transition:1s;
+
 }
 
 a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover{
