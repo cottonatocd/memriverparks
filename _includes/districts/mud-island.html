@@ -1,0 +1,43 @@
+<div class="container py-3">
+    {% assign attractions = site.data.mud-island %}
+    {% for att in attractions %}
+    <div class="row my-5">
+        <div class="col-6">
+            <h1>{{ att.title }}</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead">{{ att.hours }}</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6">
+                    {% if att.directions %}
+                        <h3>Get Here</h3>
+                        <p>{{ att.directions }}</p>
+                        <p><a href="{{ att.map-link }}" class="external">View on Map</a></p>
+                    {% endif %}
+                    {% if att.bikeshare-info %}
+                        <h3 class="mt-3">Bike Share</h3>
+                        <p>{{ att.bikeshare-info }}</p>
+                    {% endif %}
+                </div>
+                <div class="col-6">
+                        {% if att.parking %}
+                            <h3>Parking</h3>
+                            <p>{{ att.parking }}</p>
+                        {% endif %}
+                        {% if att.rental-info %}
+                            <h3 class="mt-3">Rent</h3>
+                            <p>{{ att.rental-info }}</p>
+                            <p><a href="{{ post.rent-link }}" class="external">Send an Inquiry</a></p>
+                        {% endif %}
+                    </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <img class="img-fluid" src="{{ site.url }}/assets/images/parks/{{ att.image }}" />
+        </div>
+    </div>
+    {% endfor %}
+   
+</div>

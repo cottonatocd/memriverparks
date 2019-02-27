@@ -1,26 +1,24 @@
 - title: Parks
-  url: /parks.html
+  url: /parks
 - title: Events
-  url: /events.html
+  url: /events
 - title: Partnership
-  url: /support.html
   sublinks:
     - title: About
-      url: /about.html
+      url: /about
     - title: News
-      url: /news.html
+      url: /news
     - title: FAQ
-      url: /faq.html
+      url: /faq
     - title: Contact
-      url: /contact.html
+      url: /contact
 - title: Participate
-  url: /support.html
   sublinks:
     - title: River Parks People
-      url: /river-parks-people.html
+      url: /river-parks-people
     - title: Work With Us
-      url: /documentation.html
+      url: /#
       type: external
     - title: Donate
-      url: /customer-support.html
+      url: /#
       type: external

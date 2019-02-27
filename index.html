@@ -28,36 +28,7 @@ title: Memphis River Parks
         </div>
 </div>
 <div class="container-fluid clearfix" id="districts-section">
-        <a href="greenbelt.html" class="text-decoration-none district-link">
-                <div class="district text-center greenbelt float-left align-items-center d-flex">
-                    <img class="img-fluid before-click" src="assets/images/districts/greenbelt.png" onmouseenter="this.src ='assets/images/districts/greenbelt.gif';" onmouseout="this.src = 'assets/images/districts/greenbelt.png';" />
-                    <img class="img-fluid after-click d-none" src="assets/images/districts/greenbelt.png" />
-                </div>
-        </a>
-        <a href="mud-island.html" class="text-decoration-none district-link">
-            <div class="district text-center mud-island float-left align-items-center d-flex">
-                    <img class="img-fluid before-click" src="assets/images/districts/mud-island.png" onmouseenter="this.src ='assets/images/districts/mud-island.gif';" onmouseout="this.src = 'assets/images/districts/mud-island.png';" />
-                    <img class="img-fluid after-click d-none" src="assets/images/districts/mud-island.png" />
-            </div>
-        </a>
-        <a href="fourth-bluff.html" class="text-decoration-none district-link">
-                <div class="district text-center fourth-bluff float-left align-items-center d-flex">
-                    <img class="img-fluid before-click" src="assets/images/districts/fourth-bluff.png" onmouseenter="this.src ='assets/images/districts/fourth-bluff.gif';" onmouseout="this.src = 'assets/images/districts/fourth-bluff.png';" />
-                    <img class="img-fluid after-click d-none" src="assets/images/districts/fourth-bluff.png" />
-                </div>
-        </a>
-        <a href="big-river.html" class="text-decoration-none district-link">
-            <div class="district text-center big-river float-left align-items-center d-flex">
-                <img class="img-fluid before-click" src="assets/images/districts/big-river.png" onmouseenter="this.src ='assets/images/districts/big-river.gif';" onmouseout="this.src = 'assets/images/districts/big-river.png';" />
-                <img class="img-fluid after-click d-none" src="assets/images/districts/big-river.png" />
-            </div>
-        </a>
-        <a href="mlk.html" class="text-decoration-none district-link">
-            <div class="district text-center mlk float-left align-items-center d-flex">
-                <img class="img-fluid before-click" src="assets/images/districts/mlk.png" onmouseenter="this.src ='assets/images/districts/mlk.gif';" onmouseout="this.src = 'assets/images/districts/mlk.png';" />
-                <img class="img-fluid after-click d-none" src="assets/images/districts/mlk.png" />
-            </div>
-        </a>
+    {% include districts.html %}
 </div>
 <div class="container-fluid bg-white">
     <div class="container py-4 py-lg-5">
@@ -71,25 +42,14 @@ title: Memphis River Parks
     </div>
 </div>
 <div class="container-fluid text-left bg-light">
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-10 col-sm-6 col-lg-3 order-2 order-md-1">
-                    <h2>Host your next event at the river.</h2>
-                    <p>There are many options to host weddings, birthday parties, family reunions and more at the riverfront. We charge rental fees based on the impact to the park and to the public.</p>
-                    <a href="#" class="btn btn-primary mt-3">Get Started</a>
-                </div>
-                <div class="col-md-6 col-lg-8 offset-lg-1 order-1 order-md-2 mb-3 mb-md-0">
-                    <img class="img-fluid" src="../assets/images/rent-1.png" />
-                </div>
-            </div>
-        </div>
+        {% include rent.html %}
     </div>
     <div class="container-fluid bg-white">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-lg-3">
-                        <p class="lead mb-3">See the latest news from the Partnership here.</p>
-                        <a href="news.html" class="btn btn-primary mb-4 mb-lg-0">See What's New</a>
+                        <p class="lead mb-3 editable">See the latest news from the Partnership here.</p>
+                        <a href="news.html" class="btn btn-primary mb-4 mb-lg-0 editable">See What's New</a>
                     </div>
                     
                     <div id="news-items-selection" class="col-lg-8 offset-lg-1">

@@ -4,160 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Memphis River Parks</title>
+        <title>Fourth Bluff</title>
       
         <link rel="stylesheet" href="/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
 </head>
   <body>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId            : '556297018114224',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.2'
-        });
-
-        var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
-
-        FB.api('/870962136249359/events?time_filter=upcoming', {
-            access_token : pageAccessToken },
-            function (response) {
-
-                if (response && !response.error) {
-                    /* handle the result */
-                    // const renderedEvents = document.createDocumentFragment();
-                    var renderedEvents = '';
-
-                    // loop through the events
-                    response.data.forEach((item) => {
-                    
-                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
-                        // need to pass the manipulated data to this function
-
-                        var apiStr = "/" + item.id + "/picture";
-
-                        // FB.api(
-                        //     apiStr, {
-                        //         access_token : pageAccessToken
-                        //     },
-                        //     function (response) {
-                        //         if (response && !response.error) {
-                        //             /* handle the result */
-                        //             console.log(response);
-                        //         }
-                        //     }
-                        // );
-
-                        // console.log(item);
-
-                        var today  = new Date();
-                        var date = new Date(item.start_time);
-
-                        if (item.event_times){
-                            // console.log(item);
-                            // for(var i=0;i<item.event_times.length;i++){
-                            //     console.log(new Date(item.event_times[i].start_time));
-                            // }
-                        }
-                        // if (date > today){
-                            renderedEvents += createSingleEvent(item, date);
-                        // }
-
-                    });
-
-                    // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
-                    const eventsContainer = document.getElementById('upcoming-events');
-
-                    // inject the rendered events into the dom 
-                    eventsContainer.innerHTML = renderedEvents;
-
-                } // make sure to handle errors
-            });
-
-
-
-            FB.api('/870962136249359/events?time_filter=past&limit=2 ', {
-            access_token : pageAccessToken },
-            function (response) {
-
-                if (response && !response.error) {
-                    /* handle the result */
-                    // const renderedEvents = document.createDocumentFragment();
-                    var renderedEvents = `
-                    <div class="col-10 col-sm-6 col-lg-4 col-xl-3">
-                        <p class="lead mb-3 editable">
-                            The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.
-                            </p>
-                        <a href="events.html" class="btn btn-primary mb-4">View Events</a>
-                    </div>
-                    <div class="d-none d-sm-block col-sm-6 d-lg-none d-xl-block col-lg-1"></div>`;
-
-                    // loop through the events
-                    response.data.forEach((item) => {
-                    
-                        // need to create a function to manipulate the event data (particularly the time) and pass it to the createSingleEvent function
-                        // need to pass the manipulated data to this function
-
-                        var apiStr = "/" + item.id + "/picture";
-
-                        // FB.api(
-                        //     apiStr, {
-                        //         access_token : pageAccessToken
-                        //     },
-                        //     function (response) {
-                        //         if (response && !response.error) {
-                        //             /* handle the result */
-                        //             console.log(response);
-                        //         }
-                        //     }
-                        // );
-                    
-                        
-
-                        var today  = new Date();
-                        var date = new Date(item.start_time);
-                        // if (date > today){
-                            renderedEvents += createSingleEvent(item, date);
-                        // }
-
-                    });
-
-                    // get the dom node that we'll inject the rendered events into (you'll need to make/adjust this id in your html)
-                    const eventsContainer = document.getElementById('past-events');
-
-                    // inject the rendered events into the dom 
-                    eventsContainer.innerHTML = renderedEvents;
-
-                } // make sure to handle errors
-            });
-
-
-
-        };
-
-
-        (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        function createSingleEvent(item, date){
-            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-            var end = new Date(item.end_time);
-            return "<div class='col-12 col-sm-6 col-lg-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id +" ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='../assets/images/event-placeholder.png'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
-        }
-
-
-
-
-
-
-</script>
     <div class="nav-placeholder">
 <div class="container-fluid nav-wrapper position-fixed">
   <div class="container">
@@ -293,32 +145,48 @@
 </div>
 </div>
     
-        <div class="landing-hero">
+    <div class="container-fluid clearfix districts clicked" id="parks-hero">
+        <a href="#" class="text-decoration-none district-link disabled" id="fourth-bluff">
+            <div class="district text-center fourth-bluff float-left align-items-center d-flex clicked">
+                <img class="img-fluid" src="http://localhost:4000/assets/images/districts/fourth-bluff.png" />
+            </div>
+        </a>
 </div>
-<div class="landing-hero-after"></div>
-<div class="container half-height">
-    <div class="round bg-dark text-center d-flex">
-        <div class="m-auto">
-                <h1 class="mb-3 mb-md-4 editable">Come<br>to<br>the<br>River</h1>
-                <a href="#" class="btn btn-primary">Join</a>
+<div class="container-fluid" id="district-content">
+        <div class="container py-3">
+    <div class="row my-5">
+        <div class="col-6">
+            <h1>Fourth Bluff</h1>
+            <div class="row">
+                <div class="col-6">
+                    <p class="lead">Closed.<br>Come back May 2020.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6">
+                    <h3>Get Here</h3>
+                    <p>Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.</p>
+                    <p><a href="#" class="external">View on Map</a></p>
+                    <h3 class="mt-3">Bike Share</h3>
+                    <p>There are Explore Bike Share stations located at the parking lot and at Beale Street Landing.</p>
+                </div>
+                <div class="col-6">
+                        <h3>Parking</h3>
+                        <p>Paid parking available in the River Parks Garage at Poplar and Front St.</p>
+                        <h3 class="mt-3">Rent the Park</h3>
+                        <p>Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.</p>
+                        <p><a href="#" class="external">Send an Inquiry</a></p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <img class="img-fluid" src="http://localhost:4000/assets/images/parks-placeholder.png" />
         </div>
     </div>
 </div>
-<div class="container-fluid bg-white py-5" id="mission">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-12 col-md-8 offset-md-2 text-center my-auto">
-                    <div>
-                        <h1 class="mb-md-4 editable">
-                            Memphis River Parks Partnership works with and for the people of Memphis to trigger the transformative power of our river.
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-</div>
-<div class="container-fluid clearfix" id="districts-section">
-    
+
+    <div class="container-fluid clearfix" id="districts-section">
+        
 <a href="http://localhost:4000/parks/greenbelt/" class="text-decoration-none district-link" id="greenbelt">
         <div class="district text-center greenbelt float-left align-items-center d-flex">
             <img class="img-fluid before-click" src="http://localhost:4000/assets/images/districts/greenbelt.png" onmouseenter="this.src ='http://localhost:4000/assets/images/districts/greenbelt.gif';" onmouseout="this.src = 'http://localhost:4000/assets/images/districts/greenbelt.png';" />
@@ -350,20 +218,69 @@
     </div>
 </a>
 
-</div>
-<div class="container-fluid bg-white">
-    <div class="container py-4 py-lg-5">
-        <div class="row" id="past-events">
-            <div class="col-10 col-md-3">
-                <p class="lead mb-3 editable">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
-                <a href="events.html" class="btn btn-primary editable">View Events</a>
-            </div>
-            <!-- Insert Events Here -->
-        </div>
     </div>
 </div>
-<div class="container-fluid text-left bg-light">
-        <div class="container py-4">
+
+
+    <div class="container-fluid bg-grey py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8">
+                    <h1 class="mb-4 editable">This is your park. Enjoy it and help keep it clean, safe and beautiful. 
+                        </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8 col-md-4 col-lg-5 editable">
+                    <h2>Be cordial and respectful to other park users.</h2>
+                    <h2>Pick up after yourself, your children and pets and use all designated trash receptacles.</h2>  
+                    <h2>Visitors may be subject to video monitoring while in the park.</h2>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 offset-lg-1 editable">
+                    <h2 class="mb-1">Walk Your Dog!</h2>
+                    <p class="mb-2">Bring your balls, games, hula-hoops, bags and activities and enjoy them in the park.</p>
+                    <h2 class="mb-1">Play a Game!</h2>
+                    <p class="mb-2">Bring your balls, games, hula-hoops, bags and activities and enjoy them in the park.</p>
+                    <h2 class="mb-1">Work Out!</h2>
+                    <p class="mb-2">Run, train, hula-hoop… whatever you do to keep fit, you can do it in Memphis River Parks. Please be mindful of others who may not be moving through the park as quickly as you.</p>
+                    <h2 class="mb-1">Take a Photo!</h2>
+                    <p class="mb-2">Take advantage of the most beautiful spot on the Mississippi River to shoot your best selfies. Tag us @memriverparks and use #cometotheriver.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 editable">
+                        <p class="lead">Have a Picnic!</h2>
+                        <p class="mb-2">Bring your balls, games, hula-hoops, bags and activities and enjoy them in the park.</p>
+                        <h2 class="mb-1">Make New Friends!</h2>
+                        <p class="mb-2">Bring your balls, games, hula-hoops, bags and activities and enjoy them in the park.</p>
+                        <h2 class="mb-1">But Don't:</h2>
+                        <p>Drink or sell alcohol without all relevant city permits and prior authorization from the partnership.
+                        </p><p >Vend or sell food or drinks without prior authorization from the partnership.
+                            </p><p >Close the park, or a section of the park, to public use. Inquire about park rentals here.
+                                </p><p >Destroy or tamper with grass, trees, plantings or flowers.</p>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+            <div class="container py-4">
+                <div class="row">
+                    <div class="col-10 col-sm-6 col-lg-3 mb-3 mb-md-0">
+                        <h2>The Memphis Riverfront started from a vision.</h2>
+                        <p class="mb-3">The Memphis Riverfront Concept is a vision document prepared by Studio Gang for the City of Memphis and Memphis River Parks Partnership describing a sequence of actionable investments to build a connected, catalytic and fun riverfront.</p>
+                        <a href="#" class="btn btn-primary mt-0 mr-1 mb-1">Download</a>
+                        <a href="#" class="btn btn-secondary mt-0 mb-1">Get Involved</a>
+                    </div>
+                    <div class="col-md-6 col-lg-8 offset-lg-1 mb-3 mb-md-0">
+                            <iframe src="https://e.issuu.com/anonymous-embed.html?u=memriverparks&d=memphis_riverfront_concept__c__stud" style="border:none;width:100%;height:500px;" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="container-fluid text-left bg-grey">
+            <div class="container py-4">
     <div class="row">
         <div class="col-10 col-sm-6 col-lg-3 order-2 order-md-1">
             <h2 class="editable" href="/parks">
@@ -377,20 +294,6 @@
         </div>
     </div>
 </div>
-    </div>
-    <div class="container-fluid bg-white">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-10 col-sm-6 col-lg-3">
-                        <p class="lead mb-3 editable">See the latest news from the Partnership here.</p>
-                        <a href="news.html" class="btn btn-primary mb-4 mb-lg-0 editable">See What's New</a>
-                    </div>
-                    
-                    <div id="news-items-selection" class="col-lg-8 offset-lg-1">
-                        
-                    </div>
-                </div>
-            </div>
         </div>
     
     <footer>
