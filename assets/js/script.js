@@ -15,8 +15,10 @@ $(document).ready(function(){
 
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
+            $('.navbar-brand').addClass('smaller');
         } else {
             $navBar.removeClass('fixed');
+            $('.navbar-brand').removeClass('smaller')
         }
     });
 
@@ -46,6 +48,18 @@ $(document).ready(function(){
     });
 
 
+    //NAV COLOR ON MOBILE COLLAPSE
+    // $('#collapsingNavbar3').collapse({
+    //     // toggle: false
+    //   });
+      $('#collapsingNavbar3').on('show.bs.collapse', function(){
+        $('.nav-wrapper').addClass("navbar-mobile");
+    });
+    $('#collapsingNavbar3').on('hide.bs.collapse', function(){
+        $('.nav-wrapper').removeClass("navbar-mobile");
+    });
+    
+
 
     //HOVER COLOR EFFECTS & ANIMATIONS
 
@@ -66,7 +80,7 @@ $(document).ready(function(){
     });
     
     $("a").mouseleave(function(){
-        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.btn-404):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.btn-404, .logo):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
         var style = document.createElement('style');
         if (style.styleSheet) {
             style.styleSheet.cssText = css;

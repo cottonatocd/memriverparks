@@ -6588,9 +6588,6 @@ h3 {
   text-transform: uppercase;
   color: black; }
 
-.navbar {
-  padding: 24px 0px; }
-
 .navbar .btn {
   margin-left: 21px; }
 
@@ -6608,16 +6605,28 @@ h3 {
 
 .navbar-brand {
   height: 91px;
-  width: 34%; }
+  mix-blend-mode: multiply;
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 100000000;
+  transition: 300ms; }
 
 .navbar-brand .logo {
   width: 163px;
   height: 91px;
-  background-image: url("../assets/images/memphis-river-parks-logo.png");
-  background-size: 163px 91px; }
+  transition: 300ms;
+  mix-blend-mode: multiply; }
+  .navbar-brand .logo img {
+    mix-blend-mode: multiply; }
+
+.navbar-brand .logo:hover {
+  width: 163px;
+  height: 91px;
+  mix-blend-mode: multiply; }
 
 .nav-right {
-  width: 34%; }
+  right: 50px; }
 
 a.btn, span.btn {
   font-family: "GT Haptik", Helvetica, sans-serif;
@@ -6784,9 +6793,12 @@ a.external:after, svg.external:after {
   left: 0px !important;
   visibility: visible !important; }
 
-.nav-wrapper, .nav-wrapper * {
+.nav-wrapper {
+  padding: 0px 40px !important; }
+
+.nav-wrapper, .nav-wrapper *:not(.logo) {
   transition: 300ms; }
-  .nav-wrapper nav, .nav-wrapper * nav {
+  .nav-wrapper nav, .nav-wrapper *:not(.logo) nav {
     height: 130px; }
 
 .nav-wrapper.fixed {
@@ -6798,13 +6810,16 @@ a.external:after, svg.external:after {
   z-index: 1000; }
   .nav-wrapper.fixed nav {
     height: 78px; }
-  .nav-wrapper.fixed .navbar-brand {
-    height: auto; }
-    .nav-wrapper.fixed .navbar-brand .logo {
-      width: 97px;
-      height: 54px;
-      background-image: url("../assets/images/memphis-river-parks-logo.png");
-      background-size: 97px 54px; }
+
+.navbar-brand.smaller {
+  height: auto;
+  top: 10px; }
+  .navbar-brand.smaller .logo {
+    width: 97px;
+    height: 54px; }
+
+.nav-wrapper.navbar-mobile nav {
+  height: 100% !important; }
 
 button.navbar-toggler:focus {
   outline: 0px auto -webkit-focus-ring-color; }
@@ -6840,12 +6855,23 @@ button.navbar-toggler:focus {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: #000;
-  stroke-width: 5.5;
+  stroke-width: 5;
   stroke-linecap: round; }
 
 .navbar-light .navbar-toggler {
   color: black !important;
-  border: 0px solid black !important; }
+  border: 0px solid black !important;
+  padding: 0px;
+  position: absolute;
+  right: -18px;
+  top: 10px; }
+
+.nav-wrapper.navbar-mobile, .nav-wrapper.navbar-mobile.fixed {
+  background-color: #F7F7F7;
+  padding-bottom: 30px !important;
+  height: auto; }
+  .nav-wrapper.navbar-mobile nav, .nav-wrapper.navbar-mobile.fixed nav {
+    height: 100% !important; }
 
 .icons a {
   margin: 10px; }
@@ -7169,6 +7195,14 @@ a.event-image:hover h3, a.event-image:hover h2 {
 @media (max-width: 991px) {
   .nav-wrapper nav, .nav-wrapper * nav {
     height: auto; } }
+@media (max-width: 1200px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .navbar .btn {
+    margin-left: 10px; } }
 @media (max-width: 768px) {
   .modal-content {
     width: auto; }
@@ -7211,7 +7245,21 @@ a.event-image:hover h3, a.event-image:hover h2 {
   p.lead {
     font-size: 18px;
     letter-spacing: 0.39px;
-    line-height: 20px; } }
+    line-height: 20px; }
+
+  .navbar-brand .logo {
+    width: 100px;
+    height: 55.83px; }
+
+  .navbar-brand {
+    top: 20px;
+    left: 30px; }
+
+  .navbar-collapse.show ul.navbar-nav {
+    margin-top: 100px; }
+
+  .nav-wrapper {
+    padding: 0px 20px !important; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }

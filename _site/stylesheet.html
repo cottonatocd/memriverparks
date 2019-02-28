@@ -162,20 +162,25 @@
 
 </script>
     <div class="nav-placeholder">
+
+
+    <a href="/" class="navbar-brand d-flex mr-auto">
+      <div class="logo">
+          <img class="img-fluid before-click" src="http://localhost:4000/assets/images/logo.png" onmouseenter="this.src ='http://localhost:4000/assets/images/logo-animated.gif';" onmouseout="this.src = 'http://localhost:4000/assets/images/logo.png';" />
+      </div>
+    </a>
+
+
 <div class="container-fluid nav-wrapper position-fixed">
-  <div class="container">
-    <div class="row">
-      <div class="col">
+
 
      
         <nav class="navbar navbar-light navbar-expand-lg bg-faded justify-content-center">
             
-            <a href="/" class="navbar-brand d-flex mr-auto">
-              <div class="logo"></div>
-            </a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
                 <!-- <span class="navbar-toggler-icon"></span> -->
-                <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                <svg class="ham hamRotate ham4" viewBox="0 0 120 100" width="80" onclick="this.classList.toggle('active')">
                   <path
                         class="line top"
                         d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
@@ -188,7 +193,7 @@
                 </svg>
             </button>
 
-            <div class="navbar-collapse  collapse w-100" id="collapsingNavbar3">
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
               <ul class="navbar-nav w-100 justify-content-center">
                   
                   
@@ -275,7 +280,7 @@
               </ul>
             </div>
 
-            <div class="navbar-collapse collapse nav-right" id="collapsingNavbar3">
+            <div class="navbar-collapse collapse nav-right position-fixed" id="collapsingNavbar">
             
                   <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                     <li class="nav-item">
@@ -289,11 +294,9 @@
             </div>
             
         </nav>
-        
-      </div>
-    </div>
+       
   </div>
-</div>
+
 </div>
     
         <h1 id="h1-lorem-ipsum">H1 Lorem Ipsum</h1>
