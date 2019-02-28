@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/libraries/addons/p5.dom.min.js"></script>
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/sketch.js"></script>
+  
+  <body>
+
+    {% include navigation.html %}
+    
+        {{ content }}
+    
+    <script>
+    var colors = ['#44b549', '#ffc818', '#f05f22', '#298fce', '#e684a1'];
+
+        // 404 BG COLOR CHANGE
+        //var colors = palette;
+        var currentColor = 0;
+        var lis = document.getElementById("#page-404");
+
+        function changeColor() {
+        if (currentColor < colors.length - 1){
+        ++currentColor
+        } else {
+            currentColor = 0;
+        }
+        if (currentColor < 0) {
+            currentColor = colors.length -1
+        }
+        
+        lis.style.background = colors[currentColor];
+        
+        }
+
+        setInterval(changeColor, 1600);
+</script>
+
+  </body>
+
+</html>

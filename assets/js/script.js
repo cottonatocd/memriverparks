@@ -53,7 +53,7 @@ $(document).ready(function(){
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
     $("a.btn").mouseleave(function(){
-        var css = 'a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
+        var css = 'a.btn.btn-primary:not(.btn-404):hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
         var style = document.createElement('style');
     
         if (style.styleSheet) {
@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
     
     $("a").mouseleave(function(){
-        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.btn-404):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
         var style = document.createElement('style');
         if (style.styleSheet) {
             style.styleSheet.cssText = css;
@@ -82,20 +82,22 @@ $(document).ready(function(){
     var colors = palette;
     var currentColor = 0;
     var lis = document.getElementById("#page-404");
-
-    console.log(lis);
     
     function changeColor() {
+    if (currentColor < colors.length - 1){
       ++currentColor
+    } else {
+        currentColor = 0;
+    }
       if (currentColor < 0) {
           currentColor = colors.length -1
       }
       
-        lis.style.background = colors[currentColor];
+       lis.style.background = colors[currentColor];
       
     }
     
-    setInterval(changeColor, 2000);
+    setInterval(changeColor, 1600);
 
 
 
