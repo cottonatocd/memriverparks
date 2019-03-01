@@ -1,21 +1,43 @@
 - title: Mud Island Park
-  hours: Open dawn to dusk. This equates to 6am-6pm in winter, 6am-8pm in summer.
-  directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
-  map-link: https://goo.gl/maps/ToePm2FjKVG2
+  hours: 
+    - Open dawn to dusk.
+    - This equates to 6am-6pm in winter, 6am-8pm in summer.
+  get-here:
+    directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
+    map-link: https://goo.gl/maps/ToePm2FjKVG2
+  admission: Free admission to the park.
   parking: Paid parking available in the River Parks Garage at Poplar and Front St.
-  rental-info: Lorem ipsum Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
-  rent-link: https://google.com
+  rent:
+    rental-info: Lorem ipsum Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
+    rental-link: https://google.com
+  bikeshare-info: Lorem ipsum dolor sit amet.
   image: mud-island-park.jpeg
 - title: Mississippi River Museum
-  hours: Open seasonally. April-October – Wednesday to Sunday from 10AM-5PM; November-March – Closed
-  directions: The Mississippi River Museum is located in Mud Island Park at the West end of the skybridge.
-  map-link: https://goo.gl/maps/ycfVHnL4CR12
+  hours: 
+    - Open seasonally.
+    - April-October – Wednesday to Sunday from 10AM-5PM
+    - November-March – Closed
+  get-here:
+    directions: The Mississippi River Museum is located in Mud Island Park at the West end of the skybridge.
+    map-link: https://goo.gl/maps/ycfVHnL4CR12
   admission: $10 Adults 12 & Over, $8 Children ages 4 to 11, Free for Children under 4
+  parking:
+  rent:
+    rental-info:
+    rental-link:
   image: museum.jpeg
 - title: Mud Island Amphitheatre
-  hours: tk
-  directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
-  admission: tk
+  hours: 
+    - Open dawn to dusk.
+    - This equates to 6am-6pm in winter, 6am-8pm in summer.
+  get-here:
+    directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
+    map-link:
+  admission:
+  parking:
+  rent:
+    rental-info:
+    rental-link:
   image: amphitheatre.jpeg
   
 
