@@ -6995,37 +6995,79 @@ button.navbar-toggler:focus {
     display: none; }
   .round.form-active .form {
     display: block; }
+  .round.form-active input.btn.btn-primary {
+    background-color: #ffc818;
+    color: black;
+    border: 0px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-weight: 900;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%); }
+  .round.form-active input.btn.btn-primary:hover {
+    background-color: #44b549; }
+  .round.form-active input#mce-EMAIL {
+    text-align: center;
+    font-family: GTHaptik-Medium;
+    font-size: 32px;
+    color: black;
+    letter-spacing: 0.6px;
+    text-align: center;
+    line-height: 50px;
+    border: 0px;
+    width: 100%;
+    outline: none; }
 
-input.btn.btn-primary {
-  background-color: #ffc818;
+footer input.btn.btn-primary {
+  background-color: white;
   color: black;
+  font-weight: 900;
+  letter-spacing: 0.76px;
   border: 0px;
+  padding: 10px 20px;
   font-family: "GT Haptik", Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 14px !important;
   letter-spacing: 0.76px;
   text-transform: uppercase;
   border-radius: 100px;
+  line-height: 21px;
+  width: 210px;
+  transition: 500ms; }
+
+footer input.btn.btn-primary:hover {
+  animation-name: bgcolorchange1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bgcolorchange1;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite; }
+
+footer input.btn.btn-primary:focus:hover {
+  animation: none; }
+
+footer input.btn.btn-primary::placeholder {
+  color: black !important;
   font-weight: 900;
-  padding: 10px 20px;
-  position: absolute;
-  bottom: 70px;
-  left: 50%;
-  transform: translate(-50%, 0%); }
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  text-transform: uppercase;
+  line-height: 21px;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
 
-input.btn.btn-primary:hover {
-  background-color: #44b549; }
+footer input.btn.btn-primary:focus {
+  width: 500px;
+  border: 3px solid;
+  border-color: #ffc818; }
 
-input#mce-EMAIL {
-  text-align: center;
-  font-family: GTHaptik-Medium;
-  font-size: 32px;
-  color: black;
-  letter-spacing: 0.6px;
-  text-align: center;
-  line-height: 50px;
-  border: 0px;
-  width: 100%;
-  outline: none; }
+footer input.btn.btn-primary:focus::-webkit-input-placeholder {
+  color: #b2b2b2 !important;
+  font-weight: 700; }
 
 input#mce-Email:focus {
   outline: none !important; }

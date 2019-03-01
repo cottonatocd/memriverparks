@@ -23,11 +23,19 @@ $(document).ready(function(){
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
             $('.navbar-brand').addClass('smaller');
+
         } else {
             $navBar.removeClass('fixed');
-            $('.navbar-brand').removeClass('smaller')
+            $('.navbar-brand').removeClass('smaller');
+            $('.navbar-brand.always').addClass('smaller');
+
         }
     }
+
+    document.getElementsByName('Email')[0].onfocus = function(){
+        document.getElementsByName('Email')[0].placeholder='Enter your email & press Enter';
+    }
+    
 
 
     //CAROUSEL
