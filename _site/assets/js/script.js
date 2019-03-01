@@ -9,18 +9,31 @@ $(document).ready(function(){
         var shrinkPos = 200;
     }
 
-    $(window).scroll(function() {
+    checkNavPosition($(window).scrollTop());
 
-        var scrollPos = $(this).scrollTop();
+    $(window).scroll(function() {
+        //var scrollPos = $(this).scrollTop();
+        checkNavPosition($(this).scrollTop());
+    });
+
+    
+
+    function checkNavPosition(scrollPos){
 
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
+            $('.navbar-brand').addClass('smaller');
         } else {
             $navBar.removeClass('fixed');
+            $('.navbar-brand').removeClass('smaller')
         }
+    }
 
-    });
 
+    //CAROUSEL
+    $('.carousel').carousel({
+        interval: false
+      })
 
     //PARKS TRANSITION & LOAD
 
@@ -47,6 +60,46 @@ $(document).ready(function(){
     });
 
 
+    //NAV COLOR ON MOBILE COLLAPSE
+    // $('#collapsingNavbar3').collapse({
+    //     // toggle: false
+    //   });
+      $('#collapsingNavbar3').on('show.bs.collapse', function(){
+        $('.nav-wrapper').addClass("navbar-mobile");
+    });
+    $('#collapsingNavbar3').on('hide.bs.collapse', function(){
+        $('.nav-wrapper').removeClass("navbar-mobile");
+    });
+
+    //FAVICON
+    var page_title = document.getElementsByTagName("title")[0].innerHTML;
+    var site_url = "http://localhost:4000";
+    var favicon_images = [
+        
+        site_url + '/assets/images/favicon/2.png',
+        site_url + '/assets/images/favicon/3.png',
+        site_url + '/assets/images/favicon/4.png',
+        site_url + '/assets/images/favicon/5.png',
+        site_url + '/assets/images/favicon/1.png'
+    ],
+    image_counter = 0; // To keep track of the current image
+
+    if(page_title.indexOf("Greenbelt") !== -1 || page_title.indexOf("Mud Island") !== -1 || page_title.indexOf("Fourth Bluff") !== -1 || page_title.indexOf("Big River") !== -1 || page_title.indexOf("MLK") !== -1) {
+        // do nothing
+    } else {
+        setInterval(function() {
+        $("link[rel='icon']").remove();
+        $("link[rel='shortcut icon']").remove();
+        $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+        // If last image then goto first image
+        // Else go to next image    
+        if(image_counter == favicon_images.length -1)
+            image_counter = 0;
+        else
+            image_counter++;
+        }, 1000);
+    }
 
     //HOVER COLOR EFFECTS & ANIMATIONS
 
@@ -54,7 +107,7 @@ $(document).ready(function(){
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
     $("a.btn").mouseleave(function(){
-        var css = 'a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
+        var css = 'a.btn.btn-primary:not(.btn-404):hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
         var style = document.createElement('style');
     
         if (style.styleSheet) {
@@ -76,6 +129,52 @@ $(document).ready(function(){
         }
     
         document.getElementsByTagName('head')[0].appendChild(style);
+    });
+
+
+    // 404 BG COLOR CHANGE
+    var colors = palette;
+    var currentColor = 0;
+    var lis = document.getElementById("#page-404");
+   
+    
+    function changeColor() {
+    if (currentColor < colors.length - 1){
+      ++currentColor
+    } else {
+        currentColor = 0;
+    }
+      if (currentColor < 0) {
+          currentColor = colors.length -1
+      }
+      
+        if (lis !== null){
+            lis.style.background = colors[currentColor];
+        }
+    }
+    
+    setInterval(changeColor, 1600);
+
+
+
+    // ROUND SUBSCRIBE ACTION HOME PAGE
+    $('.join').on('click', function(e){
+        e.preventDefault(); 
+        $('.round').addClass("form-active");
+    })
+
+    // DROPDOWN MENU EVENTS
+
+    $(".dropdown-menu li a.btn").mouseenter(
+        function() {
+            $(this).removeClass("animate-me").addClass("post-animation");
+        }
+    );
+
+    $('.dropdown-toggle').dropdown();
+
+    $(document).on("shown.bs.dropdown", ".dropdown", function (e) {
+        $(".dropdown-menu li a.btn").removeClass("post-animation").addClass("animate-me");
     });
 
 

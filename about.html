@@ -45,11 +45,45 @@ permalink: /about/
         {% for staffmember in staff %}
             <div class="col-6 col-sm-4 col-md-3 mb-4">
                 <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="../assets/images/{{ staffmember.image }}">
-                <p class="lead">{{ staffmember.name }}</p>
+                <p class="lead mb-1">{{ staffmember.name }}</p>
                 <p>{{ staffmember.title }}</p>
             </div>
         {% endfor %}
     </div>
+    <div class="row">
+        <div class="col">
+            <h3 class="my-2">Board Members</h3>
+        </div>
+    </div>
+    <div class="row mb-2">
+        
+        <div class="col col-flow">
+                {% assign board = site.data.board %}
+                {% for boardmember in board %}
+            <div class="person">
+                <p class="lead">{{ boardmember.name }}</p>
+                <p>{{ boardmember.role}}<br>{{boardmember.optional-third-line}}</p>
+            </div>
+                {% endfor %}
+        </div>
+
+    </div>
+    <div class="row">
+            <div class="col">
+                <h3 class="my-2">Ex-Officio Members</h3>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col col-flow">
+                    {% assign officio = site.data.ex-officio %}
+                    {% for member in officio %}
+                <div class="person">
+                    <p class="lead">{{ member.name }}</p>
+                    <p>{{ member.role}}<br>{{member.optional-third-line}}</p>
+                </div>
+                    {% endfor %}
+            </div>
+        </div>
 </div>
 <div class="container-fluid bg-grey py-4">
     <div class="container h-100">

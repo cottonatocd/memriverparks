@@ -64,6 +64,34 @@ a.disabled {
     cursor: default;
  }
 
+.full-height{
+    height:100vh;
+}
+
+.modal.show{
+    display:flex !important;
+}
+
+.modal-content {
+    border-radius: 0px !important;
+    border-radius: 0px;
+    width: 500px;
+    border:0px;
+    padding:42px;
+
+    .close{
+        opacity:1;
+        width:20px;
+        float:none;
+        margin-bottom:70px;
+    }
+    h2{
+        margin-bottom:40px;
+    }
+}
+
+
+
 p.lead{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 21px;
@@ -108,13 +136,15 @@ h3{
 //     top:0px;
 // }
 
-.navbar{
-    padding:24px 0px;
-}
+// .navbar{
+//     padding:24px 0px;
+// }
 
 .navbar .btn{
     margin-left:21px;
 }
+
+
 
 .nav-item{
     font-family: "GT Haptik", Helvetica, sans-serif;
@@ -132,20 +162,54 @@ h3{
 
 .navbar-brand{
     height:91px;
-    width:34%;
+    //width:34%;
+    mix-blend-mode: multiply;
+    position:fixed;
+    top:20px;
+    left:50px;
+    z-index:100000000;
+    transition: 300ms;
 }
 
-.navbar-brand .logo{
+.navbar-brand .logo {
     width:163px;
     height:91px;
-    background-image: url("../assets/images/memphis-river-parks-logo.png");
-    background-size:163px 91px;
+    transition: 300ms;
+    // background-image: url("../assets/images/logo.png");
+    // background-size:163px 91px;
+    // background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    img{
+        mix-blend-mode: multiply;
+    }
+}
+.navbar-brand .logo:hover{
+    width:163px;
+    height:91px;
+    mix-blend-mode: multiply;
+    // background-image: url("../assets/images/logo-animated.gif");
+    // background-size:163px 91px;
+    // background-blend-mode: multiply;
 }
 
 .nav-right{
-    width:34%;
+    //width:34%;
+    right:50px;
 }
 
+.col-flow{
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+         column-count: 4;
+
+ -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+}
+
+.person{
+    margin-bottom:20px;
+}
 a.btn, span.btn{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 14px;
@@ -154,17 +218,34 @@ a.btn, span.btn{
     border-radius: 100px;
 }
 
-a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover{
+
+
+.page-404{
+    background:#44b549;
+    transition:1s;
+    z-index:-2;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    mix-blend-mode: multiply;
+    z-index:-1;
+}
+
+a.btn.btn-primary:not(.btn-404):hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover{
     color:black !important;
     font-weight:900 !important;
     animation-name: bgcolorchange1;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: step-end;
+    //animation-timing-function: step-end;
     -webkit-animation-name: bgcolorchange1;
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: step-end;
+    //-webkit-animation-timing-function: step-end;
     border: 0px;
     padding: 10px 20px;
     letter-spacing: 0.76px;
@@ -172,6 +253,10 @@ a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary
 
 a.btn.btn-primary.external:after{
     background-image: url(../assets/images/external-white.svg);
+}
+
+.bg-dark a.btn.btn-primary.external:after{
+    background-image: url(../assets/images/external.svg);
 }
 
 
@@ -249,9 +334,12 @@ a.external:after, svg.external:after{
             animation-fill-mode:forwards;
             position:relative;
             margin-left:0px;
-            left: -100%;
-            visibility:hidden;
-
+           left: -100%;
+           visibility:hidden;
+        }
+        a.btn.post-animation{
+            visibility:visible;
+            left: 0px;
         }
     }
 
@@ -303,6 +391,13 @@ a.external:after, svg.external:after{
     }
 }
 
+.btn.btn-primary.btn-404:hover{
+    background-color:white;
+    color:black;
+    font-weight:900;
+    letter-spacing: 0.76px;
+}
+
 .container{
     padding:0px 50px;
 }
@@ -322,8 +417,8 @@ a.external:after, svg.external:after{
     -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: step-end;
-    left: 0px;
-    visibility: visible
+    left: 0px !important;
+    visibility: visible !important;
     //   background-image:url('join-us-black.svg');
 }
 
@@ -331,10 +426,15 @@ a.external:after, svg.external:after{
     // padding-top: 40px;
 }
 
-.nav-wrapper, .nav-wrapper *{
+.nav-wrapper{
+    padding:0px 40px !important;
+}
+
+.nav-wrapper, .nav-wrapper *:not(.logo){
     transition: 300ms;
     nav{
         height:130px;
+        
     }
 }
 
@@ -348,16 +448,21 @@ a.external:after, svg.external:after{
     nav{
         height:78px;
     }
-    .navbar-brand {
-        height:auto;
-        .logo{
-            width:97px;
-            height:54px;
-            background-image: url("../assets/images/memphis-river-parks-logo.png");
-            background-size:97px 54px;
-        }
+}
+
+.navbar-brand.smaller {
+    height:auto;
+    top:10px;
+    .logo{
+        width:97px;
+        height:54px;
     }
-    
+}
+
+.nav-wrapper.navbar-mobile{
+    nav{
+        height:100% !important;
+    }
 }
 
 button.navbar-toggler:focus {
@@ -397,7 +502,7 @@ button.navbar-toggler:focus {
     fill:none;
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
     stroke:#000;
-    stroke-width:5.5;
+    stroke-width:5;
     stroke-linecap:round;
   }
 
@@ -405,6 +510,19 @@ button.navbar-toggler:focus {
     color: black !important;
     //border-color: rgba(0, 0, 0, 0.1);
     border:0px solid black !important;
+    padding:0px;
+    position: absolute;
+    right: -18px;
+    top:10px;
+}
+
+.nav-wrapper.navbar-mobile, .nav-wrapper.navbar-mobile.fixed{
+    background-color: #F7F7F7;
+    padding-bottom: 30px !important;
+    height:auto;
+    nav{
+        height:100% !important;
+    }
 }
 
 .icons a{
@@ -543,6 +661,73 @@ button.navbar-toggler:focus {
     height: 450px;
     margin:auto;
     margin-bottom:calc(50vh - 225px);
+
+    position:relative;
+
+    .form{
+        display:none;
+    }
+    .tagline{
+        display:block;
+    }
+    .join{
+        position:absolute;
+        bottom:70px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+.round.form-active{
+    background-color:white !important;
+    .tagline{
+        display:none;
+    }
+    .form{
+        display:block;
+    }
+}
+
+input.btn.btn-primary{
+    background-color: $mud-island;
+    color:black;
+    border:0px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-weight:900;
+    padding: 10px 20px;
+    position:absolute;
+    bottom:70px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+input.btn.btn-primary:hover{
+    background-color: $mlk;
+}
+
+input#mce-EMAIL {
+    text-align: center;
+    font-family: GTHaptik-Medium;
+    font-size: 32px;
+    color:black;
+    letter-spacing: 0.6px;
+    text-align: center;
+    line-height: 50px;
+    border:0px;
+    width:100%;
+    outline:none;
+}
+
+input#mce-Email:focus{
+    outline: none !important;
+}
+
+input#mce-EMAIL::placeholder{
+    color: #CCCCCC;
 }
 
 .landing-hero{
@@ -572,6 +757,15 @@ button.navbar-toggler:focus {
     }
 }
 
+a.event-image{
+    span{
+        position: absolute;
+        top: 10px;
+        right: 45px;
+        display:none;
+    }
+}
+
 a.event-image:hover {
     .img-container {
         animation-name: bgcolorchange5;
@@ -583,11 +777,7 @@ a.event-image:hover {
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-timing-function: step-end;
 
-        span.btn{
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 28%;
-            left: 50%;
+        span{
             display:inherit;
         }
     }
@@ -606,14 +796,30 @@ a.event-image:hover {
     }
 }
 
-
-    
-
-
 .navbar-light .navbar-nav .nav-link:hover, a:hover{ 
-    color: #f05f22 !important; 
+  color: #f05f22 !important; 
 }
 
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 20.2px;
+    height: 36.74px;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+.carousel-control-prev-icon {
+    background-image: url("../assets/images/previous-icon.svg");
+}
+.carousel-control-next-icon {
+    background-image: url("../assets/images/next-icon.svg");
+}
+.carousel-control-prev, .carousel-control-next{
+    width:auto;
+    padding:0px 25px;
+    opacity: 1;
+}
 
 
 @keyframes bgcolorchange1 {
@@ -736,10 +942,27 @@ a.event-image:hover {
     .nav-wrapper nav, .nav-wrapper * nav {
         height: auto;
     }
-    
+    .navbar-collapse.show ul.navbar-nav {
+        margin-top: 100px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+
+    .navbar-light .navbar-nav .nav-link {
+        color: black;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .navbar .btn{
+        margin-left:10px;
+    }
   }
 
   @media (max-width: 768px){
+    .modal-content {
+        width: auto;
+    }
     .container {
         padding: 0px 30px;
     }
@@ -781,6 +1004,25 @@ a.event-image:hover {
         letter-spacing: 0.39px;
         line-height: 20px;
     }
+
+    .navbar-brand .logo{
+        width: 100px;
+        height: 55.83px;
+       // margin-top:10px;
+    }
+    .navbar-brand{
+        top:20px;
+        left:30px;
+    }
+    
+
+
+
+    .nav-wrapper {
+        padding: 0px 20px !important;
+    }
+
+    
   }
 
 

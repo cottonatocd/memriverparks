@@ -2,8 +2,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
+        <title>{{ page.title }}{% if page.url != "/" %} | Memphis River Parks Partnership {% endif %}</title>
       
         <link rel="stylesheet" href="/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
+
+        {% if page.favicon %}
+        <link rel="icon" href="{{ site.url }}/assets/images/favicon/{{ page.favicon }}" type="image/gif">
+        {% else %}
+        <link rel="icon" href="{{ site.url }}/assets/images/favicon/1.png" type="image/gif">
+        {% endif %}
+
+
+        
 </head>
