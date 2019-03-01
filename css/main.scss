@@ -197,6 +197,19 @@ h3{
     right:50px;
 }
 
+.col-flow{
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+         column-count: 4;
+
+ -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+}
+
+.person{
+    margin-bottom:20px;
+}
 a.btn, span.btn{
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 14px;
