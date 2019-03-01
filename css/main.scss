@@ -259,6 +259,10 @@ a.btn.btn-primary.external:after{
     background-image: url(../assets/images/external.svg);
 }
 
+a.btn.btn-primary.external:hover:after{
+    background-image: url(../assets/images/external.svg);
+}
+
 
 a.btn.btn-primary, span.btn.btn-primary{
     background-color:black;
@@ -758,7 +762,8 @@ footer input.btn.btn-primary::placeholder{
     font-family: "GT Haptik", Helvetica, sans-serif;
 }
 footer input.btn.btn-primary:focus{
-    width:500px;
+    width:90%;
+    max-width:500px;
     border:3px solid;
     border-color: $mud-island;
 }
@@ -1033,6 +1038,17 @@ a.event-image:hover {
         width: 300px;
         height: 300px;
         margin-bottom: calc(50vh - 150px);
+        .join{
+            bottom:40px;
+        }
+        h1{
+            margin-bottom:70px !important;
+        }
+    }
+    .round.form-active{
+        input.btn.btn-primary{
+            bottom:40px;
+        }
     }
     #districts-section, #parks-hero {
         height: auto;
