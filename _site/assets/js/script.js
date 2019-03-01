@@ -9,9 +9,16 @@ $(document).ready(function(){
         var shrinkPos = 200;
     }
 
-    $(window).scroll(function() {
+    checkNavPosition($(window).scrollTop());
 
-        var scrollPos = $(this).scrollTop();
+    $(window).scroll(function() {
+        //var scrollPos = $(this).scrollTop();
+        checkNavPosition($(this).scrollTop());
+    });
+
+    
+
+    function checkNavPosition(scrollPos){
 
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
@@ -20,8 +27,13 @@ $(document).ready(function(){
             $navBar.removeClass('fixed');
             $('.navbar-brand').removeClass('smaller')
         }
-    });
+    }
 
+
+    //CAROUSEL
+    $('.carousel').carousel({
+        interval: false
+      })
 
     //PARKS TRANSITION & LOAD
 
@@ -108,7 +120,7 @@ $(document).ready(function(){
     });
     
     $("a").mouseleave(function(){
-        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.btn-404, .logo):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
         var style = document.createElement('style');
         if (style.styleSheet) {
             style.styleSheet.cssText = css;
@@ -136,9 +148,9 @@ $(document).ready(function(){
           currentColor = colors.length -1
       }
       
-      if (lis !== null){
-       lis.style.background = colors[currentColor];
-    }
+        if (lis !== null){
+            lis.style.background = colors[currentColor];
+        }
     }
     
     setInterval(changeColor, 1600);

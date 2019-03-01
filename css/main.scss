@@ -797,7 +797,28 @@ a.event-image:hover {
 }
 
 .navbar-light .navbar-nav .nav-link:hover, a:hover{ 
-  //  color: #f05f22 !important; 
+  color: #f05f22 !important; 
+}
+
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: inline-block;
+    width: 20.2px;
+    height: 36.74px;
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+.carousel-control-prev-icon {
+    background-image: url("../assets/images/previous-icon.svg");
+}
+.carousel-control-next-icon {
+    background-image: url("../assets/images/next-icon.svg");
+}
+.carousel-control-prev, .carousel-control-next{
+    width:auto;
+    padding:0px 25px;
+    opacity: 1;
 }
 
 
@@ -921,6 +942,9 @@ a.event-image:hover {
     .nav-wrapper nav, .nav-wrapper * nav {
         height: auto;
     }
+    .navbar-collapse.show ul.navbar-nav {
+        margin-top: 100px;
+    }
   }
 
   @media (max-width: 1200px) {
@@ -990,9 +1014,7 @@ a.event-image:hover {
         top:20px;
         left:30px;
     }
-    .navbar-collapse.show ul.navbar-nav {
-        margin-top: 100px;
-    }
+    
 
 
 
