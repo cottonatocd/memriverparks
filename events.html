@@ -65,7 +65,9 @@ hero-image: events.png
                 <div>
                     <h2>{{ event.title }}</h2>
                     <p class="lead mb-2">
-                        {{ event.frequency }}
+                        {% for item in event.frequency %}
+                            {{item}}<br>
+                        {% endfor %}
                     </p>
                     <div class="row">
                         <div class="col-9">
@@ -75,8 +77,6 @@ hero-image: events.png
                     
                     {% if event.link_url %}
                     <a href="{{ event.link_url }}" class="btn btn-primary">{{ event.link_text }}</a>
-                    {% else %}
-                    <a href="#" class="btn btn-primary">Get Notified</a>
                     {% endif %}
                 </div>
             </div>

@@ -34,8 +34,10 @@
                               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
                               <ul class="dropdown-menu">
                                   {% for sublink in link.sublinks %}
-                                      {% if sublink.title == 'separator' %}
-                                          <li role="separator" class="divider"></li>
+                                      {% if sublink.external == true %}
+                                      <li>
+                                            <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external">{{ sublink.title }}</a>
+                                        </li>
                                       {% else %}
                                           <li>
                                               <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary">{{ sublink.title }}</a>

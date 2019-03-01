@@ -1,5 +1,5 @@
 
-       <a href="/" class="navbar-brand d-flex mr-auto smaller">
+       <a href="/" class="navbar-brand d-flex mr-auto smaller always">
         <div class="logo">
             <img class="img-fluid before-click" src="{{ site.url }}/assets/images/logo.png" onmouseenter="this.src ='{{ site.url }}/assets/images/logo-animated.gif';" onmouseout="this.src = '{{ site.url }}/assets/images/logo.png';" />
         </div>
@@ -33,15 +33,17 @@
                               <li class="nav-item dropdown">
                                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
                                   <ul class="dropdown-menu">
-                                      {% for sublink in link.sublinks %}
-                                          {% if sublink.title == 'separator' %}
-                                              <li role="separator" class="divider"></li>
-                                          {% else %}
-                                              <li>
-                                                  <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary">{{ sublink.title }}</a>
-                                              </li>
-                                          {% endif %}
-                                      {% endfor %}
+                                        {% for sublink in link.sublinks %}
+                                        {% if sublink.external == true %}
+                                        <li>
+                                              <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external">{{ sublink.title }}</a>
+                                          </li>
+                                        {% else %}
+                                            <li>
+                                                <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary">{{ sublink.title }}</a>
+                                            </li>
+                                        {% endif %}
+                                    {% endfor %}
                                   </ul>
                               </li>        
                           {% else %}
