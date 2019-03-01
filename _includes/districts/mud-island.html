@@ -2,15 +2,15 @@
     {% assign attractions = site.data.mud-island %}
     {% for att in attractions %}
     <div class="row my-5">
-        <div class="col-6">
+        <div class="col-md-6 order-2">
             <h1>{{ att.title }}</h1>
             <div class="row">
-                <div class="col-6">
+                <div class="col-sm-6 col-md-12 col-lg-6">
                     <p class="lead">{{ att.hours }}</p>
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col-6">
+                <div class="col-sm-6 col-md-12 col-lg-6">
                     {% if att.directions %}
                         <h3>Get Here</h3>
                         <p>{{ att.directions }}</p>
@@ -21,9 +21,9 @@
                         <p>{{ att.bikeshare-info }}</p>
                     {% endif %}
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6 col-md-12 col-lg-6">
                         {% if att.parking %}
-                            <h3>Parking</h3>
+                            <h3 class="mt-3 mt-sm-0 mt-md-3 mt-lg-0">Parking</h3>
                             <p>{{ att.parking }}</p>
                         {% endif %}
                         {% if att.rental-info %}
@@ -34,7 +34,7 @@
                     </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 order-1 mb-3">
             <img class="img-fluid" src="{{ site.url }}/assets/images/parks/{{ att.image }}" />
         </div>
     </div>

@@ -58,8 +58,36 @@ $(document).ready(function(){
     $('#collapsingNavbar3').on('hide.bs.collapse', function(){
         $('.nav-wrapper').removeClass("navbar-mobile");
     });
-    
 
+    //FAVICON
+    var page_title = document.getElementsByTagName("title")[0].innerHTML;
+    var site_url = "http://localhost:4000";
+    var favicon_images = [
+        
+        site_url + '/assets/images/favicon/2.png',
+        site_url + '/assets/images/favicon/3.png',
+        site_url + '/assets/images/favicon/4.png',
+        site_url + '/assets/images/favicon/5.png',
+        site_url + '/assets/images/favicon/1.png'
+    ],
+    image_counter = 0; // To keep track of the current image
+
+    if(page_title.indexOf("Greenbelt") !== -1 || page_title.indexOf("Mud Island") !== -1 || page_title.indexOf("Fourth Bluff") !== -1 || page_title.indexOf("Big River") !== -1 || page_title.indexOf("MLK") !== -1) {
+        // do nothing
+    } else {
+        setInterval(function() {
+        $("link[rel='icon']").remove();
+        $("link[rel='shortcut icon']").remove();
+        $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+        // If last image then goto first image
+        // Else go to next image    
+        if(image_counter == favicon_images.length -1)
+            image_counter = 0;
+        else
+            image_counter++;
+        }, 1000);
+    }
 
     //HOVER COLOR EFFECTS & ANIMATIONS
 
@@ -96,6 +124,7 @@ $(document).ready(function(){
     var colors = palette;
     var currentColor = 0;
     var lis = document.getElementById("#page-404");
+   
     
     function changeColor() {
     if (currentColor < colors.length - 1){
@@ -107,8 +136,9 @@ $(document).ready(function(){
           currentColor = colors.length -1
       }
       
+      if (lis !== null){
        lis.style.background = colors[currentColor];
-      
+    }
     }
     
     setInterval(changeColor, 1600);
