@@ -25,8 +25,10 @@ permalink: /contact/
         <div class="container py-5">
             <div class="row py-2">
                     <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
-                        <p class="lead editable">
-                          Memphis River Parks Partnership<br />22 North Front Street, Suite 960<br />Memphis, TN 38103
+                        <p class="lead">
+                          {% for item in site.data.global-content.address %}
+                            {{ issue }}<br>
+                          {% endfor %}
                         </p>
                     </div>
                     <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
