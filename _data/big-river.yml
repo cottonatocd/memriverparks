@@ -8,6 +8,8 @@
       Park.
     map-link: 'https://goo.gl/maps/8o2oqCZSqW62'
   admission:
+    admission-info:
+    admission-link:
   parking: >-
     There is a small public parking lot accessible from Riverside Dr at Georgia.
     Parking lot open during park hours.
@@ -26,6 +28,8 @@
       the River Line, Butler Ave. or stairs from Tom Lee Park.
     map-link: 'https://goo.gl/maps/LkZPQJvP3eq'
   admission:
+    admission-info:
+    admission-link:
   parking: Tom Lee Park Lot.
   rent:
     rental-info:

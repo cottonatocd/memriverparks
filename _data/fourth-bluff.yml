@@ -6,6 +6,8 @@
     directions: Memphis Park is located on Front St. between Court and Jefferson.
     map-link: 'https://goo.gl/maps/Y67CutjoZ9A2'
   admission:
+    admission-info:
+    admission-link:
   parking: Street Parking available on Court St.
   rent:
     rental-info:
@@ -22,6 +24,8 @@
     directions: River Garden is located on Riverside Drive between Court and Jefferson.
     map-link: 'https://goo.gl/maps/PhVe6cBmQp62'
   admission:
+    admission-info:
+    admission-link:
   parking: Street parking available on Court St. and at the Tennessee Welcome Center.
   rent:
     rental-info:

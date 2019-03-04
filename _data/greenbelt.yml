@@ -8,6 +8,8 @@
       Greenbelt Park is on your left.
     map-link: 'https://goo.gl/maps/abs8UBF2gpE2'
   admission:
+    admission-info:
+    admission-link:
   parking: >-
     There are three public parking lots in Greenbelt Park. Parking lots are open
     in line with park hours.
