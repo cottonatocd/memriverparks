@@ -14,3 +14,19 @@
     The Explore Bike Share station is located at the south east corner of the
     park.
   image: /assets/images/parks/V60_dlbw.jpeg
+- title: River Garden
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
+  get-here:
+    directions: River Garden is located on Riverside Drive between Court and Jefferson.
+    map-link: 'https://goo.gl/maps/PhVe6cBmQp62'
+  admission:
+  parking: Street parking available on Court St. and at the Tennessee Welcome Center.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    The Explore Bike Share station is located at the south east corner of the
+    park.
+  image: /assets/images/parks/F8lzAEjg.jpeg
