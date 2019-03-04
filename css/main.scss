@@ -792,12 +792,12 @@ input#mce-EMAIL::placeholder{
     position:fixed;
     top:0px;
     left:0px;
-    z-index:-1;
+    z-index:-2;
 }
 .landing-hero-after{
     height:100vh;
     width:100vw;
-    z-index:-2;
+    z-index:0;
 }
 
 .img-container{
@@ -849,7 +849,11 @@ a.event-image:hover {
     }
 }
 
-.navbar-light .navbar-nav .nav-link:hover, a:hover{ 
+.nav-placeholder{
+    z-index:10;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, a:not(.round-donate-btn):hover{ 
   color: #f05f22 !important; 
 }
 
@@ -873,8 +877,13 @@ a.event-image:hover {
     text-transform: uppercase;
     color:black;
     text-decoration:none !important; 
-    z-index:1;
+    z-index:0;
+}
 
+.round-donate-btn:hover{
+    color:white !important;
+    background:black !important;
+    animation:none;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {

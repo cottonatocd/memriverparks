@@ -4,16 +4,17 @@ title: Memphis River Parks Partnership
 image: /assets/images/landing.png
 ---
 
-<div class="landing-hero-after"></div>
-<div class="landing-hero position-fixed" style="background-image: url('{{ page.image }}')">
-             
-</div>
-<a href="{{site.data.global-content.donate}}" class="round-donate-btn d-flex">
-        <span class="m-auto">
-                Donate
-        </span>
-    </a>  
 
+<div class="landing-hero position-fixed" style="background-image: url('{{ page.image }}')">
+        
+</div>
+<div class="landing-hero-after position-relative">
+        <a href="{{site.data.global-content.donate}}" class="round-donate-btn d-flex">
+            <span class="m-auto">
+                    Donate
+            </span>
+        </a> 
+    </div>
 <div class="container half-height">
     <div class="round bg-dark text-center d-flex">
         <div class="tagline m-auto">
@@ -49,7 +50,7 @@ image: /assets/images/landing.png
             </div>
     </div>
 </div>
-<div class="container-fluid bg-white py-5" id="mission">
+<div class="container-fluid bg-white py-5 position-relative" id="mission">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12 col-md-8 offset-md-2 text-center my-auto">
@@ -62,10 +63,10 @@ image: /assets/images/landing.png
             </div>
         </div>
 </div>
-<div class="container-fluid clearfix" id="districts-section">
+<div class="container-fluid clearfix position-relative" id="districts-section">
     {% include districts.html %}
 </div>
-<div class="container-fluid bg-white">
+<div class="container-fluid bg-white position-relative">
     <div class="container py-4 py-lg-5">
         <div class="row" id="events-landing">
             <div class="col-10 col-md-3">
@@ -77,10 +78,10 @@ image: /assets/images/landing.png
         </div>
     </div>
 </div>
-<div class="container-fluid text-left bg-light">
+<div class="container-fluid text-left bg-light position-relative">
         {% include rent.html %}
     </div>
-    <div class="container-fluid bg-white">
+    <div class="container-fluid bg-white position-relative">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-lg-3">
