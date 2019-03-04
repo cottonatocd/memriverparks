@@ -8,6 +8,8 @@
       to the park at Person and Mallory Avenues.
     map-link: 'https://goo.gl/maps/bhPsCZSeLKk'
   admission:
+    admission-info:
+    admission-link:
   parking: There are several small parking lots in MLK Park open during park hours.
   rent:
     rental-info:
