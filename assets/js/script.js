@@ -47,6 +47,7 @@ $(document).ready(function(){
 
     $('#parks-hero a').click(function(e){
         e.preventDefault(); 
+        console.log("clicked");
         $('#parks-hero').addClass('clicked');
         $('#parks-hero').find('.district').addClass('hidden');
         $(this).addClass('disabled');
@@ -55,7 +56,7 @@ $(document).ready(function(){
         $(this).find('.before-click').addClass('d-none');
 
         var url = "/parks/" + this.id + ".html";
-
+        console.log(url);
         window.history.pushState('obj', 'newtitle', "/parks/" + this.id);
         
         $("#district-content").html("<p>loading content...</p>").load(url);

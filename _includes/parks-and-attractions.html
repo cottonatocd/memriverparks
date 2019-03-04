@@ -1,6 +1,7 @@
 <div class="container py-3">
-        {% assign attractions = site.data.parks-and-attractions.big-river %}
+        {% assign attractions = site.data.parks-and-attractions[page.id] %}
         {% for att in attractions %}
+            
         <div class="row my-5">
                 <div class="col-md-6 order-2">
                     <h1>{{ att.title }}</h1>
@@ -49,5 +50,6 @@
                     <img class="img-fluid" src="{{ att.image }}" />
                 </div>
             </div>
+            
         {% endfor %}
     </div>
