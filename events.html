@@ -32,7 +32,9 @@ hero-image: events.png
         <div class="container pt-4 pb-5">
             <div class="row">
                 <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4">
-                    <h2 class="editable">Lorem past events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+                    <h2 class="editable">
+                      Past Events
+                    </h2>
                 </div>
             </div>
             
@@ -51,8 +53,8 @@ hero-image: events.png
 <div class="container-fluid">
 <div class="container py-4">
         <div class="row">
-            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable">
-                <h2 class="editable">Lorem seasonal events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable" href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal">
+              <h2><b>Major seasonal happenings return to the riverfront every year. Find out more information on major events here.</b></h2>
             </div>
         </div>
         {% assign events = site.data.seasonal-events %}
@@ -66,7 +68,7 @@ hero-image: events.png
                     <h2>{{ event.title }}</h2>
                     <p class="lead mb-2">
                         {% for item in event.frequency %}
-                            {{item}}<br>
+                            {{item}}<br />
                         {% endfor %}
                     </p>
                     <div class="row">
@@ -85,4 +87,4 @@ hero-image: events.png
 
         
     </div>
-</div>
+</div></div>
