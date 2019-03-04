@@ -1,14 +1,20 @@
 - title: Greenbelt Park
-  hours: 
+  hours:
     - Open dawn to dusk.
-    - This equates to 6am-6pm in winter, 6am-8pm in summer.
+    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
   get-here:
-    directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
-    map-link: https://goo.gl/maps/ToePm2FjKVG2
+    directions: >-
+      Take the AW Willis bridge to Mud Island and turn right onto Island Drive.
+      Greenbelt Park is on your left.
+    map-link: 'https://goo.gl/maps/abs8UBF2gpE2'
   admission: Free admission to the park.
-  parking: Paid parking available in the River Parks Garage at Poplar and Front St.
+  parking: >-
+    There are three public parking lots in Greenbelt Park. Parking lots are open
+    in line with park hours.
   rent:
-    rental-info: Lorem ipsum Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
-    rental-link: https://google.com
-  bikeshare-info: Lorem ipsum dolor sit amet.
-  image: mud-island-park.jpeg
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    There are three Explore Bike Share stations in Greenbelt Park, one at each
+    parking lot.
+  image: /assets/images/parks/greenbelt-park.jpeg
