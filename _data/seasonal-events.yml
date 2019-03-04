@@ -1,30 +1,32 @@
 - title: Memphis in May
   frequency:
-    - Fridays from 4:30 - 6:30PM
+    - 'Fridays from 4:30 - 6:30PM'
     - Yearly in May
-  description: Memphis in May hosts its annual celebrations in Tom Lee Park during the month of May. Lineup and tickets are available at memphisinmay.org.
-  image: seasonal-placeholder.png
+  description: >-
+    Memphis in May hosts its annual celebrations in Tom Lee Park during the
+    month of May. Lineup and tickets are available at memphisinmay.org.
+  image: /assets/images/seasonal-placeholder.png
   link:
-    link_url: https://www.memphisinmay.org/
+    link_url: 'https://www.memphisinmay.org/'
     link_text: Get Your Tickets
 - title: Wine on the River
-  frequency: 
+  frequency:
     - Yearly in October
-  description: Each October, Wine on the River takes place along the riverwalk in Mud Island Park. Tickets are available at wineontherivermemphis.com.
+  description: >-
+    Each October, Wine on the River takes place along the riverwalk in Mud
+    Island Park. Tickets are available at wineontherivermemphis.com.
   link:
-    link_url: https://www.wineontherivermemphis.com/
+    link_url: 'https://www.wineontherivermemphis.com/'
     link_text: Get Your Tickets
   image: seasonal-placeholder.png
 - title: Duncan-Williams St. Jude Dragon Boat Races
-  frequency: 
+  frequency:
     - Yearly in May
-  description: The Duncan-Williams St. Jude dragon boat races take place each May at Mud Island Park. It’s free to attend but boat crews must pay a registration fee. Details and registration is available at stjude.org.
+  description: >-
+    The Duncan-Williams St. Jude dragon boat races take place each May at Mud
+    Island Park. It’s free to attend but boat crews must pay a registration fee.
+    Details and registration is available at stjude.org.
   link:
     link_url:
     link_text:
   image: seasonal-placeholder.png
-
-
-
-
-
