@@ -7134,6 +7134,29 @@ a.event-image:hover h3, a.event-image:hover h2 {
 .navbar-light .navbar-nav .nav-link:hover, a:hover {
   color: #f05f22 !important; }
 
+.round-donate-btn {
+  width: 93px;
+  height: 93px;
+  animation-name: bgcolorchange5;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bgcolorchange5;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  border-radius: 93px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: -1; }
+  .round-donate-btn a {
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none !important; }
+
 .carousel-control-prev-icon, .carousel-control-next-icon {
   display: inline-block;
   width: 20.2px;
