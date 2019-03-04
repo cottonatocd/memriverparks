@@ -1,14 +1,17 @@
 title: Memphis River Parks Partnership
 email: info@memphisriverparks.org
 author:
-description:
+description: >-
+  The Memphis River Parks Partnership is a nonprofit (501c3) organization that
+  stewards the riverfront on behalf of the people of Memphis. The partnership
+  works to create a connected, catalytic and fun riverfront for all.
 url:
 facebook: 'https://www.facebook.com/memriverparks/'
 instagram: 'https://www.instagram.com/memriverparks/'
 twitter: 'https://twitter.com/memriverparks'
 medium: 'https://medium.com/memriverparks'
-donate:
-shop:
+donate: 'https://fundly.com/'
+shop: 'https://squareup.com/shop/hardware/us/en'
 address:
   - Memphis River Parks Partnership!!!!!
   - '22 North Front Street, Suite 960'
