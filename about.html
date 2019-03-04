@@ -37,14 +37,16 @@ permalink: /about/
 <div class="container py-4">
     <div class="row">
         <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4">
-            <h2 class="editable" href="#">These are the people who make the riverfront lorem ipsum dolor sit amet.</h2>
+            <h2 class="editable" href="#">
+              The Partnership team maintains more than five miles of riverfront everyday. Say hi to a ranger next time you spot them in the park!
+            </h2>
         </div>
     </div>
     <div class="row">
         {% assign staff = site.data.staff %}
         {% for staffmember in staff %}
             <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="../assets/images/{{ staffmember.image }}">
+                <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="../assets/images/{{ staffmember.image }}" />
                 <p class="lead mb-1">{{ staffmember.name }}</p>
                 <p>{{ staffmember.title }}</p>
             </div>
@@ -62,7 +64,7 @@ permalink: /about/
                 {% for boardmember in board %}
             <div class="person">
                 <p class="lead">{{ boardmember.name }}</p>
-                <p>{{ boardmember.role}}<br>{{boardmember.optional-third-line}}</p>
+                <p>{{ boardmember.role}}<br />{{boardmember.optional-third-line}}</p>
             </div>
                 {% endfor %}
         </div>
@@ -79,7 +81,7 @@ permalink: /about/
                     {% for member in officio %}
                 <div class="person">
                     <p class="lead">{{ member.name }}</p>
-                    <p>{{ member.role}}<br>{{member.optional-third-line}}</p>
+                    <p>{{ member.role}}<br />{{member.optional-third-line}}</p>
                 </div>
                     {% endfor %}
             </div>
@@ -102,7 +104,9 @@ permalink: /about/
 <div class="container py-4">
         <div class="row">
             <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4">
-                <p class="lead mb-3 editable" href="#">Keep up with the latest ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p class="lead mb-3 editable" href="#">
+                  We love to show off the riverfront online. Check out the latest images and follow us at @memriverparks
+                </p>
                 <a class="btn btn-secondary external mb-2 editable" href="https://www.instagram.com/memriverparks/" target="_blank">View More Images</a>
             </div>
         </div>
