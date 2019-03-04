@@ -7146,15 +7146,14 @@ a.event-image:hover h3, a.event-image:hover h2 {
   border-radius: 93px;
   position: fixed;
   bottom: 50px;
-  left: 50px; }
-  .round-donate-btn a {
-    font-family: "GT Haptik", Helvetica, sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.76px;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: black;
-    text-decoration: none !important; }
+  left: 50px;
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none !important; }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
   display: inline-block;
