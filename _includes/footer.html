@@ -39,16 +39,18 @@
 
 
     <div class="icons my-4">
-        <a href="{{ site.facebook }}"><img src="{{ siteurl }}/assets/images/icon-facebook.svg" /></a>
-        <a href="{{ site.twitter }}"><img src="{{ siteurl }}/assets/images/icon-twitter.svg" /></a>
-        <a href="{{ site.medium }}"><img src="{{ siteurl }}/assets/images/icon-medium.svg" /></a>
-        <a href="{{ site.instagram }}"><img src="{{ siteurl }}/assets/images/icon-instagram.svg" /></a>
+        <a href="{{ site.global-content.facebook }}"><img src="{{ siteurl }}/assets/images/icon-facebook.svg" /></a>
+        <a href="{{ site.global-content.twitter }}"><img src="{{ siteurl }}/assets/images/icon-twitter.svg" /></a>
+        <a href="{{ site.global-content.medium }}"><img src="{{ siteurl }}/assets/images/icon-medium.svg" /></a>
+        <a href="{{ site.global-content.instagram }}"><img src="{{ siteurl }}/assets/images/icon-instagram.svg" /></a>
     </div>
-    <p class="pb-3 editable" href="#">
-        Memphis River Parks Partnership<br />22 North Front Street, Suite 960<br />Memphis, TN 38103
+    <p class="pb-3 editable">
+        {% for item in site.global-content.address %}
+            {{item}}<br>
+        {% endfor %}
     </p>
     <p class="pb-3">
-        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <a href="mailto:{{ site.global-content.email }}">{{ site.global-content.email }}</a>
     </p>
 </div>
 </footer>
