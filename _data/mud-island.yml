@@ -13,3 +13,18 @@
     rental-info:
     rental-link:
   image: amphitheatre.jpeg
+- title: Mud Island Park
+  hours: 
+    - Open dawn to dusk.
+    - This equates to 6am-6pm in winter, 6am-8pm in summer.
+  get-here:
+    directions: Access Mud Island Park on foot from Island Drive or by walking across the skybridge from downtown.
+    map-link:
+  admission:
+    admission-info:
+    admission-link:
+  parking:
+  rent:
+    rental-info:
+    rental-link:
+  image: amphitheatre.jpeg
