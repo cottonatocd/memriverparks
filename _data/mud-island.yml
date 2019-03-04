@@ -1,17 +1,18 @@
 - title: Mud Island Amphitheatre
   hours:
-    - Open dawn to dusk.
-    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
+    -
   get-here:
-    directions: >-
-      Access Mud Island Park on foot from Island Drive or by walking across the
-      skybridge from downtown.
-    map-link:
+    directions: Lorem ipsum dolor sit amet.
+    map-link: 'https://goo.gl/maps/CgqKg61XjDG2'
   admission:
     admission-info: Mud Island Amphitheatre Tickets are sold by event on Ticketmaster.
     admission-link: >-
       https://www.ticketmaster.com/Mud-Island-Amphitheatre-tickets-Memphis/venue/221388
-  parking:
+  parking: >-
+    Parking is available at the Mud Island Parking Garage adjacent to the East
+    Plaza Entrance which is located at 125 N. Front Street. Entrance to the
+    garage is at the corner of Front St. and Poplar. Fees range from $3-$10,
+    depending on the event.
   rent:
     rental-info:
     rental-link:
