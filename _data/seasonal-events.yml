@@ -18,7 +18,7 @@
   link:
     link_url: 'https://www.wineontherivermemphis.com/'
     link_text: Get Your Tickets
-  image: seasonal-placeholder.png
+  image: /assets/images/seasonal-placeholder.png
 - title: Duncan-Williams St. Jude Dragon Boat Races
   frequency:
     - Yearly in May
@@ -29,4 +29,4 @@
   link:
     link_url:
     link_text:
-  image: seasonal-placeholder.png
+  image: /assets/images/seasonal-placeholder.png
