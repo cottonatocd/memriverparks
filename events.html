@@ -77,8 +77,8 @@ image: /assets/images/events.png
                         </div>
                     </div>
                     
-                    {% if event.link_url %}
-                    <a href="{{ event.link_url }}" class="btn btn-primary">{{ event.link_text }}</a>
+                    {% if event.link.link_url %}
+                    <a href="{{ event.link.link_url }}" class="btn btn-primary">{{ event.link.link_text }}</a>
                     {% endif %}
                 </div>
             </div>
