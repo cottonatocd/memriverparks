@@ -8,10 +8,16 @@
   link_text: Explore the Parks
 - question: Can I bring my dog(s) to the parks?
   answer: Yes! Dogs are welcome at the river parks. Dogs must be kept on a leash, and we ask that you make sure to clean up after your pet. 
+  link_url:
+  link_text:
 - question: Can I bring food and drink to enjoy on the river?
   answer: Yes! You can bring food and drink to enjoy at any of the parks. Alcoholic beverages are not permitted. Please make sure to use the trashcans provided to discard your food and drink waste.
+  link_url:
+  link_text:
 - question: How do I buy tickets for Memphis in May events?
   answer: Buy tickets directly from Memphis in May International Festival at memphisinmay.org.
+  link_url:
+  link_text:
 - question: Can I host a private event or wedding on the river?
   answer: Yes, there are a number of rental facilities available for events of all sizes. Contact us for more. 
   link_url: LINK TO EVENT BOOKING PAGE.
@@ -21,3 +27,5 @@
         Memphis Riverboats offers sightseeing trips and dinner cruises leaving from the riverboat dock at Beale St. and Riverside Drive. Visit memphisriverboats.net for more information and to book your cruise. 
         
         American Cruise Lines and American Queen Steamboat Company offer multi-day cruises that depart from Memphis. Check out their websites for more details and to book.
+  link_url:
+  link_text:
