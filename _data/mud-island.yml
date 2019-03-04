@@ -15,7 +15,7 @@
   rent:
     rental-info:
     rental-link:
-  image: amphitheatre.jpeg
+  image: /assets/images/parks/amphitheatre.jpeg
 - title: Mud Island Park
   hours:
     - Open dawn to dusk.
