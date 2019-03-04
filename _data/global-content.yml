@@ -1,22 +1,15 @@
-# Site settings
 title: Memphis River Parks Partnership
 email: info@memphisriverparks.org
 author:
-description: 
+description:
 url:
-
-# Social links
-facebook: https://www.facebook.com/memriverparks/
-instagram: https://www.instagram.com/memriverparks/
-twitter: https://twitter.com/memriverparks
-medium: https://medium.com/memriverparks
-
-# Global links
-donate: 
-shop: 
-
-# Info
+facebook: 'https://www.facebook.com/memriverparks/'
+instagram: 'https://www.instagram.com/memriverparks/'
+twitter: 'https://twitter.com/memriverparks'
+medium: 'https://medium.com/memriverparks'
+donate:
+shop:
 address:
-    - Memphis River Parks Partnership
-    - 22 North Front Street, Suite 960
-    - Memphis, TN 38103
+  - Memphis River Parks Partnership!!!!!
+  - '22 North Front Street, Suite 960'
+  - 'Memphis, TN 38103'
