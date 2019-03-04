@@ -18,7 +18,7 @@
                                 <p>{{ att.get-here.directions }}</p>
                                 <p><a href="{{ att.get-here.map-link }}" class="external">View on Map</a></p>
                             {% endif %}
-                            {% if att.admission %}
+                            {% if att.admission.admission-info or att.admission.admission-link %}
                                 <h3 class="mt-3">Admission</h3>
                                 <p>{{ att.admission.admission-info }}</p>
                                 {% if att.admission.admission-link %}
