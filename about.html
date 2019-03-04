@@ -46,7 +46,7 @@ permalink: /about/
         {% assign staff = site.data.staff %}
         {% for staffmember in staff %}
             <div class="col-6 col-sm-4 col-md-3 mb-4">
-                <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="../assets/images/{{ staffmember.image }}" />
+                <img class="img-fluid mb-3" alt="{{ staffmember.alt_text }}" src="{{ staffmember.image }}" />
                 <p class="lead mb-1">{{ staffmember.name }}</p>
                 <p>{{ staffmember.title }}</p>
             </div>
@@ -96,7 +96,7 @@ permalink: /about/
             <div class="col-sm-8 offset-sm-2 col-md-8 col-lg-4 offset-md-2 offset-lg-1 text-center my-auto">
                 <h1 class="mb-3 editable" href="#">We run on ipsum people like you.</h1>
                 <p class="lead mb-3 mx-auto editable" style="max-width:400px;" href="#">Your donations keep us going ipsum dolor sit amet.</p>
-                <a href="#" class="btn btn-primary editable">Donate to keep us going</a>
+                <a href="{{ site.data.global-content.donate}}" class="btn btn-primary editable">Donate to keep us going</a>
             </div>
         </div>
     </div>
