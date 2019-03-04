@@ -7146,8 +7146,7 @@ a.event-image:hover h3, a.event-image:hover h2 {
   border-radius: 93px;
   position: fixed;
   bottom: 50px;
-  left: 50px;
-  z-index: -1; }
+  left: 50px; }
   .round-donate-btn a {
     font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 14px;
