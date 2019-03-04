@@ -1,6 +1,6 @@
 <footer>
 <div class="container-fluid bg-grey text-center py-4">
-    <h2 class="editable" href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal">
+    <h2 class="editable" href="#">
       Questions, comments or feedback?
     </h2>
     <a href="#" class="btn btn-primary editable">Let Us Know</a>
@@ -44,10 +44,8 @@
         <a href="{{ site.data.global-content.medium }}"><img src="{{ siteurl }}/assets/images/icon-medium.svg" /></a>
         <a href="{{ site.data.global-content.instagram }}"><img src="{{ siteurl }}/assets/images/icon-instagram.svg" /></a>
     </div>
-    <p class="pb-3 editable">
-        {% for item in site.data.global-content.address %}
-            {{item}}<br>
-        {% endfor %}
+    <p class="pb-3 editable" href="#">
+      Memphis River Parks Partnership<br />22 North Front Street, Suite 960<br />Memphis, TN 38103
     </p>
     <p class="pb-3">
         <a href="mailto:{{ site.data.global-content.email }}">{{ site.data.global-content.email }}</a>
