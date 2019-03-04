@@ -2,49 +2,52 @@
         {% assign attractions = site.data.mlk %}
         {% for att in attractions %}
         <div class="row my-5">
-            <div class="col-md-6 order-2">
-                <h1>{{ att.title }}</h1>
-                <div class="row">
-                    <div class="col-sm-6 col-md-12 col-lg-6">
-                        {% for item in att.hours %}
-                            <p class="lead">{{item}}<br></p>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-sm-6 col-md-12 col-lg-6">
-                        {% if att.get-here %}
-                            <h3>Get Here</h3>
-                            <p>{{ att.get-here.directions }}</p>
-                            <p><a href="{{ att.get-here.map-link }}" class="external">View on Map</a></p>
-                        {% endif %}
-                        {% if att.admission %}
-                            <h3 class="mt-3">Admission</h3>
-                            <p>{{ att.admission }}</p>
-                        {% endif %}
-                        {% if att.bikeshare-info %}
-                                <h3 class="mt-3">Bike Share</h3>
-                                <p>{{ att.bikeshare-info }}</p>
-                            {% endif %}
-                        
-                    </div>
-                    <div class="col-sm-6 col-md-12 col-lg-6">
-                            {% if att.parking %}
-                                <h3 class="mt-3 mt-sm-0 mt-md-3 mt-lg-0">Parking</h3>
-                                <p>{{ att.parking }}</p>
-                            {% endif %}
-                            
-                            {% if att.rent %}
-                                <h3 class="mt-3">Rent</h3>
-                                <p>{{ att.rent.rental-info }}</p>
-                                <p><a href="{{ post.rent.rental-link }}" class="external">Send an Inquiry</a></p>
-                            {% endif %}
+                <div class="col-md-6 order-2">
+                    <h1>{{ att.title }}</h1>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            {% for item in att.hours %}
+                                <p class="lead">{{item}}<br></p>
+                            {% endfor %}
                         </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                            {% if att.get-here %}
+                                <h3>Get Here</h3>
+                                <p>{{ att.get-here.directions }}</p>
+                                <p><a href="{{ att.get-here.map-link }}" class="external">View on Map</a></p>
+                            {% endif %}
+                            {% if att.admission %}
+                                <h3 class="mt-3">Admission</h3>
+                                <p>{{ att.admission.admission-info }}</p>
+                                {% if att.admission.admission-link %}
+                                <p><a href="{{ att.admission.admission-link }}" class="external">Get Tickets</a></p>
+                                {% endif %}
+                            {% endif %}
+                            {% if att.bikeshare-info %}
+                                    <h3 class="mt-3">Bike Share</h3>
+                                    <p>{{ att.bikeshare-info }}</p>
+                                {% endif %}
+                            
+                        </div>
+                        <div class="col-sm-6 col-md-12 col-lg-6">
+                                {% if att.parking %}
+                                    <h3 class="mt-3 mt-sm-0 mt-md-3 mt-lg-0">Parking</h3>
+                                    <p>{{ att.parking }}</p>
+                                {% endif %}
+                                
+                                {% if att.rent.rental-info %}
+                                    <h3 class="mt-3">Rent</h3>
+                                    <p>{{ att.rent.rental-info }}</p>
+                                    <p><a href="{{ post.rent.rental-link }}" class="external">Send an Inquiry</a></p>
+                                {% endif %}
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 order-1 mb-3">
+                    <img class="img-fluid" src="{{ att.image }}" />
                 </div>
             </div>
-            <div class="col-md-6 order-1 mb-3">
-                <img class="img-fluid" src="{{ att.image }}" />
-            </div>
-        </div>
         {% endfor %}
     </div>
