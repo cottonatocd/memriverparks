@@ -20,7 +20,10 @@
                     {% endif %}
                     {% if att.admission %}
                         <h3 class="mt-3">Admission</h3>
-                        <p>{{ att.admission }}</p>
+                        <p>{{ att.admission.admission-info }}</p>
+                        {% if att.admission.admission-link %}
+                        <p><a href="{{ att.admission.admission-link }}" class="external">Get Tickets</a></p>
+                        {% endif %}
                     {% endif %}
                     {% if att.bikeshare-info %}
                             <h3 class="mt-3">Bike Share</h3>
@@ -34,7 +37,7 @@
                             <p>{{ att.parking }}</p>
                         {% endif %}
                         
-                        {% if att.rent %}
+                        {% if att.rent.rental-info %}
                             <h3 class="mt-3">Rent</h3>
                             <p>{{ att.rent.rental-info }}</p>
                             <p><a href="{{ post.rent.rental-link }}" class="external">Send an Inquiry</a></p>
