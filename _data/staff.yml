@@ -2,12 +2,11 @@
   title: Title of Titling
   image: /assets/images/headshot-placeholder.png
   alt_text: 'Lauren Ipsom, Memphis River Parks'
-- name: Lorn Ipsom
-  title: Title of Titling
+- name: Lauren ipsum
+  title: Leader of Ipsum
   image: /assets/images/headshot-placeholder.png
-- name: Lauren Ipsom
-  title: Title of Titling
+  alt_text: Lauren Ipsum of Memphis River Parks
+- name: Lauren Ipsum
+  title: Director of Ipsum
   image: /assets/images/headshot-placeholder.png
-- name: Lauren Ipsom
-  title: Title of Titling
-  image: /assets/images/headshot-placeholder.png
+  alt_text: Lauren of Memphis River Parks
