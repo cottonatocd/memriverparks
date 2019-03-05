@@ -17,8 +17,8 @@
     - title: River Parks People
       url: /river-parks-people
     - title: Work With Us
-      url: /#
+      url: '/#'
       external: true
     - title: Donate
-      url: /#
+      url: donate.com
       external: true
