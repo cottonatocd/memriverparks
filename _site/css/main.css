@@ -6538,18 +6538,18 @@ a.disabled {
 .modal.show {
   display: flex !important; }
 
-.modal-content {
+.modal-content:not(.round) {
   border-radius: 0px !important;
   border-radius: 0px;
   width: 500px;
   border: 0px;
   padding: 42px; }
-  .modal-content .close {
+  .modal-content:not(.round) .close {
     opacity: 1;
     width: 20px;
     float: none;
     margin-bottom: 70px; }
-  .modal-content h2 {
+  .modal-content:not(.round) h2 {
     margin-bottom: 40px; }
 
 p.lead {
@@ -7334,14 +7334,14 @@ a.event-image:hover h3, a.event-image:hover h2 {
   h3 {
     font-size: 16px; }
 
-  .round {
-    border-radius: 50%;
+  .round, .round.modal-content {
+    border-radius: 50% !important;
     width: 300px;
     height: 300px;
     margin-bottom: calc(50vh - 150px); }
-    .round .join {
+    .round .join, .round.modal-content .join {
       bottom: 40px; }
-    .round h1 {
+    .round h1, .round.modal-content h1 {
       margin-bottom: 70px !important; }
 
   .round.form-active input.btn.btn-primary {

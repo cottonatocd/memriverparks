@@ -72,7 +72,7 @@ a.disabled {
     display:flex !important;
 }
 
-.modal-content {
+.modal-content:not(.round) {
     border-radius: 0px !important;
     border-radius: 0px;
     width: 500px;
@@ -1064,8 +1064,8 @@ a.event-image:hover {
     h3{
         font-size:16px;
     }
-    .round {
-        border-radius: 50%;
+    .round, .round.modal-content {
+        border-radius: 50% !important;
         width: 300px;
         height: 300px;
         margin-bottom: calc(50vh - 150px);
