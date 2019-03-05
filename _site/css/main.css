@@ -7404,7 +7404,10 @@ a.btn-404:hover {
   input#mce-EMAIL::placeholder, input#mce-EMAIL {
     font-size: 26px;
     letter-spacing: 0.6px;
-    line-height: 28px; } }
+    line-height: 28px; }
+
+  .round.form-active input#mce-EMAIL {
+    width: 90%; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }
