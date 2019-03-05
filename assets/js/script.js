@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     $('#parks-hero a').click(function(e){
         e.preventDefault(); 
-        console.log("clicked");
+    
         $('#parks-hero').addClass('clicked');
         $('#parks-hero').find('.district').addClass('hidden');
         $(this).addClass('disabled');
@@ -53,9 +53,12 @@ $(document).ready(function(){
         $(this).find('.after-click').removeClass('d-none');
         $(this).find('.before-click').addClass('d-none');
 
-        var url = "/parks/" + this.id + ".html";
-        console.log(url);
+        var url = "/dont-edit-parks/" + this.id + ".html";
+
         window.history.pushState('obj', 'newtitle', "/parks/" + this.id);
+
+        console.log(url);
+
         
         $("#district-content").html("<p>loading content...</p>").load(url);
         //Use this inside your document ready jQuery 

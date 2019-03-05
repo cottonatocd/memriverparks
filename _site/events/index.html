@@ -95,9 +95,11 @@
                 response.data.forEach((item, index) => {
                   item.cover = values[index];
                   //create the events html
+
                   renderedEvents += createSingleEvent(item);
                 });
                 //add events to the dom
+                
                 eventsContainer.innerHTML += renderedEvents;
               });
             } else {
