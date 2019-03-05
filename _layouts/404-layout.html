@@ -7,7 +7,16 @@
   
   <body>
 
-    {% include navigation.html %}
+      <div class="nav-placeholder position-relative">
+          <a href="/" class="navbar-brand d-flex mr-auto">
+            <div class="logo">
+                <img class="img-fluid before-click" src="{{ site.url }}/assets/images/logo.png" onmouseenter="this.src ='{{ site.url }}/assets/images/logo-animated.gif';" onmouseout="this.src = '{{ site.url }}/assets/images/logo.png';" />
+            </div>
+          </a>
+          <div class="container-fluid nav-wrapper position-fixed">
+            {% include navigation.html %}
+          </div>
+      </div>
     
         {{ content }}
 

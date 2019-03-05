@@ -2,7 +2,17 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include navigation.html %}
+        <div class="nav-placeholder position-relative">
+                <a href="/" class="navbar-brand d-flex mr-auto">
+                  <div class="logo">
+                      <img class="img-fluid before-click" src="{{ site.url }}/assets/images/logo.png" onmouseenter="this.src ='{{ site.url }}/assets/images/logo-animated.gif';" onmouseout="this.src = '{{ site.url }}/assets/images/logo.png';" />
+                  </div>
+                </a>
+                <div class="container-fluid nav-wrapper position-fixed">
+                  {% include navigation.html %}
+                </div>
+            </div>
+            {% include join-modal.html %}
     
     {{ content }}
     <div class="container-fluid bg-grey py-5">
@@ -60,7 +70,7 @@
                             
                         
                             {% if page.show_carousel %}
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
                                 <div class="carousel-inner">
                                     {% for img in site.data.tom-lee-park-carousel %}
                                         {% if forloop.first == true %}

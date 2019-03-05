@@ -5,7 +5,14 @@
 
     {% include fb-events.html %}
 
-    {% include nav-internal.html %}
+    <a href="/" class="navbar-brand d-flex mr-auto smaller always">
+      <div class="logo">
+          <img class="img-fluid before-click" src="{{ site.url }}/assets/images/logo.png" onmouseenter="this.src ='{{ site.url }}/assets/images/logo-animated.gif';" onmouseout="this.src = '{{ site.url }}/assets/images/logo.png';" />
+      </div>
+    </a>
+    <div class="container-fluid nav-wrapper fixed">
+        {% include navigation.html %}
+    </div>
     <div class="container-fluid" style="margin-top:78px;">
         {{ content }}
     </div>

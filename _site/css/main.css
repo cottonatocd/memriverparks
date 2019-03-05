@@ -7134,7 +7134,7 @@ a.event-image:hover h3, a.event-image:hover h2 {
 .nav-placeholder {
   z-index: 10; }
 
-.navbar-light .navbar-nav .nav-link:hover, a:not(.round-donate-btn):hover {
+.navbar-light .navbar-nav .nav-link:hover, a:not(.round-donate-btn, .btn-404):hover {
   color: #f05f22 !important; }
 
 .round-donate-btn {
