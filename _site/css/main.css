@@ -7080,7 +7080,8 @@ input#mce-Email:focus {
   outline: none !important; }
 
 input#mce-EMAIL::placeholder {
-  color: #CCCCCC; }
+  color: #CCCCCC;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
 
 .landing-hero {
   background-position: center;
