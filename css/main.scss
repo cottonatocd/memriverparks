@@ -718,7 +718,7 @@ button.navbar-toggler:focus {
 
     input#mce-EMAIL {
         text-align: center;
-        font-family: GTHaptik-Medium;
+        font-family: "GT Haptik", Helvetica, sans-serif
         font-size: 32px;
         color:black;
         letter-spacing: 0.6px;
@@ -782,6 +782,7 @@ footer input.btn.btn-primary:focus::-webkit-input-placeholder{
 
 input#mce-Email:focus{
     outline: none !important;
+    font-family: "GT Haptik", Helvetica, sans-serif
 }
 
 input#mce-EMAIL::placeholder{
