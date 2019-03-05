@@ -48,6 +48,9 @@ a:focus{
 :focus {
     outline: none;
 }
+.nav-link.dropdown-toggle.showing:focus {
+    box-shadow: none;
+}
 .bg-grey{
     background-color:#F7F7F7;
 }

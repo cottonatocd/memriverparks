@@ -189,6 +189,10 @@ $(document).ready(function(){
 
     $(document).on("shown.bs.dropdown", ".dropdown", function (e) {
         $(".dropdown-menu li a.btn").removeClass("post-animation").addClass("animate-me");
+        $(".nav-link.dropdown-toggle").addClass("showing");
+    });
+    $(document).on("hidden.bs.dropdown", ".dropdown", function (e) {
+        $(".nav-link.dropdown-toggle").removeClass("showing");
     });
 
 
