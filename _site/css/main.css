@@ -6513,6 +6513,16 @@ p {
   color: black;
   margin-bottom: 10px; }
 
+a.btn:focus {
+  box-shadow: 0 0 0 0.2rem #ffc818;
+  color: white; }
+
+a:focus {
+  box-shadow: 0 0 0 0.2rem #ffc818; }
+
+:focus {
+  outline: none; }
+
 .bg-grey {
   background-color: #F7F7F7; }
 
