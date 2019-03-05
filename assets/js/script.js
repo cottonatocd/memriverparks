@@ -231,8 +231,10 @@ $(document).ready(function(){
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
         var pubDateSafari = new Date(item.pubDate.replace(/-/g, "/"));
+        // console.log(item.pubDate);
+        // console.log(pubDate);
+        // console.log(pubDateSafari);
 
-        console.log(pubDateSafari);
         var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
         var desc = item.description;
         var stripped = $(desc).text();
