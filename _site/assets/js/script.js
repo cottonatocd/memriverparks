@@ -33,6 +33,11 @@ $(document).ready(function(){
     document.getElementsByName('Email')[0].onfocus = function(){
         document.getElementsByName('Email')[0].placeholder='Enter your email & press Enter';
     }
+
+    document.getElementsByName('Email')[0].onfocusout = function(){
+        document.getElementsByName('Email')[0].placeholder='Sign Up for Updates';
+        console.log("changed!");
+    }
     
 
 
