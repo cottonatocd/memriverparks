@@ -7020,7 +7020,7 @@ button.navbar-toggler:focus {
     background-color: #44b549; }
   .round.form-active input#mce-EMAIL {
     text-align: center;
-    font-family: GTHaptik-Medium;
+    font-family: "GT Haptik", Helvetica, sans-serif;
     font-size: 32px;
     color: black;
     letter-spacing: 0.6px;
@@ -7076,8 +7076,13 @@ footer input.btn.btn-primary:focus::-webkit-input-placeholder {
   color: #b2b2b2 !important;
   font-weight: 700; }
 
+.modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto; }
+
 input#mce-Email:focus {
-  outline: none !important; }
+  outline: none !important;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
 
 input#mce-EMAIL::placeholder {
   color: #CCCCCC;
@@ -7394,7 +7399,12 @@ a.btn-404:hover {
     column-count: 2; }
 
   .nav-wrapper {
-    padding: 0px 20px !important; } }
+    padding: 0px 20px !important; }
+
+  input#mce-EMAIL::placeholder, input#mce-EMAIL {
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    line-height: 28px; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }
