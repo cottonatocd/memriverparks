@@ -230,6 +230,9 @@ $(document).ready(function(){
       
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
+        var pubDateSafari = new Date(item.pubDate.replace(/-/g, "/"));
+
+        console.log(pubDateSafari);
         var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
         var desc = item.description;
         var stripped = $(desc).text();
@@ -243,7 +246,7 @@ $(document).ready(function(){
             <div class="col-md-6 col-lg-5 offset-lg-1 order-2 order-md-1">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-md-12 col-lg-8 col-xl-6">
-                            <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
+                            <h3 class="mb-2">${pubDateSafari.toLocaleDateString("en-US", pubDateOptions)}</h3>
                             <h2>${item.title}</h2>
                     </div>
                 </div>
@@ -267,7 +270,7 @@ $(document).ready(function(){
                         <img class="img-fluid" src="${item.thumbnail}">
                     </div>
                     <div class="col-sm-6">
-                        <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
+                        <h3 class="mb-2">${pubDateSafari.toLocaleDateString("en-US", pubDateOptions)}</h3>
                         <h2>${item.title}</h2>
                         <p class="mb-3">${firstLine}</p>
                         <a href="${item.link}" class="btn btn-secondary" target='_blank'>Read More</a>
