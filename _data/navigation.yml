@@ -23,6 +23,6 @@
       url: donate.com
       external: true
 - title: Shop
-  url: /url
+  url: 'https://squareup.com/shop/hardware/us/en'
   external: true
   main-nav: false
