@@ -22,3 +22,7 @@
     - title: Donate
       url: donate.com
       external: true
+- title: Shop
+  url: /url
+  external: true
+  main-nav: false

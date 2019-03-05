@@ -29,28 +29,30 @@
                       {% if page.url contains link.url %}
                           {% assign class = 'active' %}
                       {% endif %}
-                      {% if link.sublinks %}
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
-                              <ul class="dropdown-menu">
-                                  {% for sublink in link.sublinks %}
-                                      {% if sublink.external == true %}
-                                      <li>
-                                            <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external">{{ sublink.title }}</a>
-                                        </li>
-                                      {% else %}
-                                          <li>
-                                              <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary">{{ sublink.title }}</a>
-                                          </li>
-                                      {% endif %}
-                                  {% endfor %}
-                              </ul>
-                          </li>        
-                      {% else %}
-                          <li class="nav-item {% if page.url == link.url %} active {% endif %}">
-                              <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
-                          </li>
-                      {% endif %}
+                      {% unless link.main-nav == false %}
+                            {% if link.sublinks %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link.title }}</a>
+                                    <ul class="dropdown-menu">
+                                        {% for sublink in link.sublinks %}
+                                            {% if sublink.external == true %}
+                                            <li>
+                                                    <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external">{{ sublink.title }}</a>
+                                                </li>
+                                            {% else %}
+                                                <li>
+                                                    <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary">{{ sublink.title }}</a>
+                                                </li>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </li>        
+                            {% else %}
+                                <li class="nav-item {% if page.url == link.url %} active {% endif %}">
+                                    <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endunless %}
                   {% endfor %}
               </ul>
             </div>
@@ -58,10 +60,10 @@
             
                     <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
                       <li class="nav-item">
-                        <a class="nav-link external" href="#">Shop</a>
+                        <a class="nav-link external" href="{{site.data.navigation[4].url}}">{{site.data.navigation[4].title}}</a>
                       </li>
                       <li>
-                        <a class="btn btn-primary" href="#" role="button">Join Us</a>
+                        <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal" role="button">Join Us</a>
                       </li>
                     </ul>
               </div>
