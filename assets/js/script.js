@@ -3,8 +3,8 @@ $(document).ready(function(){
     //SHRINK NAV
     var $navBar = $('.nav-placeholder .nav-wrapper');
 
-    if ($('.round').length){
-        var shrinkPos = $('.round').offset().top;
+    if ($('.round.bg-dark').length){
+        var shrinkPos = $('.round.bg-dark').offset().top;
     } else {
         var shrinkPos = 200;
     }
@@ -23,7 +23,6 @@ $(document).ready(function(){
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
             $('.navbar-brand').addClass('smaller');
-
         } else {
             $navBar.removeClass('fixed');
             $('.navbar-brand').removeClass('smaller');
