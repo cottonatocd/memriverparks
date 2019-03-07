@@ -39,11 +39,13 @@ p{
     margin-bottom:10px;
 }
 a.btn:focus{
-    box-shadow: 0 0 0 0.2rem $mud-island;
+    // box-shadow: 0 0 0 0.2rem $mud-island;
+    box-shadow: none;
     color: white;
 }
 a:focus{
-    box-shadow: 0 0 0 0.2rem $mud-island;
+    // box-shadow: 0 0 0 0.2rem $mud-island;
+    box-shadow: none;
 }
 :focus {
     outline: none;
