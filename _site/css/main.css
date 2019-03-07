@@ -7153,10 +7153,6 @@ a.event-image:hover h3, a.event-image:hover h2 {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: step-end; }
 
-.nav-placeholder {
-  z-index: 10;
-  mix-blend-mode: multiply; }
-
 .navbar-light .navbar-nav .nav-link:hover, a:hover {
   color: #f05f22; }
 
