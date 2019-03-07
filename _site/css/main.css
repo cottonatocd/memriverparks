@@ -7059,6 +7059,15 @@ footer input.btn.btn-primary {
   width: 210px;
   transition: 500ms; }
 
+footer input.btn.btn-primary::placeholder {
+  color: black !important;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  text-transform: uppercase;
+  line-height: 21px;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
+
 footer input.btn.btn-primary:hover {
   animation-name: bgcolorchange1;
   animation-duration: 2s;
@@ -7069,15 +7078,6 @@ footer input.btn.btn-primary:hover {
 
 footer input.btn.btn-primary:focus:hover {
   animation: none; }
-
-footer input.btn.btn-primary::placeholder {
-  color: black !important;
-  font-weight: 900;
-  font-size: 14px;
-  letter-spacing: 0.76px;
-  text-transform: uppercase;
-  line-height: 21px;
-  font-family: "GT Haptik", Helvetica, sans-serif; }
 
 footer input.btn.btn-primary:focus {
   width: 90%;
@@ -7411,10 +7411,34 @@ a.btn-404:hover {
   .nav-wrapper {
     padding: 0px 20px !important; }
 
-  input#mce-EMAIL::placeholder, input#mce-EMAIL:not(footer input#mce-EMAIL) {
+  input#mce-EMAIL::placeholder, input#mce-EMAIL:not(input.footer-input#mce-EMAIL) {
     font-size: 26px;
     letter-spacing: 0.6px;
     line-height: 28px; }
+
+  footer input.footer-input.btn.btn-primary#mce-EMAIL {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 0.76px;
+    border: 0px;
+    padding: 10px 20px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px !important;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    line-height: 21px;
+    transition: 500ms; }
+
+  footer input.footer-input.btn.btn-primary#mce-EMAIL::placeholder {
+    color: black !important;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    line-height: 21px;
+    font-family: "GT Haptik", Helvetica, sans-serif; }
 
   .round.form-active input#mce-EMAIL {
     width: 90%; } }
