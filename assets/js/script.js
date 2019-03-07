@@ -223,6 +223,15 @@ $(document).ready(function(){
     });
 
 
+    //AUTO OPEN FACEBOOK APP
+    function openFbApp(){
+    setTimeout(function () { 
+        window.location = "https://www.facebook.com"; 
+    }, 25);
+    window.location = "fb://";
+    }
+
+    
 
     //MEDIUM
     
