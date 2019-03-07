@@ -7415,7 +7415,7 @@ a.btn-404:hover {
   .nav-wrapper {
     padding: 0px 20px !important; }
 
-  input#mce-EMAIL::placeholder, input#mce-EMAIL {
+  input#mce-EMAIL::placeholder, input#mce-EMAIL:not(footer input#mce-EMAIL) {
     font-size: 26px;
     letter-spacing: 0.6px;
     line-height: 28px; }
