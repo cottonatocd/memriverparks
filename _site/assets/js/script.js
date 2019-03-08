@@ -162,7 +162,6 @@ if(document.getElementsByName('Email')[0]){
 
             for (var i = 0; i < classname.length; i++) {
                 classname[i].addEventListener("mouseout", function( event ) {
-                console.log("left event");
                 var randomColor = palette[Math.floor(Math.random()*palette.length)];
                 var css = "a.event-image:hover .img-container{  background-color:" +  randomColor + "; -webkit-animation:none; animation:none;} a.event-image:hover h3, a.event-image:hover h2{color:" +  randomColor + "; -webkit-animation:none; animation:none;}";
                 var style = document.createElement('style');
