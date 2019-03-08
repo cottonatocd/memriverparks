@@ -142,7 +142,7 @@ if(document.getElementsByName('Email')[0]){
     });
     
     $("a").mouseleave(function(){
-        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.round-donate.btn):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.round-donate):hover, a:not(.btn-secondary):hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
         var style = document.createElement('style');
         if (style.styleSheet) {
             style.styleSheet.cssText = css;
