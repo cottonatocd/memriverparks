@@ -363,6 +363,7 @@ a.external:after, svg.external:after{
         a.btn.post-animation{
             visibility:visible;
             left: 0px;
+            transition:none;
         }
     }
 

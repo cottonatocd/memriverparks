@@ -6766,7 +6766,8 @@ a.external:after, svg.external:after {
       visibility: hidden; }
     .dropdown-menu.show li a.btn.post-animation {
       visibility: visible;
-      left: 0px; }
+      left: 0px;
+      transition: none; }
   .dropdown-menu.show li:nth-child(1) a.btn.animate-me {
     animation-name: slideIn1;
     -webkit-animation-name: slideIn1;

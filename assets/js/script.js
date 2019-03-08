@@ -185,21 +185,55 @@ $(document).ready(function(){
 
     // DROPDOWN MENU EVENTS
 
-    $(".dropdown-menu li a.btn").mouseenter(
-        function() {
-            $(this).removeClass("animate-me").addClass("post-animation");
-        }
-    );
+    // $(".dropdown-menu li a.btn").mouseenter(
+    //     function() {
+    //         $(this).removeClass("animate-me").addClass("post-animation");
+    //     }
+    // );
 
-    $('.dropdown-toggle').dropdown();
+    // $('.dropdown-toggle').dropdown();
 
-    $(document).on("shown.bs.dropdown", ".dropdown", function (e) {
-        $(".dropdown-menu li a.btn").removeClass("post-animation").addClass("animate-me");
-        $(".nav-link.dropdown-toggle").addClass("showing");
-    });
+    // $(document).on("shown.bs.dropdown", ".dropdown", function (e) {
+    //     $(".dropdown-menu li a.btn").removeClass("post-animation").addClass("animate-me");
+    //     $(".nav-link.dropdown-toggle").addClass("showing");
+    // });
+
     $(document).on("hidden.bs.dropdown", ".dropdown", function (e) {
+        console.log('hidden');
         $(".nav-link.dropdown-toggle").removeClass("showing");
+        $(".dropdown-menu li a.btn").addClass('animate-me').removeClass('post-animation');
     });
+
+
+    // $(document).on("shown.bs.dropdown", ".dropdown", setTimeout(function (e) {
+    //     $(".dropdown-menu li a.btn").addClass("post-animation").removeClass("animate-me");
+    //     $(".nav-link.dropdown-toggle").addClass("showing");
+    //     console.log("showing");
+    // }, 3000 )
+    // );
+
+    // function myFunction() {
+    //     x.style.WebkitAnimation = "mymove 4s 2"; // Code for Chrome, Safari and Opera
+    //     x.style.animation = "mymove 4s 2";     // Standard syntax
+    //   }
+
+    
+
+    var x = document.getElementsByClassName('animate-me');
+    for (var i=0; i<x.length; i++){
+        //console.log(x[i]);
+        x[i].addEventListener("webkitAnimationEnd", myEndFunction);
+    }
+    
+   
+    // x.addEventListener("webkitAnimationEnd", myEndFunction);
+  
+
+    function myEndFunction() {
+        console.log("finished!");
+        $(this).removeClass('animate-me').addClass('post-animation');
+        console.log(this);
+    }
 
 
 
