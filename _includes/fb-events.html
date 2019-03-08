@@ -38,6 +38,8 @@
             var arrow = '<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="News" transform="translate(-1259.000000, -34.000000)" fill="#000000"><g id="Group-4"><g id="Group-3" transform="translate(1212.000000, 30.000000)"><g id="Page-1" transform="translate(47.000000, 4.000000)"><path d="M9.93,3.38633333 L6.18,0.053 C6.11875,-0.00158333333 6.03083333,-0.01575 5.95625,0.0184166667 C5.88125,0.0521666667 5.83333333,0.126333333 5.83333333,0.208416667 L5.83333333,1.66675 L5.20833333,1.66675 C2.385,1.66675 0,3.6705 0,6.04175 C0,7.55466667 1.07416667,9.17258333 2.61208333,9.97633333 C2.6425,9.99258333 2.67541667,10.0005 2.70833333,10.0005 L2.71291667,10.0005 C2.82916667,9.993 2.925,9.90841667 2.925,9.79216667 C2.925,9.72216667 2.89041667,9.65966667 2.83708333,9.62216667 C2.46833333,9.1855 2.08333333,8.47883333 2.08333333,7.91716667 C2.08333333,6.35216667 3.88416667,5.41716667 5.625,5.41716667 C5.67458333,5.41716667 5.72375,5.41591667 5.77208333,5.41425 L5.83333333,5.413 L5.83333333,6.8755 C5.83333333,6.95758333 5.88166667,7.03175 5.95625,7.0655 C6.03083333,7.09925 6.11833333,7.08591667 6.18,7.03091667 L9.93,3.69758333 C9.97458333,3.658 10,3.60133333 10,3.54175 C10,3.48216667 9.97458333,3.42591667 9.93,3.38633333" id="Fill-1"></path></g></g></g></g></g></svg>';
         return "<div class='col-sm-6 col-md-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id + " ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span>" + arrow + "</span><img class='img-fluid' src='" + item.cover + "'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
             }
+            
+
       }
       function displayEventList(container, pageID, token, parameters){
         let queryStrings = '?';
@@ -71,13 +73,31 @@
                   renderedEvents += createSingleEvent(item);
                 });
                 //add events to the dom
-                
-                eventsContainer.innerHTML += renderedEvents;
+                if (eventsContainer){
+                  eventsContainer.innerHTML += renderedEvents;
+                 }
               });
             } else {
               document.querySelector(`${container} .events-error`).classList.remove('hidden');
             }
           });
-      }
+
+            // $(document).ready(function(){
+            //   var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
+            //   $('.event-image').mouseleave(function(){
+            // var css = 'a.event-image:hover .img-container{  animation-name:" +  animations[Math.floor(Math.random()*animations.length)] +"; -webkit-animation-name:" +  animations[Math.floor(Math.random()*animations.length)] +";}
+            // var style = document.createElement('style');
+            // if (style.styleSheet) {
+            //     style.styleSheet.cssText = css;
+            //   } else {
+            //     style.appendChild(document.createTextNode(css));
+            //   }
+            //   document.getElementsByTagName('head')[0].appendChild(style);
+            // });
+
+            // });
+
+          
+        }
       </script>
       
