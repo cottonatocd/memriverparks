@@ -33,11 +33,6 @@
     
 }
 
-@font-feature-values "GT Haptik" { 
-    @styleset { alt-0: 1; } 
-    @stylistic { alternates: 1; } 
-  }
-
 body *{
     -moz-font-feature-settings: "salt";
     -webkit-font-feature-settings: "salt";

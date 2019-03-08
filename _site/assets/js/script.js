@@ -30,15 +30,17 @@ $(document).ready(function(){
         }
     }
 
+if(document.getElementsByName('Email')[0]){
+
     document.getElementsByName('Email')[0].onfocus = function(){
         document.getElementsByName('Email')[0].placeholder='Enter your email & press Enter';
     }
 
     document.getElementsByName('Email')[0].onfocusout = function(){
         document.getElementsByName('Email')[0].placeholder='Sign Up for Updates';
-        console.log("changed!");
+       // console.log("changed!");
     }
-
+}
 
     //NAV DROPDOWN MOBILE
     $(document).on('click', '.dropdown .dropdown-menu', function (e) {
@@ -230,7 +232,7 @@ $(document).ready(function(){
 
     function myEndFunction() {
         $(this).removeClass('animate-me').addClass('post-animation');
-        console.log(this);
+       // console.log(this);
     }
 
 
