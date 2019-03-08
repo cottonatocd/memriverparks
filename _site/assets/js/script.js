@@ -38,6 +38,12 @@ $(document).ready(function(){
         document.getElementsByName('Email')[0].placeholder='Sign Up for Updates';
         console.log("changed!");
     }
+
+
+    //NAV DROPDOWN MOBILE
+    $(document).on('click', '.dropdown .dropdown-menu', function (e) {
+        e.stopPropagation();
+      });
     
 
 
