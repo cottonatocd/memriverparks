@@ -6505,6 +6505,16 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../assets/fonts/GT-Haptik-Black.woff2") format("woff2"), url("../assets/fonts/GT-Haptik-Black.woff") format("woff"), url("../assets/fonts/GT-Haptik-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
+@font-feature-values "GT Haptik" {
+  @styleset {
+    alt-0: 1; }
+  @stylistic {
+    alternates: 1; } }
+body * {
+  -moz-font-feature-settings: "salt";
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt"; }
+
 p {
   font-family: 'Lora', serif;
   font-size: 16px;
