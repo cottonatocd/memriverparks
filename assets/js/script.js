@@ -62,7 +62,7 @@ $(document).ready(function(){
 
         window.history.pushState('obj', 'newtitle', "/parks/" + this.id);
 
-        console.log(url);
+       // console.log(url);
 
         
         $("#district-content").html("<p>loading content...</p>").load(url);

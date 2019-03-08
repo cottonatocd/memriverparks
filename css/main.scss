@@ -470,6 +470,7 @@ a.external:after, svg.external:after{
     z-index: 1000;
     nav{
         height:78px;
+        
     }
 }
 
@@ -482,11 +483,7 @@ a.external:after, svg.external:after{
     }
 }
 
-.nav-wrapper.navbar-mobile{
-    nav{
-        height:100% !important;
-    }
-}
+
 
 button.navbar-toggler:focus {
     outline: 0px auto -webkit-focus-ring-color;
@@ -539,14 +536,7 @@ button.navbar-toggler:focus {
     top:10px;
 }
 
-.nav-wrapper.navbar-mobile, .nav-wrapper.navbar-mobile.fixed{
-    background-color: #F7F7F7;
-    padding-bottom: 30px !important;
-    height:auto;
-    nav{
-        height:100% !important;
-    }
-}
+
 
 .icons a{
     margin:10px;
@@ -1059,12 +1049,27 @@ a.btn-404:hover{
         height: auto;
     }
     .navbar-collapse.show ul.navbar-nav {
-        margin-top: 100px;
+      //  margin-top: 100px;
     }
     .col-flow{
         -webkit-column-count: 3;
         -moz-column-count: 3;
              column-count: 3;
+    }
+    .nav-wrapper.navbar-mobile{
+        nav{
+            height:100% !important;
+            padding-top:120px;
+        }
+    }
+    .nav-wrapper.navbar-mobile, .nav-wrapper.navbar-mobile.fixed{
+        background-color: #F7F7F7;
+        padding-bottom: 30px !important;
+    
+        height:auto;
+        nav{
+            height:100% !important;
+        }
     }
   }
 
