@@ -1056,6 +1056,15 @@ a.btn-404:hover{
     .nav-wrapper nav, .nav-wrapper * nav {
         height: auto;
     }
+    #collapsingNavbar4.position-fixed{
+        position:static !important;
+        margin-top:30px;
+    }
+
+    .join-us-btn-nav{
+        padding-top:10px;
+    }
+
     .navbar-collapse.show ul.navbar-nav {
       //  margin-top: 100px;
     }
