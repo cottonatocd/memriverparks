@@ -199,7 +199,6 @@ $(document).ready(function(){
     // });
 
     $(document).on("hidden.bs.dropdown", ".dropdown", function (e) {
-        console.log('hidden');
         $(".nav-link.dropdown-toggle").removeClass("showing");
         $(".dropdown-menu li a.btn").addClass('animate-me').removeClass('post-animation');
     });
@@ -230,7 +229,6 @@ $(document).ready(function(){
   
 
     function myEndFunction() {
-        console.log("finished!");
         $(this).removeClass('animate-me').addClass('post-animation');
         console.log(this);
     }
