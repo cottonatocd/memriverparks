@@ -297,7 +297,7 @@ a.btn.btn-secondary{
     color:black;
     font-weight:900;
     border: 3px solid black;
-    padding: 7.1px 17.2px;
+    padding: 7px 17px;
 }
 
 span.btn.btn-secondary{
@@ -305,7 +305,7 @@ span.btn.btn-secondary{
     color:black;
     font-weight:900;
     border: 3px solid black;
-    padding: 7.1px 17.2px;
+    padding: 7px 17px;
 }
 
 a.external:after, svg.external:after{
@@ -786,6 +786,14 @@ footer input.btn.btn-primary:focus::-webkit-input-placeholder{
     max-width: 500px;
     margin: 1.75rem auto;
 }
+
+.modal {
+    overflow-y: auto;
+   }
+   
+   .modal-open {
+    overflow: auto;
+   }
 
 
 input#mce-Email:focus{
