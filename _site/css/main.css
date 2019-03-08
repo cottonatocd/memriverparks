@@ -7197,6 +7197,12 @@ a.btn-404:hover {
   padding: 0px 25px;
   opacity: 1; }
 
+#fb-device {
+  display: none; }
+
+#fb-web {
+  display: inline-block; }
+
 @keyframes bgcolorchange1 {
   0% {
     background-color: #f05f22; }
@@ -7448,3 +7454,9 @@ a.btn-404:hover {
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }
+@media only screen and (max-device-width: 768px) {
+  #fb-device {
+    display: inline-block; }
+
+  #fb-web {
+    display: none; } }

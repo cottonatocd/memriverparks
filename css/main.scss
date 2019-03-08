@@ -928,6 +928,14 @@ a.btn-404:hover{
 }
 
 
+#fb-device{
+    display:none;
+}
+#fb-web{
+    display:inline-block;
+}
+
+
 @keyframes bgcolorchange1 {
   0% {background-color: #f05f22;}
   25% {background-color: #ffc818;}
@@ -1209,3 +1217,12 @@ a.btn-404:hover{
             height:1000px;
         } 
     }
+
+@media only screen and (max-device-width: 768px){
+    #fb-device{
+        display:inline-block;
+    }
+    #fb-web{
+        display:none;
+    }
+}
