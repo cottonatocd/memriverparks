@@ -1,12 +1,27 @@
 - name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
 - name: Tyree Daniels – Vice Chair
-  role: Managing Director 
-  optional-third-line: Duncan Williams, Inc
+  role: Managing Director
+  optional-third-line: 'Duncan Williams, Inc'
 - name: John Farris
   role: Immediate Past Chair
-  optional-third-line: Farris, Mathews, Branan, Bobango & Hellen, P.L.C.
+  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
+- name: Terry Lynch
+  role: Treasurer
+  optional-third-line: 'Managing Partner, The Southland Companies'
+- name: Robert Clark
+  role: Secretary
+  optional-third-line: 'Director, Office of Government Affairs, St. Jude Research Hospital'
+- name: Ray Pohlman – Chair
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
+- name: Tyree Daniels – Vice Chair
+  role: Managing Director
+  optional-third-line: 'Duncan Williams, Inc'
+- name: John Farris
+  role: Immediate Past Chair
+  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
 - name: J.W. Gibson II
   role: Chairman and CEO
   optional-third-line: Gibson Companies
@@ -14,14 +29,17 @@
   role: General Manager
   optional-third-line: Bass Pro Shops Pyramid
 - name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
+- name: Ray Pohlman – Chair
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
 - name: Tyree Daniels – Vice Chair
-  role: Managing Director 
-  optional-third-line: Duncan Williams, Inc
+  role: Managing Director
+  optional-third-line: 'Duncan Williams, Inc'
 - name: John Farris
   role: Immediate Past Chair
-  optional-third-line: Farris, Mathews, Branan, Bobango & Hellen, P.L.C.
+  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
 - name: J.W. Gibson II
   role: Chairman and CEO
   optional-third-line: Gibson Companies
@@ -29,17 +47,14 @@
   role: General Manager
   optional-third-line: Bass Pro Shops Pyramid
 - name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
 - name: Tyree Daniels – Vice Chair
-  role: Managing Director 
-  optional-third-line: Duncan Williams, Inc
+  role: Managing Director
+  optional-third-line: 'Duncan Williams, Inc'
 - name: John Farris
   role: Immediate Past Chair
-  optional-third-line: Farris, Mathews, Branan, Bobango & Hellen, P.L.C.
+  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
 - name: J.W. Gibson II
   role: Chairman and CEO
   optional-third-line: Gibson Companies
@@ -47,20 +62,5 @@
   role: General Manager
   optional-third-line: Bass Pro Shops Pyramid
 - name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
-- name: Tyree Daniels – Vice Chair
-  role: Managing Director 
-  optional-third-line: Duncan Williams, Inc
-- name: John Farris
-  role: Immediate Past Chair
-  optional-third-line: Farris, Mathews, Branan, Bobango & Hellen, P.L.C.
-- name: J.W. Gibson II
-  role: Chairman and CEO
-  optional-third-line: Gibson Companies
-- name: David Hagel
-  role: General Manager
-  optional-third-line: Bass Pro Shops Pyramid
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President 
-  optional-third-line: AutoZone, Inc.
+  role: Government Relations Director and Vice President
+  optional-third-line: 'AutoZone, Inc.'
