@@ -1,7 +1,7 @@
 - title: Mud Island Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
   get-here:
     directions: >-
       Access Mud Island Park on foot from Island Drive or by walking across the
@@ -12,8 +12,8 @@
     admission-link:
   parking: Paid parking available in the River Parks Garage at Poplar and Front St.
   rent:
-    rental-info:
-    rental-link:
+    rental-info: Ask about renting Mud Island for your next event.
+    rental-link: 'https://rubyzielinski.typeform.com/to/MaSZXe'
   image: /assets/images/parks/mud-island-park.jpeg
 - title: Mud Island Amphitheatre
   hours:
@@ -34,3 +34,21 @@
     rental-info:
     rental-link:
   image: /assets/images/parks/amphitheatre.jpeg
+- title: Mississippi River Museum
+  hours:
+    - Open May through October
+    - Thursday – Sunday
+    - 10AM – 5PM
+  get-here:
+    directions: >-
+      The Mississippi River Museum is located in Mud Island Park at the West end
+      of the skybridge.
+    map-link: 'https://goo.gl/maps/pYAMMz3TCnA2'
+  admission:
+    admission-info: '$10 Adults 12 & Over, $8 Children ages 4 to 11, Free for Children under 4'
+    admission-link:
+  parking: Paid parking available in the River Parks Garage at Poplar and Front St.
+  rent:
+    rental-info:
+    rental-link:
+  image: /uploads/img-1257.jpg
