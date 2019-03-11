@@ -1,8 +1,6 @@
 - title: Memphis Park
   hours:
     - Open dawn to dusk.
-    - 'April – October, 6AM–8PM'
-    - 'November – March, 6AM–6PM'
   get-here:
     directions: Memphis Park is located on Front St. between Court and Jefferson.
     map-link: 'https://goo.gl/maps/Y67CutjoZ9A2'
@@ -20,8 +18,6 @@
 - title: River Garden
   hours:
     - Open dawn to dusk.
-    - 'April – October, 6AM–8PM'
-    - 'November – March, 6AM–6PM'
   get-here:
     directions: River Garden is located on Riverside Drive between Court and Jefferson.
     map-link: 'https://goo.gl/maps/PhVe6cBmQp62'
