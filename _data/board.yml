@@ -61,3 +61,36 @@
 - name: Doug McGowen
   role: Chief Operating Officer
   optional-third-line: City of Memphis
+- name: Laura Morris
+  role: Park and Public Realm Strategist
+  optional-third-line:
+- name: Billy Orgel
+  role: President
+  optional-third-line: Tower Ventures
+- name: Teresa Sloyan
+  role: Executive Director
+  optional-third-line: Hyde Family Foundations
+- name: Jamita Swearengen
+  role: Memphis City Council
+  optional-third-line:
+- name: Kevin Woods
+  role: Memphis Market President
+  optional-third-line: BlueCross BlueShield of TN
+- name: Jen Andrews
+  role: Executive Director
+  optional-third-line: Shelby Farms Park Conservancy
+- name: Maria Munoz-Blanco
+  role: Director of Parks and Neighborhoods
+  optional-third-line: City of Memphis
+- name: Kevin Kane
+  role: President & CEO
+  optional-third-line: Memphis Tourism
+- name: Kristen C. Wright
+  role: 'Senior Vice President, General Counsel & Secretary'
+  optional-third-line: 'AutoZone, Inc.'
+- name: Paul Young
+  role: Director of Memphis Housing Authority
+  optional-third-line: City of Memphis
+- name: Marcus Harris
+  role: President
+  optional-third-line: Downtown Neighborhood Association
