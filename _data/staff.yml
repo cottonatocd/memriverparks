@@ -1,12 +1,16 @@
 - name: Amanda Glenn
-  title: Title of Titling
+  title: River Parks Ranger
   image: /uploads/artboard-1-copy-3.png
   alt_text: Memphis River Parks Partnership
 - name: Arsenio Holmes
-  title: Leader of Ipsum
+  title: River Parks Ranger
   image: /uploads/artboard-1-copy-6.png
   alt_text: Memphis River Parks Partnership
 - name: Rodger Todd
   title: Director of Ipsum
   image: /uploads/artboard-1-copy-7.png
+  alt_text: Memphis River Parks Partnership
+- name: Willie Pollard
+  title:
+  image: /uploads/artboard-1-copy-8.png
   alt_text: Memphis River Parks Partnership
