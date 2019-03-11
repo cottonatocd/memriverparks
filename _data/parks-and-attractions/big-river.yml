@@ -1,7 +1,8 @@
 - title: Ashburn-Coppock Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: >-
       Ashburn-Coppock Park is located atop the bluff at the south end of Tom Lee
@@ -21,7 +22,8 @@
 - title: Butler Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: >-
       Butler Park overlooks Tom Lee Park atop the Bluff. Access the park from
@@ -38,8 +40,7 @@
   image: /assets/images/parks/Butler-Park.jpeg
 - title: Big River Crossing
   hours:
-    - Open daily.
-    - '6:00AM to 10:00PM'
+    - 'Open daily, 6AM–10PM'
   get-here:
     directions: 'Big River Crossing is located on Virginia Ave W, just off Channel 3. Dr.'
     map-link: 'https://goo.gl/maps/mtDxd4k6woy'
@@ -59,7 +60,8 @@
 - title: Chickasaw Heritage Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: Chickasaw Heritage Park is located south of I-55 on Metal Museum Dr.
     map-link: 'https://goo.gl/maps/xrPdWDHpFUN2'
@@ -75,7 +77,8 @@
 - title: E. H. Crump Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: E. H. Crump Park is located south of I-55 on Illinois Ave.
     map-link: 'https://goo.gl/maps/XqwybJX7Auw'
@@ -91,7 +94,8 @@
 - title: Martyrs Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: >-
       Martyrs Park is located south of Big River Crossing and is accessible from
@@ -111,11 +115,10 @@
 - title: Tom Lee Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
-    directions: >-
-      Tom Lee Park is a 30-acre expanse on Riverside Drive between Beale and
-      Georgia.
+    directions: Tom Lee Park is on Riverside Drive between Beale and Georgia.
     map-link: 'https://goo.gl/maps/BwNYqaMYc9q'
   admission:
     admission-info:
@@ -131,7 +134,8 @@
 - title: Vance Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+    - 'April – October, 6AM–8PM'
+    - 'November – March, 6AM–6PM'
   get-here:
     directions: >-
       Vance Park overlooks Beale Street Landing atop the Bluff. Access the park
