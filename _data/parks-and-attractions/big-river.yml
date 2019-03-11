@@ -21,7 +21,7 @@
 - title: Butler Park
   hours:
     - Open dawn to dusk.
-    - 'This equates to 6am-6pm in winter, 6am-8pm in summer.'
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
   get-here:
     directions: >-
       Butler Park overlooks Tom Lee Park atop the Bluff. Access the park from
@@ -36,3 +36,113 @@
     rental-link:
   bikeshare-info:
   image: /assets/images/parks/Butler-Park.jpeg
+- title: Big River Crossing
+  hours:
+    - Open daily.
+    - '6:00AM to 10:00PM'
+  get-here:
+    directions: 'Big River Crossing is located on Virginia Ave W, just off Channel 3. Dr.'
+    map-link: 'https://goo.gl/maps/mtDxd4k6woy'
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    Public parking is available at both the Memphis and Arkansas terminuses of
+    Big River Crossing.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    There are two Explore Bike Share Stations along the Crossing – one on the
+    Arkansas side and one on the Tennessee Side.
+  image: /uploads/ad9a4588-1.jpg
+- title: Chickasaw Heritage Park
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+  get-here:
+    directions: Chickasaw Heritage Park is located south of I-55 on Metal Museum Dr.
+    map-link: 'https://goo.gl/maps/xrPdWDHpFUN2'
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Metal Museum Dr.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/cbpark.jpg
+- title: E. H. Crump Park
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+  get-here:
+    directions: E. H. Crump Park is located south of I-55 on Illinois Ave.
+    map-link: 'https://goo.gl/maps/XqwybJX7Auw'
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Illinois Ave.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/ehcrumppark.jpg
+- title: Martyrs Park
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+  get-here:
+    directions: >-
+      Martyrs Park is located south of Big River Crossing and is accessible from
+      Channel 3 Dr.
+    map-link: 'https://goo.gl/maps/3hjLkUjAu6z'
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    There is a small public parking lot in the park. Parking lots open in line
+    with park hours.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/image-credit-dougcarpenterassociates-4.jpg
+- title: Tom Lee Park
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+  get-here:
+    directions: >-
+      Tom Lee Park is a 30-acre expanse on Riverside Drive between Beale and
+      Georgia.
+    map-link: 'https://goo.gl/maps/BwNYqaMYc9q'
+  admission:
+    admission-info:
+    admission-link:
+  parking: Public parking lot in the park – open with park hours.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    There are two Explore Bike Share Stations in the park – one at Beale Street
+    Landing and one near the parking lot in the center.
+  image: /uploads/river-play-june-2018-2-2.jpg
+- title: Vance Park
+  hours:
+    - Open dawn to dusk.
+    - 'This equates to 6AM – 6PM in winter, 6AM – 8PM in summer.'
+  get-here:
+    directions: >-
+      Vance Park overlooks Beale Street Landing atop the Bluff. Access the park
+      from the River Line, Vance Ave. or stairs from Tom Lee Park.
+    map-link: 'https://goo.gl/maps/4VDMG3xZNv92'
+  admission:
+    admission-info:
+    admission-link:
+  parking: Tom Lee Park Lot.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/vancepark.jpg
