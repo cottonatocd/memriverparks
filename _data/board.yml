@@ -4,63 +4,60 @@
 - name: Tyree Daniels – Vice Chair
   role: Managing Director
   optional-third-line: 'Duncan Williams, Inc'
-- name: John Farris
-  role: Immediate Past Chair
+- name: John Farris - Immediate Past Chair
+  role:
   optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
-- name: Terry Lynch
-  role: Treasurer
-  optional-third-line: 'Managing Partner, The Southland Companies'
-- name: Robert Clark
-  role: Secretary
-  optional-third-line: 'Director, Office of Government Affairs, St. Jude Research Hospital'
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
-- name: Tyree Daniels – Vice Chair
-  role: Managing Director
-  optional-third-line: 'Duncan Williams, Inc'
-- name: John Farris
-  role: Immediate Past Chair
-  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
+- name: Terry Lynch - Treasurer
+  role: Managing Partner
+  optional-third-line: The Southland Companies
+- name: Robert Clark - Secretary
+  role: 'Director, Office of Government Affairs'
+  optional-third-line: St. Jude Research Hospital
+- name: Jennifer Oswalt - Assistant Treasurer
+  role: President
+  optional-third-line: Downtown Memphis Commission
+- name: Tanja Mitchell - Assistant Secretary
+  role:
+  optional-third-line:
+- name: Gregory M. Duckett – Chairperson Emeritus
+  role: Senior Vice President and Chief Legal Officer
+  optional-third-line: Baptist Memorial Hospital Medical Center
+- name: Kevin Adams
+  role: Executive Vice President
+  optional-third-line: 'CBRE Group, Inc.'
+- name: Calvin Anderson
+  role: 'Retired SVP, BlueCross BlueShield of TN'
+  optional-third-line: 'President, Clear Strategies Group'
+- name: Sam Cantor
+  role: Sam Cantor & Company
+  optional-third-line:
+- name: Chase Carlisle
+  role: Vice President
+  optional-third-line: Young
+- name: Robert Craddock
+  role: Managing Partner
+  optional-third-line: 'Wyatt, Tarrant & Combs, LLP'
+- name: Alan Crone
+  role: Special Counsel to the Mayor
+  optional-third-line: City of Memphis
+- name: Candace Steele Flippin
+  role: Chief Communications Officer
+  optional-third-line: First Horizon National Corporation
 - name: J.W. Gibson II
   role: Chairman and CEO
   optional-third-line: Gibson Companies
 - name: David Hagel
   role: General Manager
   optional-third-line: Bass Pro Shops Pyramid
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
-- name: Tyree Daniels – Vice Chair
-  role: Managing Director
-  optional-third-line: 'Duncan Williams, Inc'
-- name: John Farris
-  role: Immediate Past Chair
-  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
-- name: J.W. Gibson II
-  role: Chairman and CEO
-  optional-third-line: Gibson Companies
-- name: David Hagel
-  role: General Manager
-  optional-third-line: Bass Pro Shops Pyramid
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
-- name: Tyree Daniels – Vice Chair
-  role: Managing Director
-  optional-third-line: 'Duncan Williams, Inc'
-- name: John Farris
-  role: Immediate Past Chair
-  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
-- name: J.W. Gibson II
-  role: Chairman and CEO
-  optional-third-line: Gibson Companies
-- name: David Hagel
-  role: General Manager
-  optional-third-line: Bass Pro Shops Pyramid
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
+- name: Bruce B. Hopkins
+  role: 'Chairman, West Tennessee Region'
+  optional-third-line: First Tennessee Bank
+- name: Barry Lichterman
+  role: Founder & Past President of Levitt Shell - Retired
+  optional-third-line:
+- name: Anton Powell Mack
+  role: President
+  optional-third-line: Century House
+- name: Doug McGowen
+  role: Chief Operating Officer
+  optional-third-line: City of Memphis
