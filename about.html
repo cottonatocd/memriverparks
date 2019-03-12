@@ -74,22 +74,25 @@ image: /uploads/img-3099.JPG
         </div>
 
     </div>
+
+    {% assign officio = site.data.ex-officio %}
+    {% if officio[0].name %}
     <div class="row">
             <div class="col">
                 <h3 class="my-2">Ex-Officio Members</h3>
             </div>
-        </div>
-        <div class="row mb-2">
-            <div class="col col-flow">
-                    {% assign officio = site.data.ex-officio %}
-                    {% for member in officio %}
+    </div>
+    <div class="row mb-2">
+        <div class="col col-flow">
+                {% for member in officio %}
                 <div class="person">
                     <p class="lead">{{ member.name }}</p>
                     <p>{{ member.role}}<br />{{member.optional-third-line}}</p>
                 </div>
-                    {% endfor %}
-            </div>
+                {% endfor %}
         </div>
+    </div>
+    {% endif %}
 </div>
 <div class="container-fluid bg-grey py-4">
     <div class="container h-100">
