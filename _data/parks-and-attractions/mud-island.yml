@@ -13,7 +13,7 @@
   rent:
     rental-info: Ask about renting Mud Island for your next event.
     rental-link: 'https://rubyzielinski.typeform.com/to/MaSZXe'
-  image: /assets/images/parks/mud-island-park.jpeg
+  image: /mud-island-park.jpg
 - title: Mud Island Amphitheatre
   hours:
     - Opened event days only; time varies by event.
@@ -32,7 +32,7 @@
   rent:
     rental-info:
     rental-link:
-  image: /assets/images/parks/amphitheatre.jpeg
+  image: /amphitheatre.jpg
 - title: Mississippi River Museum
   hours:
     - Open May through October
@@ -50,4 +50,4 @@
   rent:
     rental-info:
     rental-link:
-  image: /uploads/img-1257.jpg
+  image: /mississippi-river-museum.jpg
