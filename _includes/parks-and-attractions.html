@@ -17,13 +17,13 @@
                             {% if att.get-here %}
                                 <h3>Get Here</h3>
                                 <p>{{ att.get-here.directions }}</p>
-                                <p><a href="{{ att.get-here.map-link }}" class="external">View on Map</a></p>
+                                <p><a href="{{ att.get-here.map-link }}" class="external" target="_blank">View on Map</a></p>
                             {% endif %}
                             {% if att.admission.admission-info or att.admission.admission-link %}
                                 <h3 class="mt-3">Admission</h3>
                                 <p>{{ att.admission.admission-info }}</p>
                                 {% if att.admission.admission-link %}
-                                <p><a href="{{ att.admission.admission-link }}" class="external">Get Tickets</a></p>
+                                <p><a href="{{ att.admission.admission-link }}" class="external" target="_blank">Get Tickets</a></p>
                                 {% endif %}
                             {% endif %}
                             {% if att.bikeshare-info %}
@@ -41,7 +41,7 @@
                                 {% if att.rent.rental-info %}
                                     <h3 class="mt-3">Rent</h3>
                                     <p>{{ att.rent.rental-info }}</p>
-                                    <p><a href="{{ post.rent.rental-link }}" class="external">Send an Inquiry</a></p>
+                                    <p><a href="{{ post.rent.rental-link }}" class="external" target="_blank">Send an Inquiry</a></p>
                                 {% endif %}
                             </div>
                     </div>
