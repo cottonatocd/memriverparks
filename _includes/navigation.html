@@ -43,7 +43,7 @@
                                 </li>        
                             {% else %}
                                 <li class="nav-item {% if page.url == link.url %} active {% endif %}">
-                                    <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                                    <a class="nav-link" href="{{ link.url }}" {% if link.external == true %} target="_blank" {% endif %}>{{ link.title }}</a>
                                 </li>
                             {% endif %}
                         {% endunless %}
