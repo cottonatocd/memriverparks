@@ -16,7 +16,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /assets/images/parks/Bi_fFfK9.jpeg
+  image: /ashburn-coppock.jpg
 - title: Butler Park
   hours:
     - Open dawn to dusk.
@@ -33,7 +33,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /assets/images/parks/Butler-Park.jpeg
+  image: /butler-park.jpg
 - title: Big River Crossing
   hours:
     - 'Open daily, 6AM–10PM'
@@ -52,7 +52,7 @@
   bikeshare-info: >-
     There are two Explore Bike Share Stations along the Crossing – one on the
     Arkansas side and one on the Tennessee Side.
-  image: /uploads/ad9a4588-1.jpg
+  image: /big-river.jpg
 - title: Chickasaw Heritage Park
   hours:
     - Open dawn to dusk.
@@ -67,8 +67,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: >-
-    https://res.cloudinary.com/taliacotton/image/upload/c_scale,f_auto,fl_lossy,q_auto,w_600/v1552506434/memphisriverparks/chickasaw-2.jpg
+  image: /chickasaw.jpg
 - title: E. H. Crump Park
   hours:
     - Open dawn to dusk.
@@ -83,7 +82,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /uploads/ehcrumppark.jpg
+  image: /eh-crump.jpg
 - title: Martyrs Park
   hours:
     - Open dawn to dusk.
@@ -102,7 +101,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /uploads/image-credit-dougcarpenterassociates-4.jpg
+  image: /martyrs.jpg
 - title: Tom Lee Park
   hours:
     - Open dawn to dusk.
@@ -119,7 +118,7 @@
   bikeshare-info: >-
     There are two Explore Bike Share Stations in the park – one at Beale Street
     Landing and one near the parking lot in the center.
-  image: /uploads/river-play-june-2018-2-2.jpg
+  image: /tom-lee.jpg
 - title: Vance Park
   hours:
     - Open dawn to dusk.
