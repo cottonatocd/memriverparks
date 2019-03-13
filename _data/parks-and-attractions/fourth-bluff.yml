@@ -14,7 +14,7 @@
   bikeshare-info: >-
     The Explore Bike Share station is located at the south east corner of the
     park.
-  image: /assets/images/parks/V60_dlbw.jpeg
+  image: /memphis-park.jpg
 - title: River Garden
   hours:
     - Open dawn to dusk.
@@ -31,4 +31,4 @@
   bikeshare-info: >-
     The Explore Bike Share station is located at the south east corner of the
     park.
-  image: /assets/images/parks/F8lzAEjg.jpeg
+  image: /river-garden.jpg
