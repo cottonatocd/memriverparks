@@ -67,7 +67,8 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /uploads/cbpark.jpg
+  image: >-
+    https://res.cloudinary.com/taliacotton/image/upload/q_auto/v1552506434/memphisriverparks/chickasaw-2.jpg
 - title: E. H. Crump Park
   hours:
     - Open dawn to dusk.
