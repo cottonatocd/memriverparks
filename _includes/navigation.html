@@ -31,7 +31,7 @@
                                         {% for sublink in link.sublinks %}
                                             {% if sublink.external == true %}
                                             <li>
-                                                    <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external">{{ sublink.title }}</a>
+                                                    <a href="{{ site.baseurl }}{{ sublink.url }}" class="animate-me btn btn-primary external" target="_blank">{{ sublink.title }}</a>
                                                 </li>
                                             {% else %}
                                                 <li>
@@ -43,7 +43,7 @@
                                 </li>        
                             {% else %}
                                 <li class="nav-item {% if page.url == link.url %} active {% endif %}">
-                                    <a class="nav-link" href="{{ link.url }}" {% if link.external == true %} target="_blank" {% endif %}>{{ link.title }}</a>
+                                    <a class="nav-link" href="{{ link.url }}">{{ link.title }}</a>
                                 </li>
                             {% endif %}
                         {% endunless %}
