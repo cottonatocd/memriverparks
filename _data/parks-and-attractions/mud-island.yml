@@ -18,7 +18,9 @@
   hours:
     - Opened event days only; time varies by event.
   get-here:
-    directions: Lorem ipsum dolor sit amet.
+    directions: >-
+      Access the Amphitheatre on foot from Island Drive or by walking across the
+      skybridge from downtown. Access is on Level 3 of the west terminal.
     map-link: 'https://goo.gl/maps/CgqKg61XjDG2'
   admission:
     admission-info: Mud Island Amphitheatre Tickets are sold by event on Ticketmaster.
