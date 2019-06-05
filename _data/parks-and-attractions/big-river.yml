@@ -67,7 +67,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /chickasaw.jpg
+  image: /uploads/park-photos/CBPark.jpg
 - title: E. H. Crump Park
   hours:
     - Open dawn to dusk.
@@ -82,7 +82,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /eh-crump.jpg
+  image: /uploads/park-photos/EHCrumpPark.jpg
 - title: Martyrs Park
   hours:
     - Open dawn to dusk.
