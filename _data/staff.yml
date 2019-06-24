@@ -1,10 +1,10 @@
-- name: Amanda Glenn
-  title: River Parks Ranger
-  image: /uploads/artboard-1-copy-3.png
-  alt_text: Memphis River Parks Partnership
 - name: Arsenio Holmes
   title: River Parks Ranger
   image: /uploads/artboard-1-copy-6.png
+  alt_text: Memphis River Parks Partnership
+- name: Amanda Glenn
+  title: River Parks Ranger
+  image: /uploads/artboard-1-copy-3.png
   alt_text: Memphis River Parks Partnership
 - name: Rodger Todd
   title: River Parks Specialist
@@ -49,6 +49,10 @@
 - name: Jamal Boddie
   title: Hyde Fellow In Community Engagement
   image: /uploads/jamal-boddie.png
+  alt_text:
+- name: Carol Coletta
+  title: President & CEO
+  image: /uploads/artboard-1-copy-19carol.png
   alt_text:
 - name: Jim Reeder
   title:
