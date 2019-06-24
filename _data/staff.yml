@@ -1,58 +1,62 @@
-- name: Arsenio Holmes
-  title: River Parks Ranger
-  image: /uploads/artboard-1-copy-6.png
-  alt_text: Memphis River Parks Partnership
-- name: Amanda Glenn
-  title: River Parks Ranger
-  image: /uploads/artboard-1-copy-3.png
-  alt_text: Memphis River Parks Partnership
-- name: Rodger Todd
-  title: River Parks Specialist
-  image: /uploads/artboard-1-copy-7.png
-  alt_text: Memphis River Parks Partnership
-- name: Louis Stukenburg
-  title: River Parks Specialist
-  image: /uploads/artboard-1-copy-8-1.png
-  alt_text: Memphis River Parks Partnership
+- name: George Abbott
+  title: Director of External Affairs
+  image: /uploads/artboard-1-copy-4george.png
+  alt_text:
 - name: Jessie Avant
   title: River Parks Ranger
   image: /uploads/artboard-1-copy-9.png
-  alt_text:
-- name: Terry Ramon
-  title: River Parks Ranger
-  image: /uploads/artboard-1-copy-10.png
-  alt_text:
-- name: Joshua Bynum
-  title: River Parks Ranger
-  image: /uploads/artboard-1-copy-11.png
-  alt_text:
-- name: Everett Bates
-  title: River Parks Specialist
-  image: /uploads/artboard-1-copy-14.png
   alt_text:
 - name: Harry Babb
   title: River Parks Specialist
   image: /uploads/harry-babb.png
   alt_text:
-- name: Helen Hope
-  title: External Affairs and Program Assistant
-  image: /uploads/helen-hope.png
-  alt_text:
-- name: Kammie Glenn
-  title: River Parks Ranger - Lead
-  image: /uploads/kammie-glenn.png
-  alt_text:
-- name: Ronnie McCarty
+- name: Everett Bates
   title: River Parks Specialist
-  image: /uploads/ronnie.png
+  image: /uploads/artboard-1-copy-14.png
   alt_text:
 - name: Jamal Boddie
   title: Hyde Fellow In Community Engagement
   image: /uploads/jamal-boddie.png
   alt_text:
+- name: Joshua Bynum
+  title: River Parks Ranger
+  image: /uploads/artboard-1-copy-11.png
+  alt_text:
 - name: Carol Coletta
   title: President & CEO
   image: /uploads/artboard-1-copy-19carol.png
+  alt_text:
+- name: Art Davis
+  title: Controller
+  image: /uploads/art-davis.png
+  alt_text:
+- name: Amanda Glenn
+  title: River Parks Ranger
+  image: /uploads/artboard-1-copy-3.png
+  alt_text: Memphis River Parks Partnership
+- name: Kammie Glenn
+  title: River Parks Ranger - Lead
+  image: /uploads/kammie-glenn.png
+  alt_text:
+- name: Ruby Green
+  title:
+  image: /uploads/ruby-green.png
+  alt_text:
+- name: Arsenio Holmes
+  title: River Parks Ranger
+  image: /uploads/artboard-1-copy-6.png
+  alt_text: Memphis River Parks Partnership
+- name: Helen Hope
+  title: External Affairs and Program Assistant
+  image: /uploads/helen-hope.png
+  alt_text:
+- name: Ronnie McCarty
+  title: River Parks Specialist
+  image: /uploads/ronnie.png
+  alt_text:
+- name: Terry Ramon
+  title: River Parks Ranger
+  image: /uploads/artboard-1-copy-10.png
   alt_text:
 - name: Jim Reeder
   title:
@@ -62,19 +66,15 @@
   title: Director of Operations
   image: /uploads/jean-soucy.png
   alt_text:
-- name: Ruby Green
-  title:
-  image: /uploads/ruby-green.png
-  alt_text:
+- name: Louis Stukenburg
+  title: River Parks Specialist
+  image: /uploads/artboard-1-copy-8-1.png
+  alt_text: Memphis River Parks Partnership
+- name: Rodger Todd
+  title: River Parks Specialist
+  image: /uploads/artboard-1-copy-7.png
+  alt_text: Memphis River Parks Partnership
 - name: Ruby Zielinski
   title: Design Strategist
   image: /uploads/ruby-zielinski.png
-  alt_text:
-- name: Art Davis
-  title: Controller
-  image: /uploads/art-davis.png
-  alt_text:
-- name: George Abbott
-  title: Director of External Affairs
-  image: /uploads/artboard-1-copy-4george.png
   alt_text:
