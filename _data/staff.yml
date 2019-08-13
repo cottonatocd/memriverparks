@@ -42,6 +42,10 @@
   title:
   image: /uploads/ruby-green.png
   alt_text:
+- name: Nancy Harwood
+  title: Advancement Manager
+  image: /uploads/nancy.png
+  alt_text:
 - name: Arsenio Holmes
   title: River Parks Ranger
   image: /uploads/artboard-1-copy-6.png
@@ -49,6 +53,10 @@
 - name: Helen Hope
   title: Program Associate
   image: /uploads/helen-hope.png
+  alt_text:
+- name: Sidney Johnson
+  title: Manager of Special Operations
+  image: /uploads/sidney.png
   alt_text:
 - name: Ronnie McCarty
   title: River Parks Specialist
