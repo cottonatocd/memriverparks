@@ -15,7 +15,7 @@
     in the North Lot on Mud Island.
   rent:
     rental-info: Ask about renting Mud Island for your next event.
-    rental-link: 'https://app.smartsheet.com/b/form/205e405d1ca142619f093b3bb22de993'
+    rental-link:
   image: /mud-island-park.jpg
 - title: Mud Island Amphitheatre
   hours:
