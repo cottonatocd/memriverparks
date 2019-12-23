@@ -82,7 +82,7 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /uploads/ehcrumppark.jpg
+  image: /uploads/img-7525-small.jpg
 - title: Martyrs Park
   hours:
     - Open dawn to dusk.
@@ -135,4 +135,4 @@
     rental-info:
     rental-link:
   bikeshare-info:
-  image: /vance.jpg
+  image: /uploads/vancepark-1.jpg
