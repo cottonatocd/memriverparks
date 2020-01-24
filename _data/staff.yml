@@ -58,10 +58,6 @@
   title: River Parks Specialist
   image: /uploads/ronnie.png
   alt_text:
-- name: Jim Reeder
-  title:
-  image: /uploads/jim-reeder.png
-  alt_text:
 - name: Mia Saine
   title: Design Associate
   image: /uploads/saine-mia-edited.png
@@ -69,6 +65,10 @@
 - name: Raymon Terry
   title: River Parks Ranger
   image: /uploads/artboard-1-copy-10.png
+  alt_text:
+- name: Jim Reeder
+  title:
+  image: /uploads/jim-reeder.png
   alt_text:
 - name: Rodger Todd
   title: River Parks Specialist
