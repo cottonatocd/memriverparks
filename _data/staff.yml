@@ -38,10 +38,6 @@
   title: River Parks Ranger - Lead
   image: /uploads/kammie-glenn.png
   alt_text:
-- name:
-  title:
-  image:
-  alt_text:
 - name: Nancy Harwood
   title: Advancement Manager
   image: /uploads/nancy.png
@@ -77,4 +73,8 @@
 - name: Ruby Zielinski
   title: Director of Brand Experience
   image: /uploads/ruby-zielinski.png
+  alt_text:
+- name:
+  title:
+  image:
   alt_text:
