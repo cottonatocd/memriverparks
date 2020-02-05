@@ -28,12 +28,12 @@
 - name: Calvin Anderson
   role: 'Retired SVP, BlueCross BlueShield of TN'
   optional-third-line: 'President, Clear Strategies Group'
+- name: Roshun Austin
+  role: President/CEO
+  optional-third-line: 'The Works, Inc'
 - name: Sam Cantor
   role: Sam Cantor & Company
   optional-third-line:
-- name: Chase Carlisle
-  role: Vice President
-  optional-third-line: Young
 - name: Robert Craddock
   role: Managing Partner
   optional-third-line: 'Wyatt, Tarrant & Combs, LLP'
@@ -73,24 +73,12 @@
 - name: Jamita Swearengen
   role: Memphis City Council
   optional-third-line:
+- name: Van Turner Jr.
+  role:
+  optional-third-line:
 - name: Kevin Woods
   role: Memphis Market President
   optional-third-line: BlueCross BlueShield of TN
-- name: Jen Andrews
-  role: Executive Director
-  optional-third-line: Shelby Farms Park Conservancy
-- name: Maria Munoz-Blanco
-  role: Director of Parks and Neighborhoods
-  optional-third-line: City of Memphis
-- name: Kevin Kane
-  role: President & CEO
-  optional-third-line: Memphis Tourism
-- name: Kristen C. Wright
-  role: 'Senior Vice President, General Counsel & Secretary'
-  optional-third-line: 'AutoZone, Inc.'
-- name: Paul Young
-  role: Director of Memphis Housing Authority
-  optional-third-line: City of Memphis
-- name: Roshun Austin
-  role: President/CEO
-  optional-third-line: 'The Works, Inc'
+- name: Kristen Wright
+  role:
+  optional-third-line:
