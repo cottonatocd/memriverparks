@@ -1,24 +1,18 @@
-- name: Ray Pohlman – Chair
-  role: Government Relations Director and Vice President
-  optional-third-line: 'AutoZone, Inc.'
-- name: Tyree Daniels – Vice Chair
+- name: Tyree Daniels – Chair
   role: Managing Director
   optional-third-line: 'Duncan Williams, Inc'
-- name: John Farris - Immediate Past Chair
-  role:
-  optional-third-line: 'Farris, Mathews, Branan, Bobango & Hellen, P.L.C.'
-- name: Terry Lynch - Treasurer
-  role: Managing Partner
-  optional-third-line: The Southland Companies
-- name: Robert Clark - Secretary
+- name: Robert Clark - Vice Chair
   role: 'Director, Office of Government Affairs'
   optional-third-line: St. Jude Research Hospital
-- name: Jennifer Oswalt - Assistant Treasurer
+- name: Ray Pohlman – Immediate Past Chair
+  role: President
+  optional-third-line: Coalition for Auto Repair Equality (CARE)
+- name: Candace Steele Flippin - Secretary
+  role: Chief Communications Officer
+  optional-third-line: First Horizon National Corporation
+- name: Jennifer Oswalt - Treasurer
   role: President
   optional-third-line: Downtown Memphis Commission
-- name: Tanja Mitchell - Assistant Secretary
-  role:
-  optional-third-line:
 - name: Gregory M. Duckett – Chairperson Emeritus
   role: Senior Vice President and Chief Legal Officer
   optional-third-line: Baptist Memorial Hospital Medical Center
@@ -40,9 +34,9 @@
 - name: Alan Crone
   role: Special Counsel to the Mayor
   optional-third-line: City of Memphis
-- name: Candace Steele Flippin
-  role: Chief Communications Officer
-  optional-third-line: First Horizon National Corporation
+- name: Dallas Geer
+  role: CFO
+  optional-third-line: Poplar Foundation
 - name: J.W. Gibson II
   role: Chairman and CEO
   optional-third-line: Gibson Companies
@@ -52,12 +46,15 @@
 - name: Bruce B. Hopkins
   role: 'Chairman, West Tennessee Region'
   optional-third-line: First Tennessee Bank
-- name: Barry Lichterman
-  role: Founder & Past President of Levitt Shell - Retired
-  optional-third-line:
+- name: Terry Lynch
+  role: Managing Partner
+  optional-third-line: The Southland Companies
 - name: Anton Powell Mack
-  role: President
-  optional-third-line: Century House
+  role: Executive Director
+  optional-third-line: Explore Bike Share
+- name: Tanja Mitchell
+  role: Director of Community Engagement
+  optional-third-line: 'The Works, Inc.'
 - name: Doug McGowen
   role: Chief Operating Officer
   optional-third-line: City of Memphis
@@ -74,14 +71,14 @@
   role: Memphis City Council
   optional-third-line:
 - name: Van Turner Jr.
-  role:
-  optional-third-line:
+  role: Commissioner
+  optional-third-line: Shelby County Commission
 - name: Kevin Woods
   role: Memphis Market President
   optional-third-line: BlueCross BlueShield of TN
 - name: Kristen Wright
-  role:
-  optional-third-line:
+  role: 'Senior Vice President, General Counsel'
+  optional-third-line: 'AutoZone, Inc.'
 - name: Gary Wunderlich
-  role:
-  optional-third-line:
+  role: Partner
+  optional-third-line: Live Oak Merchant Partners
