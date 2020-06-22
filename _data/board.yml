@@ -20,8 +20,8 @@
   role: Executive Vice President
   optional-third-line: 'CBRE Group, Inc.'
 - name: Calvin Anderson
-  role: 'Retired SVP, BlueCross BlueShield of TN'
-  optional-third-line: 'President, Clear Strategies Group'
+  role: President
+  optional-third-line: Clear Strategies Group
 - name: Roshun Austin
   role: President/CEO
   optional-third-line: 'The Works, Inc'
@@ -44,8 +44,8 @@
   role: General Manager
   optional-third-line: Bass Pro Shops Pyramid
 - name: Bruce B. Hopkins
-  role: 'Chairman, West Tennessee Region'
-  optional-third-line: First Tennessee Bank
+  role: 'Former Chairman, West Tennessee Region'
+  optional-third-line: First Horizon National Corporation
 - name: Terry Lynch
   role: Managing Partner
   optional-third-line: The Southland Companies
@@ -66,7 +66,7 @@
   optional-third-line: Tower Ventures
 - name: Teresa Sloyan
   role: Executive Director
-  optional-third-line: Hyde Family Foundations
+  optional-third-line: Hyde Family Foundation
 - name: Jamita Swearengen
   role: Memphis City Council
   optional-third-line:
