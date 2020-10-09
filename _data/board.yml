@@ -73,6 +73,9 @@
 - name: Van Turner Jr.
   role: Commissioner
   optional-third-line: Shelby County Commission
+- name: Jason Wexler
+  role: President
+  optional-third-line: Memphis Grizzlies
 - name: Kevin Woods
   role: Memphis Market President
   optional-third-line: BlueCross BlueShield of TN
