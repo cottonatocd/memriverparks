@@ -8,8 +8,8 @@
   role: President
   optional-third-line: Coalition for Auto Repair Equality (CARE)
 - name: Candace Steele Flippin - Secretary
-  role: Chief Communications Officer
-  optional-third-line: First Horizon National Corporation
+  role:
+  optional-third-line:
 - name: Jennifer Oswalt - Treasurer
   role: President
   optional-third-line: Downtown Memphis Commission
