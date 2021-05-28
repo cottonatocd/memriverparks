@@ -1,18 +1,24 @@
 - name: Tyree Daniels – Chair
   role: Managing Director
   optional-third-line: 'Duncan Williams, Inc'
-- name: Robert Clark - Vice Chair
-  role: 'Director, Office of Government Affairs'
-  optional-third-line: St. Jude Research Hospital
 - name: Ray Pohlman – Immediate Past Chair
   role: President
   optional-third-line: Coalition for Auto Repair Equality (CARE)
+- name: Robert Clark - Vice Chair
+  role: 'Director, Office of Government Affairs'
+  optional-third-line: St. Jude Research Hospital
 - name: Candace Steele Flippin - Secretary
   role:
   optional-third-line:
-- name: Jennifer Oswalt - Treasurer
-  role: President
-  optional-third-line: Downtown Memphis Commission
+- name: Tanja Mitchell - Assistant Secretary
+  role: Director of Community Engagement
+  optional-third-line: 'The Works, Inc.'
+- name: Sam Cantor - Treasurer
+  role: Sam Cantor & Company
+  optional-third-line:
+- name: Kristen Wright - Assistant Treasurer
+  role: 'Senior Vice President, General Counsel'
+  optional-third-line: 'AutoZone, Inc.'
 - name: Gregory M. Duckett – Chairperson Emeritus
   role: Senior Vice President and Chief Legal Officer
   optional-third-line: Baptist Memorial Hospital Medical Center
@@ -25,9 +31,6 @@
 - name: Roshun Austin
   role: President/CEO
   optional-third-line: 'The Works, Inc'
-- name: Sam Cantor
-  role: Sam Cantor & Company
-  optional-third-line:
 - name: Robert Craddock
   role: Managing Partner
   optional-third-line: 'Wyatt, Tarrant & Combs, LLP'
@@ -46,15 +49,15 @@
 - name: Bruce B. Hopkins
   role: Retired Chairman
   optional-third-line: 'West Tennessee Region, First Horizon Bank'
+- name: Tammy LoCascio
+  role: Senior Executive Vice President and Chief HR Officer
+  optional-third-line: First Horizon
 - name: Terry Lynch
   role: Managing Partner
   optional-third-line: The Southland Companies
 - name: Anton Powell Mack
   role: Executive Director
   optional-third-line: Explore Bike Share
-- name: Tanja Mitchell
-  role: Director of Community Engagement
-  optional-third-line: 'The Works, Inc.'
 - name: Doug McGowen
   role: Chief Operating Officer
   optional-third-line: City of Memphis
@@ -64,6 +67,9 @@
 - name: Billy Orgel
   role: President
   optional-third-line: Tower Ventures
+- name: Amity Schuyler
+  role: Chief of Strategy and Innovation
+  optional-third-line: Shelby County Schools
 - name: Teresa Sloyan
   role: Executive Director
   optional-third-line: Hyde Family Foundation
@@ -79,9 +85,6 @@
 - name: Kevin Woods
   role: Memphis Market President
   optional-third-line: BlueCross BlueShield of TN
-- name: Kristen Wright
-  role: 'Senior Vice President, General Counsel'
-  optional-third-line: 'AutoZone, Inc.'
 - name: Gary Wunderlich
   role: Partner
   optional-third-line: Live Oak Merchant Partners
