@@ -104,21 +104,19 @@
   image: /uploads/park-photos/martyrs-park.jpg
 - title: Tom Lee Park
   hours:
-    - Open dawn to dusk.
-    - Explore the new designs at tomleepark.org
+    - Closed for construction.
+    - Explore the new park design at tomleepark.org.
   get-here:
     directions: Tom Lee Park is on Riverside Drive between Beale and Georgia.
     map-link: 'https://goo.gl/maps/BwNYqaMYc9q'
   admission:
     admission-info:
     admission-link:
-  parking: Public parking lot in the park – currently closed.
+  parking:
   rent:
     rental-info:
     rental-link:
-  bikeshare-info: >-
-    There are two Explore Bike Share Stations in the park – one at Beale Street
-    Landing and one near the parking lot in the center.
+  bikeshare-info:
   image: /tom-lee.jpg
 - title: Vance Park
   hours:
