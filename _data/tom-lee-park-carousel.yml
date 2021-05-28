@@ -1,34 +1,19 @@
-- image: /uploads/01-bluff-before-small.jpg
-  alt-text: Bluff - Before
-- image: /uploads/01-cutbank-bluff-small.jpg
-  alt-text: Cutbank Bluff
-- image: /uploads/02-bsl-before-small.jpg
-  alt-text: Beale Street Landing - Before
-- image: /uploads/02-bsl-promenade-small.jpg
-  alt-text: Beale Street Landing
-- image: /uploads/03-bsl-before-small.jpg
-  alt-text: Beale Street Landing - Before
-- image: /uploads/03-bsl-oxbow-plaza-small.jpg
-  alt-text: Oxbow Plaza
-- image: /uploads/04-tlp-before-small.jpg
-  alt-text: Tom Lee Park - Before
-- image: /uploads/04-activity-courts-small.jpg
-  alt-text: Activity Courts
-- image: /uploads/05-activity-courts-concert-night-small.jpg
-  alt-text: Activity Courts - Night
-- image: /uploads/05-activity-courts-game-day-small.jpg
-  alt-text: Activity Courts - Day
-- image: /uploads/05-tlp-before-small.jpg
-  alt-text: Tom Lee Park - Before
-- image: /uploads/06-river-edge-before-small.jpg
-  alt-text: River Edge - Before
-- image: /uploads/06-river-edge---steps-to-river-small.jpg
-  alt-text: Steps to the River
-- image: /uploads/07-tlp-south-end-small.jpg
-  alt-text: Tom Lee Park South - Before
-- image: /uploads/07-tailout-small.jpg
-  alt-text: Tailout Adventure Play
-- image: /uploads/08-south-end-small.jpg
-  alt-text: Tom Lee Park South - Before
-- image: /uploads/08-habitat-tower-small.jpg
-  alt-text: Habitat Tower
+- image: /uploads/1-aerial---cutbank-bluff-c-studio-gang-and-scape.jpg
+  alt-text: Cutbank Bluff Aerial View
+- image: >-
+    /uploads/6-autozone-plaza-and-misting-water-feature-cstudio-gang-and-scape.jpg
+  alt-text: AutoZone Plaza and Misting Fountain
+- image: /uploads/2-active-core-c-studio-gang-and-scape.jpg
+  alt-text: Active Lawn and Civic Canopy
+- image: /uploads/3-point-bar-pavilions-c-studio-gang-and-scape.jpg
+  alt-text: Point Bar Pavilions
+- image: /uploads/4-fitness-class-under-the-civic-canopy-cstudio-gang-and-scape.jpg
+  alt-text: Civic Canopy
+- image: /uploads/7-first-horizon-sunset-deck-cstudio-gang-and-scape.jpg
+  alt-text: First Horizon Sunset Deck
+- image: /uploads/8-active-core-and-sunset-deck-cstudio-gang-and-scape.jpg
+  alt-text: First Horizon Sunset Deck and Active Core Aerial View
+- image: /uploads/5-view-to-tom-lee-memorial-c-studio-gang-and-scape.jpg
+  alt-text: Community Batture and Tom Lee Memorial
+- image: /uploads/9-tailout-trail-overlook-cstudio-gang-and-scape.jpg
+  alt-text: Tailout Trail
