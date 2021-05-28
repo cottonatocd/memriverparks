@@ -46,10 +46,6 @@
   title: Advancement Manager
   image: /uploads/nancy2.jpeg
   alt_text:
-- name: Helen Hope
-  title: Program Associate
-  image: /uploads/helen2.jpg
-  alt_text:
 - name: Raymon Terry
   title: River Parks Ranger
   image: /uploads/raymon.jpg
@@ -62,7 +58,3 @@
   title: River Parks Specialist
   image: /uploads/roger.jpg
   alt_text: Memphis River Parks Partnership
-- name: Ruby Zielinski
-  title: Director of Brand Experience
-  image: /uploads/ruby.jpg
-  alt_text:
