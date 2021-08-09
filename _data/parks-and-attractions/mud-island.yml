@@ -6,7 +6,7 @@
     directions: >-
       The skybridge from downtown is open and can be accessed at 125 N. Front
       St.
-    map-link: 'https://goo.gl/maps/t13uYNKH3DLVy6PH9'
+    map-link: https://goo.gl/maps/t13uYNKH3DLVy6PH9
   admission:
     admission-info:
     admission-link:
@@ -15,7 +15,7 @@
     and Front St.
   rent:
     rental-info: Ask about renting Mud Island Park for your next event.
-    rental-link: 'https://app.smartsheet.com/b/form/205e405d1ca142619f093b3bb22de993'
+    rental-link: https://app.smartsheet.com/b/form/205e405d1ca142619f093b3bb22de993
   image: /mud-island-park.jpg
 - title: Mud Island Amphitheatre
   hours:
@@ -24,7 +24,7 @@
     directions: >-
       Access the Amphitheatre on foot from Island Drive or by walking across the
       skybridge from downtown. Access is on Level 3 of the west terminal.
-    map-link: 'https://goo.gl/maps/CgqKg61XjDG2'
+    map-link: https://goo.gl/maps/CgqKg61XjDG2
   admission:
     admission-info: Mud Island Amphitheatre Tickets are sold by event on Ticketmaster.
     admission-link: >-
@@ -40,18 +40,14 @@
   image: /amphitheatre.jpg
 - title: Mississippi River Museum
   hours:
-    - >-
-      The Mississippi River Museum is open on Fridays and Saturdays from
-      Memorial Day through Labor Day.
-    - Friday -  Noon-4PM
-    - Saturday -  10AM-4PM
+    - The Mississippi River Museum is currently closed and will re-open in 2022.
   get-here:
     directions: >-
       The Mississippi River Museum is located in Mud Island Park at the West end
       of the skybridge.
-    map-link: 'https://goo.gl/maps/pYAMMz3TCnA2'
+    map-link: https://goo.gl/maps/pYAMMz3TCnA2
   admission:
-    admission-info: '$10 Adults 12 & Over, $8 Children ages 4 to 11, Free for Children under 4'
+    admission-info: $10 Adults 12 & Over, $8 Children ages 4 to 11, Free for Children under 4
     admission-link:
   parking: >-
     Paid parking available on the island or in the River Parks Garage at Poplar
