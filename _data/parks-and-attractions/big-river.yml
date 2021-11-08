@@ -5,13 +5,11 @@
     directions: >-
       Ashburn-Coppock Park is located atop the bluff at the south end of Tom Lee
       Park.
-    map-link: 'https://goo.gl/maps/8o2oqCZSqW62'
+    map-link: https://goo.gl/maps/8o2oqCZSqW62
   admission:
     admission-info:
     admission-link:
-  parking: >-
-    There is a small public parking lot accessible from Riverside Dr at Georgia.
-    Parking lot open during park hours.
+  parking: Street parking on Georgia Ave.
   rent:
     rental-info:
     rental-link:
@@ -24,11 +22,11 @@
     directions: >-
       Butler Park overlooks Tom Lee Park atop the Bluff. Access the park from
       the River Line, Butler Ave. or stairs from Tom Lee Park.
-    map-link: 'https://goo.gl/maps/LkZPQJvP3eq'
+    map-link: https://goo.gl/maps/LkZPQJvP3eq
   admission:
     admission-info:
     admission-link:
-  parking: Tom Lee Park Lot.
+  parking: Street parking on Tennessee and Butler streets.
   rent:
     rental-info:
     rental-link:
@@ -36,10 +34,10 @@
   image: /butler-park.jpg
 - title: Big River Crossing
   hours:
-    - 'Open daily, 6AM–10PM'
+    - Open daily, 6AM–10PM
   get-here:
-    directions: 'Big River Crossing is located on Virginia Ave W, just off Channel 3. Dr.'
-    map-link: 'https://goo.gl/maps/mtDxd4k6woy'
+    directions: Big River Crossing is located on Virginia Ave W, just off Channel 3. Dr.
+    map-link: https://goo.gl/maps/mtDxd4k6woy
   admission:
     admission-info:
     admission-link:
@@ -58,7 +56,7 @@
     - Open dawn to dusk.
   get-here:
     directions: Chickasaw Heritage Park is located south of I-55 on Metal Museum Dr.
-    map-link: 'https://goo.gl/maps/xrPdWDHpFUN2'
+    map-link: https://goo.gl/maps/xrPdWDHpFUN2
   admission:
     admission-info:
     admission-link:
@@ -73,7 +71,7 @@
     - Open dawn to dusk.
   get-here:
     directions: E. H. Crump Park is located south of I-55 on Illinois Ave.
-    map-link: 'https://goo.gl/maps/XqwybJX7Auw'
+    map-link: https://goo.gl/maps/XqwybJX7Auw
   admission:
     admission-info:
     admission-link:
@@ -90,13 +88,13 @@
     directions: >-
       Martyrs Park is located south of Big River Crossing and is accessible from
       Channel 3 Dr.
-    map-link: 'https://goo.gl/maps/3hjLkUjAu6z'
+    map-link: https://goo.gl/maps/3hjLkUjAu6z
   admission:
     admission-info:
     admission-link:
   parking: >-
     There is a small public parking lot in the park. Parking lot is open
-    6AM-8PM.
+    6AM-6PM.
   rent:
     rental-info:
     rental-link:
@@ -108,7 +106,7 @@
     - Explore the new park design at tomleepark.org.
   get-here:
     directions: Tom Lee Park is on Riverside Drive between Beale and Georgia.
-    map-link: 'https://goo.gl/maps/BwNYqaMYc9q'
+    map-link: https://goo.gl/maps/BwNYqaMYc9q
   admission:
     admission-info:
     admission-link:
@@ -120,16 +118,16 @@
   image: /tom-lee.jpg
 - title: Vance Park
   hours:
-    - Open dawn to dusk.
+    - Closed for construction.
   get-here:
     directions: >-
       Vance Park overlooks Beale Street Landing atop the Bluff. Access the park
       from the River Line, Vance Ave. or stairs from Tom Lee Park.
-    map-link: 'https://goo.gl/maps/4VDMG3xZNv92'
+    map-link: https://goo.gl/maps/4VDMG3xZNv92
   admission:
     admission-info:
     admission-link:
-  parking: Tom Lee Park Lot.
+  parking: Street parking on Vance Ave.
   rent:
     rental-info:
     rental-link:
