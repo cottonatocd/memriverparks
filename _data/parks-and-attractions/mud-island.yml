@@ -1,6 +1,6 @@
 - title: Mud Island Park
   hours:
-    - 6AM-7PM
+    - 6AM-6PM
   get-here:
     directions: >-
       The skybridge from downtown is open and can be accessed at 125 N. Front
@@ -16,30 +16,11 @@
     rental-info: Ask about renting Mud Island Park for your next event.
     rental-link: https://app.smartsheet.com/b/form/205e405d1ca142619f093b3bb22de993
   image: /mud-island-park.jpg
-- title: Mud Island Amphitheatre
-  hours:
-    - Opened event days only; time varies by event.
-  get-here:
-    directions: >-
-      Access the Amphitheatre on foot from Island Drive or by walking across the
-      skybridge from downtown. Access is on Level 3 of the west terminal.
-    map-link: https://goo.gl/maps/CgqKg61XjDG2
-  admission:
-    admission-info: Mud Island Amphitheatre Tickets are sold by event on Ticketmaster.
-    admission-link: >-
-      https://www.ticketmaster.com/Mud-Island-Amphitheatre-tickets-Memphis/venue/221388
-  parking: >-
-    Parking is available at the Mud Island Parking Garage adjacent to the East
-    Plaza Entrance which is located at 125 N. Front Street. Entrance to the
-    garage is at the corner of Front St. and Poplar. Fees range from $3-$10,
-    depending on the event.
-  rent:
-    rental-info:
-    rental-link:
-  image: /amphitheatre.jpg
 - title: Mississippi River Museum
   hours:
-    - The Mississippi River Museum is currently closed and will re-open in 2022.
+    - >-
+      The Mississippi River Museum is closed for the season and will re-open in
+      2022.
   get-here:
     directions: >-
       The Mississippi River Museum is located in Mud Island Park at the West end
