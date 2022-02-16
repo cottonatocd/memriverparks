@@ -1,0 +1,21 @@
+- title: Greenbelt Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: >-
+      Take the AW Willis bridge to Mud Island and turn right onto Island Drive.
+      Greenbelt Park is on your left.
+    map-link: https://goo.gl/maps/abs8UBF2gpE2
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    There are three public parking lots in Greenbelt Park. The south and central
+    lots are open 6AM-6PM. The north lot is open 3AM-3PM.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    There are three Explore Bike Share stations in Greenbelt Park, one at each
+    parking lot.
+  image: /uploads/01-greenbelt.jpeg

@@ -1,20 +1,59 @@
 ---
 layout: default
-title: Memphis River Parks
+title: Memphis River Parks Partnership
+image: /assets/images/landing.jpg
+description: >-
+  Memphis River Parks Partnership works with and for the people of Memphis to
+  trigger the transformative power of our river.
 ---
 
-<div class="landing-hero">
+<div class="landing-hero position-fixed" style="background-image: url('{{ page.image }}')">
+        
 </div>
-<div class="landing-hero-after"></div>
+<a href="{{site.data.navigation[3].sublinks[2].url}}" class="round-donate-btn d-flex" target="_blank">
+        <span class="m-auto">
+                Donate
+        </span>
+    </a> 
+<div class="landing-hero-after position-relative">
+        
+    </div>
 <div class="container half-height">
     <div class="round bg-dark text-center d-flex">
-        <div class="m-auto">
-                <h1 class="mb-3 mb-md-4 editable">Come<br>to<br>the<br>River</h1>
-                <a href="#" class="btn btn-primary">Join</a>
+        <div class="tagline m-auto">
+            <h1 class="mb-3 mb-md-4 editable">Come<br />to<br />the<br />River</h1>
+            <a href="#" class="btn btn-primary join">Join</a>
+            
         </div>
+        <div class="form m-auto">
+                <!-- Begin Mailchimp Signup Form -->
+                <!-- Begin Mailchimp Signup Form -->
+                <div id="mc_embed_signup">
+                <form action="https://memphisriverparks.us18.list-manage.com/subscribe/post?u=10b75de564f8de0a21197e4cb&amp;id=a14898b162" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                    
+                <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL" class="d-none">Email Address<span class="asterisk">*</span></label>
+                    <input type="email" value="" placeholder="Enter your email" name="EMAIL" class="required email mb-2" id="mce-EMAIL" />
+                </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10b75de564f8de0a21197e4cb_a14898b162" tabindex="-1" value="" /></div>
+                    <div class="clear">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" /></div>
+                    </div>
+                </form>
+                </div>
+                
+                <!--End mc_embed_signup-->
+
+            </div>
     </div>
 </div>
-<div class="container-fluid bg-white py-5" id="mission">
+<div class="container-fluid bg-white py-5 position-relative" id="mission">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12 col-md-8 offset-md-2 text-center my-auto">
@@ -27,29 +66,30 @@ title: Memphis River Parks
             </div>
         </div>
 </div>
-<div class="container-fluid clearfix" id="districts-section">
+<div class="container-fluid clearfix position-relative" id="districts-section">
     {% include districts.html %}
 </div>
-<div class="container-fluid bg-white">
+<div class="container-fluid bg-white position-relative">
     <div class="container py-4 py-lg-5">
-        <div class="row" id="past-events">
+        <div class="row" id="events-landing">
             <div class="col-10 col-md-3">
                 <p class="lead mb-3 editable">The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.</p>
-                <a href="events.html" class="btn btn-primary editable">View Events</a>
+                <a href="/events" class="btn btn-primary editable mb-4">View Events</a>
             </div>
-            <!-- Insert Events Here -->
+            <div class="col-md-1"></div>
+          
         </div>
     </div>
 </div>
-<div class="container-fluid text-left bg-light">
+<div class="container-fluid text-left bg-light position-relative">
         {% include rent.html %}
     </div>
-    <div class="container-fluid bg-white">
+    <div class="container-fluid bg-white position-relative">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-lg-3">
-                        <p class="lead mb-3 editable">See the latest news from the Partnership here.</p>
-                        <a href="news.html" class="btn btn-primary mb-4 mb-lg-0 editable">See What's New</a>
+                        <p class="lead mb-3 editable" href="https://www.partymemphis.com/book-your-party" target="_blank">See the latest news from the Partnership here.</p>
+                        <a href="/news" class="btn btn-primary mb-4 mb-lg-0 editable">See What's New</a>
                     </div>
                     
                     <div id="news-items-selection" class="col-lg-8 offset-lg-1">

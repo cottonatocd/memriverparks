@@ -1,0 +1,27 @@
+---
+layout: district-page
+title: Big River
+permalink: parks/big-river/
+id: big-river
+favicon: 4.png
+description: |-
+  Huling Ave or Butler to bbq, fitness and fun.
+  Big River on the River Line.
+image: /uploads/river-play-june-2018-23-2.jpg
+---
+
+<div class="container-fluid clearfix districts clicked" id="parks-hero">
+        <a href="#" class="text-decoration-none district-link disabled" id="{{ page.id }}">
+            <div class="district text-center {{ page.id }} float-left align-items-center d-flex clicked">
+                <img class="img-fluid" src="{{ site.url }}/assets/images/districts/{{ page.id }}.png" />
+            </div>
+        </a>
+</div>
+<div class="container-fluid" id="district-content">
+        {% include parks-and-attractions.html %}
+
+    <div class="container-fluid clearfix" id="districts-section">
+        {% include districts.html %}
+    </div>
+</div>
+

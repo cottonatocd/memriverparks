@@ -3,29 +3,62 @@ $(document).ready(function(){
     //SHRINK NAV
     var $navBar = $('.nav-placeholder .nav-wrapper');
 
-    if ($('.round').length){
-        var shrinkPos = $('.round').offset().top;
+    if ($('.round.bg-dark').length){
+        var shrinkPos = $('.round.bg-dark').offset().top;
     } else {
         var shrinkPos = 200;
     }
 
-    $(window).scroll(function() {
+    checkNavPosition($(window).scrollTop());
 
-        var scrollPos = $(this).scrollTop();
+    $(window).scroll(function() {
+        //var scrollPos = $(this).scrollTop();
+        checkNavPosition($(this).scrollTop());
+    });
+
+    
+
+    function checkNavPosition(scrollPos){
 
         if (scrollPos >= shrinkPos) {
             $navBar.addClass('fixed');
+            $('.navbar-brand').addClass('smaller');
         } else {
             $navBar.removeClass('fixed');
+            $('.navbar-brand').removeClass('smaller');
+            $('.navbar-brand.always').addClass('smaller');
         }
+    }
 
-    });
+if(document.getElementsByName('Email')[0]){
 
+    document.getElementsByName('Email')[0].onfocus = function(){
+        document.getElementsByName('Email')[0].placeholder='Enter your email & press Enter';
+    }
+
+    document.getElementsByName('Email')[0].onfocusout = function(){
+        document.getElementsByName('Email')[0].placeholder='Sign Up for Updates';
+       // console.log("changed!");
+    }
+}
+
+    //NAV DROPDOWN MOBILE
+    $(document).on('click', '.dropdown .dropdown-menu', function (e) {
+        e.stopPropagation();
+      });
+    
+
+
+    //CAROUSEL
+    $('.carousel').carousel({
+        interval: false
+      })
 
     //PARKS TRANSITION & LOAD
 
     $('#parks-hero a').click(function(e){
         e.preventDefault(); 
+    
         $('#parks-hero').addClass('clicked');
         $('#parks-hero').find('.district').addClass('hidden');
         $(this).addClass('disabled');
@@ -33,20 +66,65 @@ $(document).ready(function(){
         $(this).find('.after-click').removeClass('d-none');
         $(this).find('.before-click').addClass('d-none');
 
-        var url = "/parks/" + this.id + ".html";
+        var url = "/dont-edit-parks/" + this.id + ".html";
 
-        console.log(url);
         window.history.pushState('obj', 'newtitle', "/parks/" + this.id);
+
+       // console.log(url);
+
+
         
         $("#district-content").html("<p>loading content...</p>").load(url);
         //Use this inside your document ready jQuery 
         $(window).on('popstate', function() {
             location.reload(true);
         });
+
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         // return false;
     });
 
 
+    //NAV COLOR ON MOBILE COLLAPSE
+    // $('#collapsingNavbar3').collapse({
+    //     // toggle: false
+    //   });
+      $('#collapsingNavbar3').on('show.bs.collapse', function(){
+        $('.nav-wrapper').addClass("navbar-mobile");
+    });
+    $('#collapsingNavbar3').on('hide.bs.collapse', function(){
+        $('.nav-wrapper').removeClass("navbar-mobile");
+    });
+
+    //FAVICON
+    var page_title = document.getElementsByTagName("title")[0].innerHTML;
+    var site_url = "http://localhost:4000";
+    var favicon_images = [
+        
+        site_url + '/assets/images/favicon/2.png',
+        site_url + '/assets/images/favicon/3.png',
+        site_url + '/assets/images/favicon/4.png',
+        site_url + '/assets/images/favicon/5.png',
+        site_url + '/assets/images/favicon/1.png'
+    ],
+    image_counter = 0; // To keep track of the current image
+
+    if(page_title.indexOf("Greenbelt") !== -1 || page_title.indexOf("Mud Island") !== -1 || page_title.indexOf("Fourth Bluff") !== -1 || page_title.indexOf("Big River") !== -1 || page_title.indexOf("MLK") !== -1) {
+        // do nothing
+    } else {
+        setInterval(function() {
+        $("link[rel='icon']").remove();
+        $("link[rel='shortcut icon']").remove();
+        $("head").append('<link rel="icon" href="' + favicon_images[image_counter] + '" type="image/gif">');
+
+        // If last image then goto first image
+        // Else go to next image    
+        if(image_counter == favicon_images.length -1)
+            image_counter = 0;
+        else
+            image_counter++;
+        }, 1000);
+    }
 
     //HOVER COLOR EFFECTS & ANIMATIONS
 
@@ -54,7 +132,7 @@ $(document).ready(function(){
     var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
 
     $("a.btn").mouseleave(function(){
-        var css = 'a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
+        var css = 'a.btn.btn-primary:not(.btn-404):hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover, .dropdown-menu.show li a.btn:hover{ animation-name:' +  animations[Math.floor(Math.random()*animations.length)] +' }';
         var style = document.createElement('style');
     
         if (style.styleSheet) {
@@ -67,7 +145,7 @@ $(document).ready(function(){
     });
     
     $("a").mouseleave(function(){
-        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:hover, a:focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
+        var css = '.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, a:not(.round-donate):hover, a:not(.btn-secondary):hover, a:not(.btn):focus{ color: ' + palette[Math.floor(Math.random()*palette.length)] +' !important; } .event-image .img-container{ background-color: ' + palette[Math.floor(Math.random()*palette.length)] +' }'; 
         var style = document.createElement('style');
         if (style.styleSheet) {
             style.styleSheet.cssText = css;
@@ -77,6 +155,75 @@ $(document).ready(function(){
     
         document.getElementsByTagName('head')[0].appendChild(style);
     });
+
+    setTimeout(function(){  
+
+            var classname = document.getElementsByClassName("event-image");
+
+            for (var i = 0; i < classname.length; i++) {
+                classname[i].addEventListener("mouseout", function( event ) {
+                var randomColor = palette[Math.floor(Math.random()*palette.length)];
+                var css = "a.event-image:hover .img-container{  background-color:" +  randomColor + "; -webkit-animation:none; animation:none;} a.event-image:hover h3, a.event-image:hover h2{color:" +  randomColor + "; -webkit-animation:none; animation:none;}";
+                var style = document.createElement('style');
+                if (style.styleSheet) {
+                    style.styleSheet.cssText = css;
+                } else {
+                    style.appendChild(document.createTextNode(css));
+                }
+                document.getElementsByTagName('head')[0].appendChild(style);
+            });
+        };
+        }, 3000);
+
+    // 404 BG COLOR CHANGE
+    var colors = palette;
+    var currentColor = 0;
+    var lis = document.getElementById("#page-404");
+   
+    
+    function changeColor() {
+    if (currentColor < colors.length - 1){
+      ++currentColor
+    } else {
+        currentColor = 0;
+    }
+      if (currentColor < 0) {
+          currentColor = colors.length -1
+      }
+      
+        if (lis !== null){
+            lis.style.background = colors[currentColor];
+        }
+    }
+    
+    setInterval(changeColor, 1600);
+
+
+
+    // ROUND SUBSCRIBE ACTION HOME PAGE
+    $('.join').on('click', function(e){
+        e.preventDefault(); 
+        $('.round').addClass("form-active");
+    })
+
+    // DROPDOWN MENU EVENTS
+
+    $(document).on("hidden.bs.dropdown", ".dropdown", function (e) {
+        $(".nav-link.dropdown-toggle").removeClass("showing");
+        $(".dropdown-menu li a.btn").addClass('animate-me').removeClass('post-animation');
+    });
+
+    var x = document.getElementsByClassName('animate-me');
+    for (var i=0; i<x.length; i++){
+        //console.log(x[i]);
+        x[i].addEventListener("webkitAnimationEnd", animEnd);
+    }
+    
+
+    function animEnd() {
+        $(this).removeClass('animate-me').addClass('post-animation');
+       // console.log(this);
+    }
 
 
 
@@ -106,6 +253,15 @@ $(document).ready(function(){
     });
 
 
+    //AUTO OPEN FACEBOOK APP
+    function openFbApp(){
+    setTimeout(function () { 
+        window.location = "https://www.facebook.com"; 
+    }, 25);
+    window.location = "fb://";
+    }
+
+    
 
     //MEDIUM
     
@@ -122,6 +278,11 @@ $(document).ready(function(){
       
       posts.forEach((item) => {
         var pubDate = new Date(item.pubDate);
+        var pubDateSafari = new Date(item.pubDate.replace(/-/g, "/"));
+        // console.log(item.pubDate);
+        // console.log(pubDate);
+        // console.log(pubDateSafari);
+
         var pubDateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
         var desc = item.description;
         var stripped = $(desc).text();
@@ -135,7 +296,7 @@ $(document).ready(function(){
             <div class="col-md-6 col-lg-5 offset-lg-1 order-2 order-md-1">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-md-12 col-lg-8 col-xl-6">
-                            <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
+                            <h3 class="mb-2">${pubDateSafari.toLocaleDateString("en-US", pubDateOptions)}</h3>
                             <h2>${item.title}</h2>
                     </div>
                 </div>
@@ -159,7 +320,7 @@ $(document).ready(function(){
                         <img class="img-fluid" src="${item.thumbnail}">
                     </div>
                     <div class="col-sm-6">
-                        <h3 class="mb-2">${pubDate.toLocaleDateString("en-US", pubDateOptions)}</h3>
+                        <h3 class="mb-2">${pubDateSafari.toLocaleDateString("en-US", pubDateOptions)}</h3>
                         <h2>${item.title}</h2>
                         <p class="mb-3">${firstLine}</p>
                         <a href="${item.link}" class="btn btn-secondary" target='_blank'>Read More</a>

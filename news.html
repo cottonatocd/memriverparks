@@ -2,20 +2,21 @@
 layout: internal
 title: News
 permalink: /news/
-hero-image: news.png
+image: /assets/images/news.jpg
+description: Sign up to receive the latest news from the partnership.
 ---
 
 <div class="container-fluid hero bg-dark">
     <div class="row m-0">
-        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0 order-2 order-lg-1">
+        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0">
             <div class="p-lg-4 left-content">
                 <h1 class="text-primary mb-2 mb-lg-4 editable">Get the latest news from the partnership.</h1>
-                <a href="#" class="btn btn-primary mt-2 editable">Subscribe for Updates</a>
+                <a data-toggle="modal" data-target="#joinModal" class="btn btn-primary mt-2 editable">Subscribe for Updates</a>
             </div>
         </div>
         
-        <div class="col-12 col-lg-8 p-0 order-1 order-lg-2">
-            <div class="hero-img" style="background-image:url('../assets/images/{{ page.hero-image }}')"></div>
+        <div class="col-12 col-lg-8 p-0">
+            <div class="hero-img" style="background-image:url('{{ page.image }}')"></div>
         </div>
     </div>
 </div>
@@ -23,4 +24,5 @@ hero-image: news.png
 <div class="container-fluid">
 <div class="container pt-3 pb-5" id="news-items">
     <!-- News Items Go Here -->
+</div>
 </div>

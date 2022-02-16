@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/libraries/addons/p5.dom.min.js"></script>
+  <script language="javascript" type="text/javascript" src="{{ site.url }}/assets/js/sketch.js"></script>
+  
+  <body>
+      
+      <div class="nav-placeholder position-relative">
+          <a href="{{site.url}}" class="navbar-brand d-flex mr-auto">
+              <div class="logo">
+                  <img class="img-fluid before-click" src="{{ site.url }}/assets/images/logo.png" onmouseenter="this.src ='{{ site.url }}/assets/images/logo-animated.gif';" onmouseout="this.src = '{{ site.url }}/assets/images/logo.png';" />
+              </div>
+            </a>
+          <div class="container-fluid nav-wrapper position-fixed">
+            {% include navigation.html %}
+          </div>
+      </div>
+      {% include join-modal.html %}
+    
+        {{ content }}
+
+        {% include js-links.html %}
+
+
+  </body>
+
+</html>

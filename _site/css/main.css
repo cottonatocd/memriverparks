@@ -6505,6 +6505,11 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("../assets/fonts/GT-Haptik-Black.woff2") format("woff2"), url("../assets/fonts/GT-Haptik-Black.woff") format("woff"), url("../assets/fonts/GT-Haptik-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal; }
+body * {
+  -moz-font-feature-settings: "salt";
+  -webkit-font-feature-settings: "salt";
+  font-feature-settings: "salt"; }
+
 p {
   font-family: 'Lora', serif;
   font-size: 16px;
@@ -6512,6 +6517,19 @@ p {
   line-height: 20px;
   color: black;
   margin-bottom: 10px; }
+
+a.btn:focus {
+  box-shadow: none;
+  color: white; }
+
+a:focus {
+  box-shadow: none; }
+
+:focus {
+  outline: none; }
+
+.nav-link.dropdown-toggle.showing:focus {
+  box-shadow: none; }
 
 .bg-grey {
   background-color: #F7F7F7; }
@@ -6531,6 +6549,26 @@ a:not(.btn):not(.nav-link) {
 a.disabled {
   pointer-events: none;
   cursor: default; }
+
+.full-height {
+  height: 100vh; }
+
+.modal.show {
+  display: flex !important; }
+
+.modal-content:not(.round) {
+  border-radius: 0px !important;
+  border-radius: 0px;
+  width: 500px;
+  border: 0px;
+  padding: 42px; }
+  .modal-content:not(.round) .close {
+    opacity: 1;
+    width: 20px;
+    float: none;
+    margin-bottom: 70px; }
+  .modal-content:not(.round) h2 {
+    margin-bottom: 40px; }
 
 p.lead {
   font-family: "GT Haptik", Helvetica, sans-serif;
@@ -6568,9 +6606,6 @@ h3 {
   text-transform: uppercase;
   color: black; }
 
-.navbar {
-  padding: 24px 0px; }
-
 .navbar .btn {
   margin-left: 21px; }
 
@@ -6588,16 +6623,42 @@ h3 {
 
 .navbar-brand {
   height: 91px;
-  width: 34%; }
+  mix-blend-mode: multiply;
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  z-index: 100000000;
+  transition: 300ms; }
 
 .navbar-brand .logo {
   width: 163px;
   height: 91px;
-  background-image: url("../assets/images/memphis-river-parks-logo.png");
-  background-size: 163px 91px; }
+  transition: 300ms;
+  mix-blend-mode: multiply; }
+  .navbar-brand .logo img {
+    mix-blend-mode: multiply; }
+
+.navbar-brand .logo:hover {
+  width: 163px;
+  height: 91px;
+  mix-blend-mode: multiply; }
 
 .nav-right {
-  width: 34%; }
+  right: 50px; }
+
+.col-flow {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 60px;
+  -moz-column-gap: 60px;
+  column-gap: 60px; }
+
+.person {
+  margin-bottom: 20px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid; }
 
 a.btn, span.btn {
   font-family: "GT Haptik", Helvetica, sans-serif;
@@ -6606,23 +6667,40 @@ a.btn, span.btn {
   text-transform: uppercase;
   border-radius: 100px; }
 
-a.btn.btn-primary:hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover {
+.page-404 {
+  background: #44b549;
+  transition: 1s;
+  z-index: -2; }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  mix-blend-mode: multiply;
+  z-index: -1; }
+
+a.btn.btn-primary:not(.btn-404):hover, a.btn.btn-secondary:hover, .bg-dark a.btn.btn-secondary:hover {
   color: black !important;
   font-weight: 900 !important;
   animation-name: bgcolorchange1;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-timing-function: step-end;
   -webkit-animation-name: bgcolorchange1;
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: step-end;
   border: 0px;
   padding: 10px 20px;
   letter-spacing: 0.76px; }
 
 a.btn.btn-primary.external:after {
   background-image: url(../assets/images/external-white.svg); }
+
+.bg-dark a.btn.btn-primary.external:after {
+  background-image: url(../assets/images/external.svg); }
+
+a.btn.btn-primary.external:hover:after {
+  background-image: url(../assets/images/external.svg); }
 
 a.btn.btn-primary, span.btn.btn-primary {
   background-color: black;
@@ -6637,14 +6715,14 @@ a.btn.btn-secondary {
   color: black;
   font-weight: 900;
   border: 3px solid black;
-  padding: 7.1px 17.2px; }
+  padding: 7px 17px; }
 
 span.btn.btn-secondary {
   background-color: rgba(0, 0, 0, 0);
   color: black;
   font-weight: 900;
   border: 3px solid black;
-  padding: 7.1px 17.2px; }
+  padding: 7px 17px; }
 
 a.external:after, svg.external:after {
   display: inline-block;
@@ -6691,6 +6769,10 @@ a.external:after, svg.external:after {
       margin-left: 0px;
       left: -100%;
       visibility: hidden; }
+    .dropdown-menu.show li a.btn.post-animation {
+      visibility: visible;
+      left: 0px;
+      transition: none; }
   .dropdown-menu.show li:nth-child(1) a.btn.animate-me {
     animation-name: slideIn1;
     -webkit-animation-name: slideIn1;
@@ -6721,6 +6803,12 @@ a.external:after, svg.external:after {
     border: 3px solid white;
     font-weight: 700; }
 
+.btn.btn-primary.btn-404:hover {
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.76px; }
+
 .container {
   padding: 0px 50px; }
 
@@ -6738,12 +6826,15 @@ a.external:after, svg.external:after {
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: step-end;
-  left: 0px;
-  visibility: visible; }
+  left: 0px !important;
+  visibility: visible !important; }
 
-.nav-wrapper, .nav-wrapper * {
+.nav-wrapper {
+  padding: 0px 40px !important; }
+
+.nav-wrapper, .nav-wrapper *:not(.logo) {
   transition: 300ms; }
-  .nav-wrapper nav, .nav-wrapper * nav {
+  .nav-wrapper nav, .nav-wrapper *:not(.logo) nav {
     height: 130px; }
 
 .nav-wrapper.fixed {
@@ -6755,13 +6846,13 @@ a.external:after, svg.external:after {
   z-index: 1000; }
   .nav-wrapper.fixed nav {
     height: 78px; }
-  .nav-wrapper.fixed .navbar-brand {
-    height: auto; }
-    .nav-wrapper.fixed .navbar-brand .logo {
-      width: 97px;
-      height: 54px;
-      background-image: url("../assets/images/memphis-river-parks-logo.png");
-      background-size: 97px 54px; }
+
+.navbar-brand.smaller {
+  height: auto;
+  top: 10px; }
+  .navbar-brand.smaller .logo {
+    width: 97px;
+    height: 54px; }
 
 button.navbar-toggler:focus {
   outline: 0px auto -webkit-focus-ring-color; }
@@ -6797,12 +6888,16 @@ button.navbar-toggler:focus {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: #000;
-  stroke-width: 5.5;
+  stroke-width: 5;
   stroke-linecap: round; }
 
 .navbar-light .navbar-toggler {
   color: black !important;
-  border: 0px solid black !important; }
+  border: 0px solid black !important;
+  padding: 0px;
+  position: absolute;
+  right: -18px;
+  top: 10px; }
 
 .icons a {
   margin: 10px; }
@@ -6897,10 +6992,118 @@ button.navbar-toggler:focus {
   width: 450px;
   height: 450px;
   margin: auto;
-  margin-bottom: calc(50vh - 225px); }
+  margin-bottom: calc(50vh - 225px);
+  position: relative; }
+  .round .form {
+    display: none; }
+  .round .tagline {
+    display: block; }
+  .round .join {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%); }
+
+.round.form-active {
+  background-color: white !important; }
+  .round.form-active .tagline {
+    display: none; }
+  .round.form-active .form {
+    display: block; }
+  .round.form-active input.btn.btn-primary {
+    background-color: #ffc818;
+    color: black;
+    border: 0px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    font-weight: 900;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0%); }
+  .round.form-active input.btn.btn-primary:hover {
+    background-color: #44b549; }
+  .round.form-active input#mce-EMAIL {
+    text-align: center;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 32px;
+    color: black;
+    letter-spacing: 0.6px;
+    text-align: center;
+    line-height: 50px;
+    border: 0px;
+    width: 100%;
+    outline: none; }
+
+footer input.btn.btn-primary {
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.76px;
+  border: 0px;
+  padding: 10px 20px;
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 14px !important;
+  letter-spacing: 0.76px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  line-height: 21px;
+  width: 210px;
+  transition: 500ms; }
+
+footer input.btn.btn-primary::placeholder {
+  color: black !important;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  text-transform: uppercase;
+  line-height: 21px;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
+
+footer input.btn.btn-primary:hover {
+  animation-name: bgcolorchange1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bgcolorchange1;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite; }
+
+footer input.btn.btn-primary:focus:hover {
+  animation: none; }
+
+footer input.btn.btn-primary:focus {
+  width: 90%;
+  max-width: 500px;
+  border: 3px solid;
+  border-color: #ffc818; }
+
+footer input.btn.btn-primary:focus::-webkit-input-placeholder {
+  color: #b2b2b2 !important;
+  font-weight: 700; }
+
+.modal-dialog {
+  max-width: 500px;
+  margin: 1.75rem auto; }
+
+.modal {
+  overflow-y: auto; }
+
+.modal-open {
+  overflow: auto; }
+
+input#mce-Email:focus {
+  outline: none !important;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
+
+input#mce-EMAIL::placeholder {
+  color: #CCCCCC;
+  font-family: "GT Haptik", Helvetica, sans-serif; }
 
 .landing-hero {
-  background-image: url("../assets/images/landing.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6909,17 +7112,24 @@ button.navbar-toggler:focus {
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: -1; }
+  z-index: -2; }
 
 .landing-hero-after {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  z-index: -1; }
 
 .img-container span.btn {
   position: absolute;
   transform: translate(-50%, -50%);
   top: 28%;
   left: 50%;
+  display: none; }
+
+a.event-image span {
+  position: absolute;
+  top: 10px;
+  right: 45px;
   display: none; }
 
 a.event-image:hover .img-container {
@@ -6931,11 +7141,7 @@ a.event-image:hover .img-container {
   -webkit-animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: step-end; }
-  a.event-image:hover .img-container span.btn {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 28%;
-    left: 50%;
+  a.event-image:hover .img-container span {
     display: inherit; }
 a.event-image:hover img {
   visibility: hidden; }
@@ -6950,7 +7156,64 @@ a.event-image:hover h3, a.event-image:hover h2 {
   -webkit-animation-timing-function: step-end; }
 
 .navbar-light .navbar-nav .nav-link:hover, a:hover {
-  color: #f05f22 !important; }
+  color: #f05f22; }
+
+a.round-donate-btn:hover {
+  color: white !important; }
+
+a.btn-404:hover {
+  color: black !important; }
+
+.round-donate-btn {
+  width: 93px;
+  height: 93px;
+  animation-name: bgcolorchange5;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: bgcolorchange5;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  border-radius: 93px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  font-family: "GT Haptik", Helvetica, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.76px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none !important;
+  z-index: 0; }
+
+.round-donate-btn:hover {
+  color: white !important;
+  background: black !important;
+  animation: none; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  display: inline-block;
+  width: 20.2px;
+  height: 36.74px;
+  background: no-repeat center center;
+  background-size: 100% 100%; }
+
+.carousel-control-prev-icon {
+  background-image: url("../assets/images/previous-icon.svg"); }
+
+.carousel-control-next-icon {
+  background-image: url("../assets/images/next-icon.svg"); }
+
+.carousel-control-prev, .carousel-control-next {
+  width: auto;
+  padding: 0px 25px;
+  opacity: 1; }
+
+#fb-device {
+  display: none; }
+
+#fb-web {
+  display: inline-block; }
 
 @keyframes bgcolorchange1 {
   0% {
@@ -7072,10 +7335,49 @@ a.event-image:hover h3, a.event-image:hover h2 {
     visibility: visible; } }
 @media (max-width: 991px) {
   .nav-wrapper nav, .nav-wrapper * nav {
-    height: auto; } }
+    height: auto; }
+
+  #collapsingNavbar4.position-fixed {
+    position: static !important;
+    margin-top: 30px; }
+
+  .join-us-btn-nav {
+    padding-top: 10px; }
+
+  .col-flow {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3; }
+
+  .nav-wrapper.navbar-mobile nav {
+    height: 100% !important;
+    padding-top: 120px; }
+
+  .nav-wrapper.navbar-mobile, .nav-wrapper.navbar-mobile.fixed {
+    background-color: #F7F7F7;
+    padding-bottom: 30px !important;
+    z-index: 1;
+    height: auto; }
+    .nav-wrapper.navbar-mobile nav, .nav-wrapper.navbar-mobile.fixed nav {
+      height: 100% !important; } }
+@media (max-width: 1200px) {
+  .navbar-light .navbar-nav .nav-link {
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px; }
+
+  .navbar .btn {
+    margin-left: 10px; } }
 @media (max-width: 768px) {
+  .modal-content {
+    width: auto; }
+
   .container {
     padding: 0px 30px; }
+
+  .round-donate-btn {
+    left: 30px;
+    bottom: 30px; }
 
   h1 {
     font-size: 36px;
@@ -7090,11 +7392,18 @@ a.event-image:hover h3, a.event-image:hover h2 {
   h3 {
     font-size: 16px; }
 
-  .round {
-    border-radius: 50%;
+  .round, .round.modal-content {
+    border-radius: 50% !important;
     width: 300px;
     height: 300px;
     margin-bottom: calc(50vh - 150px); }
+    .round .join, .round.modal-content .join {
+      bottom: 40px; }
+    .round h1, .round.modal-content h1 {
+      margin-bottom: 70px !important; }
+
+  .round.form-active input.btn.btn-primary {
+    bottom: 40px; }
 
   #districts-section, #parks-hero {
     height: auto; }
@@ -7112,7 +7421,61 @@ a.event-image:hover h3, a.event-image:hover h2 {
   p.lead {
     font-size: 18px;
     letter-spacing: 0.39px;
-    line-height: 20px; } }
+    line-height: 20px; }
+
+  .navbar-brand .logo {
+    width: 100px;
+    height: 55.83px; }
+
+  .navbar-brand {
+    top: 20px;
+    left: 30px; }
+
+  .col-flow {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2; }
+
+  .nav-wrapper {
+    padding: 0px 20px !important; }
+
+  input#mce-EMAIL::placeholder, input#mce-EMAIL:not(input.footer-input#mce-EMAIL) {
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    line-height: 28px; }
+
+  footer input.footer-input.btn.btn-primary#mce-EMAIL {
+    background-color: white;
+    color: black;
+    font-weight: 900;
+    letter-spacing: 0.76px;
+    border: 0px;
+    padding: 10px 20px;
+    font-family: "GT Haptik", Helvetica, sans-serif;
+    font-size: 14px !important;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    line-height: 21px;
+    transition: 500ms; }
+
+  footer input.footer-input.btn.btn-primary#mce-EMAIL::placeholder {
+    color: black !important;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 0.76px;
+    text-transform: uppercase;
+    line-height: 21px;
+    font-family: "GT Haptik", Helvetica, sans-serif; }
+
+  .round.form-active input#mce-EMAIL {
+    width: 90%; } }
 @media (min-width: 1700px) {
   .hero-img {
     height: 1000px; } }
+@media only screen and (max-device-width: 768px) {
+  #fb-device {
+    display: inline-block; }
+
+  #fb-web {
+    display: none; } }

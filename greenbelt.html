@@ -1,0 +1,27 @@
+---
+layout: district-page
+title: Greenbelt
+permalink: parks/greenbelt/
+id: greenbelt
+favicon: 1.png
+description: >-
+  Trails to more trails just across the bridge. Greenbelt Park on the River
+  Line.1
+image: /uploads/01-greenbelt.jpeg
+---
+
+<div class="container-fluid clearfix districts clicked" id="parks-hero">
+        <a href="#" class="text-decoration-none district-link disabled" id="{{ page.id }}">
+            <div class="district text-center {{ page.id }} float-left align-items-center d-flex clicked">
+                <img class="img-fluid" src="{{ site.url }}/assets/images/districts/{{ page.id }}.png" />
+            </div>
+        </a>
+</div>
+<div class="container-fluid" id="district-content">
+        {% include parks-and-attractions.html %}
+
+    <div class="container-fluid clearfix" id="districts-section">
+        {% include districts.html %}
+    </div>
+</div>
+

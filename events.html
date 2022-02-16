@@ -2,21 +2,26 @@
 layout: events
 title: Events
 permalink: /events/
-hero-image: events.png
+image: /assets/images/events.jpg
+description: >-
+  The riverfront hosts regular programs, one-off activations and seasonal
+  happenings. See what’s coming soon to the riverfront here.
 ---
 
 <div class="container-fluid hero bg-dark">
     <div class="row m-0">
-        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0 order-2 order-lg-1">
+        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0">
             <div class="p-lg-4 left-content">
-                <h1 class="text-primary mb-2 mb-lg-4 editable">We post all our events on Facebook first.</h1>
-                <a href="#" class="btn btn-primary mt-2 mr-2 mx-auto">Get connected</a>
-                <a href="#" class="btn btn-secondary mt-2 mx-auto">Host your event</a>
+                <h1 class="text-primary mb-2 mb-lg-4 editable">
+                  We post all our events on Facebook first.
+                </h1>
+                <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-primary mt-2 mx-1 editable" target="_blank">Get connected</a>
+                <a href="#" class="btn btn-secondary mx-1 mt-2 editable" data-toggle="modal" data-target="#exampleModal">Host your event</a>
             </div>
         </div>
         
-        <div class="col-12 col-lg-8 p-0 order-1 order-lg-2">
-            <div class="hero-img" style="background-image:url('../assets/images/{{ page.hero-image }}')"></div>
+        <div class="col-12 col-lg-8 p-0">
+            <div class="hero-img" style="background-image:url('{{ page.image }}')"></div>
         </div>
     </div>
 </div>
@@ -32,16 +37,18 @@ hero-image: events.png
         <div class="container pt-4 pb-5">
             <div class="row">
                 <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4">
-                    <h2 class="editable">Lorem past events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+                    <h2 class="editable" href="#">
+                      Past Events
+                    </h2>
                 </div>
             </div>
-            
+             
             <div class="row" id="past-events">
                 <!-- Insert Past Events Here -->
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-secondary external editable">
+                    <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-secondary external editable" target="_blank">
                         View More
                     </a>
                 </div>
@@ -51,21 +58,23 @@ hero-image: events.png
 <div class="container-fluid">
 <div class="container py-4">
         <div class="row">
-            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable">
-                <h2 class="editable">Lorem seasonal events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable" href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" target="_blank">
+              <h2>Major seasonal happenings return to the riverfront every year. Find out more information on major events here.</h2>
             </div>
         </div>
         {% assign events = site.data.seasonal-events %}
         {% for event in events %}
         <div class="row bg-grey mb-3 w-100  mx-auto mb-3">
             <div class="col-12 col-md-6 px-0">
-                <div class="seasonal-img" style="background-image:url('../assets/images/{{ event.image }}');"></div>
+                <div class="seasonal-img" style="background-image:url('{{ event.image }}');"></div>
             </div>
-            <div class="col-sm-10 offset-sm-1 col-md-4 my-auto py-3">
+            <div class="class=col-sm-10 offset-sm-1 offset-md-0 offset-lg-1 col-md-6 col-lg-4 my-auto py-3">
                 <div>
                     <h2>{{ event.title }}</h2>
                     <p class="lead mb-2">
-                        {{ event.frequency }}
+                        {% for item in event.frequency %}
+                            {{item}}<br />
+                        {% endfor %}
                     </p>
                     <div class="row">
                         <div class="col-9">
@@ -73,10 +82,8 @@ hero-image: events.png
                         </div>
                     </div>
                     
-                    {% if event.link_url %}
-                    <a href="{{ event.link_url }}" class="btn btn-primary">{{ event.link_text }}</a>
-                    {% else %}
-                    <a href="#" class="btn btn-primary">Get Notified</a>
+                    {% if event.link.link_url %}
+                    <a href="{{ event.link.link_url }}" class="btn btn-primary" target="_blank">{{ event.link.link_text }}</a>
                     {% endif %}
                 </div>
             </div>
@@ -85,4 +92,6 @@ hero-image: events.png
 
         
     </div>
-</div>
+</div></div>
+
+{% include rent-modal.html %}

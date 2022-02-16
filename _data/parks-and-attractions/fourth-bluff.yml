@@ -1,0 +1,36 @@
+- title: Fourth Bluff Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: Memphis Park is located on Front St. between Court and Jefferson.
+    map-link: https://goo.gl/maps/Y67CutjoZ9A2
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street Parking available on Court St.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    The Explore Bike Share station is located at the south east corner of the
+    park.
+  image: /uploads/Memphis_Park_Yoga_PHOTOGRAPHER_Andrea_Morales_05.jpg
+- title: River Garden
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: River Garden is located on Riverside Drive between Court and Jefferson.
+    map-link: https://goo.gl/maps/xcMn8HbFZTw
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    Street parking available on Court St. Paid parking on Bass Pro Drive. No
+    parking at the Tennessee Welcome Center.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    The Explore Bike Share station is located at the south east corner of the
+    park.
+  image: /river-garden.jpg

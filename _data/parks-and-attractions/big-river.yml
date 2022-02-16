@@ -1,0 +1,135 @@
+- title: Ashburn-Coppock Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: >-
+      Ashburn-Coppock Park is located atop the bluff at the south end of Tom Lee
+      Park.
+    map-link: https://goo.gl/maps/8o2oqCZSqW62
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Georgia Ave.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /ashburn-coppock.jpg
+- title: Butler Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: >-
+      Butler Park overlooks Tom Lee Park atop the Bluff. Access the park from
+      the River Line, Butler Ave. or stairs from Tom Lee Park.
+    map-link: https://goo.gl/maps/LkZPQJvP3eq
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Tennessee street.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /butler-park.jpg
+- title: Big River Crossing
+  hours:
+    - Open daily, 6AM–10PM
+  get-here:
+    directions: Big River Crossing is located on Virginia Ave W, just off Channel 3. Dr.
+    map-link: https://goo.gl/maps/mtDxd4k6woy
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    Public parking is available at both the Memphis and Arkansas terminuses of
+    Big River Crossing.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info: >-
+    There are two Explore Bike Share Stations along the Crossing – one on the
+    Arkansas side and one on the Tennessee Side.
+  image: /big-river.jpg
+- title: Chickasaw Heritage Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: Chickasaw Heritage Park is located south of I-55 on Metal Museum Dr.
+    map-link: https://goo.gl/maps/xrPdWDHpFUN2
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Metal Museum Dr.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/p1590800-hdr.jpg
+- title: E. H. Crump Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: E. H. Crump Park is located south of I-55 on Illinois Ave.
+    map-link: https://goo.gl/maps/XqwybJX7Auw
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Illinois Ave.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/img-7525-small-3.jpg
+- title: Martyrs Park
+  hours:
+    - Open dawn to dusk.
+  get-here:
+    directions: >-
+      Martyrs Park is located south of Big River Crossing and is accessible from
+      Channel 3 Dr.
+    map-link: https://goo.gl/maps/3hjLkUjAu6z
+  admission:
+    admission-info:
+    admission-link:
+  parking: >-
+    There is a small public parking lot in the park. Parking lot is open
+    6AM-6PM.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/park-photos/martyrs-park.jpg
+- title: Tom Lee Park
+  hours:
+    - Closed for construction.
+    - Explore the new park design at tomleepark.org.
+  get-here:
+    directions: Tom Lee Park is on Riverside Drive between Beale and Georgia.
+    map-link: https://goo.gl/maps/BwNYqaMYc9q
+  admission:
+    admission-info:
+    admission-link:
+  parking:
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /tom-lee.jpg
+- title: Vance Park
+  hours:
+    - Closed for construction.
+  get-here:
+    directions: >-
+      Vance Park overlooks Beale Street Landing atop the Bluff. Access the park
+      from the River Line, Vance Ave. or stairs from Tom Lee Park.
+    map-link: https://goo.gl/maps/4VDMG3xZNv92
+  admission:
+    admission-info:
+    admission-link:
+  parking: Street parking on Vance Ave.
+  rent:
+    rental-info:
+    rental-link:
+  bikeshare-info:
+  image: /uploads/vancepark-1.jpg

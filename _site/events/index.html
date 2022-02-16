@@ -1,104 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117662063-2"></script>
+
+        <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+        
+
+        gtag('config', 'UA-117662063-2');
+
+        </script>
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Events</title>
+
+        <meta name=”description” content="The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.">
+
+        <meta property=”og:type” content="website" />
+        <meta property=”og:title” content="Events" />
+        <meta property=”og:description” content="The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here." />
+        <meta property=”og:image” content="/assets/images/events.jpg" />
+        <meta property=”og:url” content="http://localhost:4000" />
+        <meta property=”og:site_name” content="Memphis River Parks Partnership" />
+
+        <meta name=”twitter:title” content="Events">
+        <meta name=”twitter:description” content="The riverfront hosts regular programs, one-off activations and seasonal happenings. See what’s coming soon to the riverfront here.">
+        <meta name=”twitter:image” content="">
+        <meta name=”twitter:site” content=”@memriverparks>
+        <meta name=”twitter:creator” content=”@memriverparks>
+
+        <title>Events | Memphis River Parks Partnership </title>
       
         <link rel="stylesheet" href="/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
+
+        
+        <link rel="icon" href="http://localhost:4000/assets/images/favicon/1.png" type="image/gif">
+        
+
+
+        
 </head>
   <body>
 
     <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId            : '556297018114224',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v3.2'
-        });
-
-        var pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
-
-        FB.api('/870962136249359/events?time_filter=upcoming', {
-            access_token : pageAccessToken },
-            function (response) {
-
-                if (response && !response.error) {
-
-                    var renderedEvents = '';
-
-                    response.data.forEach((item) => {
-
-                        let today  = new Date();
-                        let date = new Date(item.start_time);
-                        let image = '';
-
-                        FB.api('/' + item.id + '?fields=cover', {
-                            access_token : pageAccessToken },
-                            function (response) {
-                                if (response && !response.error) {
-                                    image = response.cover.source;
-                                    renderedEvents += createSingleEvent(item, date, image);
-                                    const eventsContainer = document.getElementById('upcoming-events');
-                                    eventsContainer.innerHTML = renderedEvents;
-                                } else {
-                                    console.log(response.error);
-                                }
-                            }
-                        );
-
-                    });
-
-                } else {
-                    console.log(response.error);// make sure to handle errors
-                }
-
-            });
-
-
-            
-            FB.api('/870962136249359/events?time_filter=past&limit=9 ', {
-            access_token : pageAccessToken },
-            function (response) {
-
-                if (response && !response.error) {
-
-                    var renderedEvents = '';
-
-                    response.data.forEach((item) => {
-
-                        let today  = new Date();
-                        let date = new Date(item.start_time);
-                        let image = '';
-
-                        FB.api('/' + item.id + '?fields=cover', {
-                            access_token : pageAccessToken },
-                            function (response) {
-                                if (response && !response.error) {
-                                    image = response.cover.source;
-                                    renderedEvents += createSingleEvent(item, date, image);
-                                    const eventsContainer = document.getElementById('past-events');
-                                    eventsContainer.innerHTML = renderedEvents;
-                                } else {
-                                    console.log(response.error);
-                                }
-                            }
-                        );
-                    });
-
-                } else {
-                    console.log(response.error);// make sure to handle errors
-                }
-            });
-
-
-
-        };
-
-
         (function(d, s, id){
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) {return;}
@@ -106,156 +62,254 @@
           js.src = "https://connect.facebook.net/en_US/sdk.js";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <script>
+      // initialize the facebook api
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '556297018114224',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v3.2'
+        });
+        const pageAccessToken = 'EAAH58v4ngLABADHo4mx9CgI7sXGMkLrRYsJZAYXKNZBWZCNLbxt8ZCojOswl6YKl9pBeovquXzFoJBrvIaA3kdGs4I48jZBGlWQAv3l2dfmpoFAZAaCbDbudgLRWGhdVkH7uI0mY61tqUr5K2q5xJZB8XqxGBUu0Ql5VrVzzgSADAZDZD';
+        //get upcoming events
+        displayEventList('upcoming-events', '870962136249359', pageAccessToken, ['time_filter=upcoming']);
+        //get past events
+        displayEventList('past-events', '870962136249359', pageAccessToken, ['time_filter=past', 'limit=9']);
+        //get past events
+        displayEventList('events-landing', '870962136249359', pageAccessToken, ['time_filter=upcoming', 'limit=2']);
+      };
+      function createSingleEvent(item){
+        let options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' },
+            end = new Date(item.end_time.replace(/-/g, "/").replace(/T/g, " ").slice(0, -5)),
+            date = new Date(item.start_time.replace(/-/g, "/").replace(/T/g, " ").slice(0, -5));
 
-        function createSingleEvent(item, date, img){
-            var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-            var end = new Date(item.end_time);
-            return "<div class='col-12 col-sm-6 col-md-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id + " ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span class='btn btn-secondary external'>Get More Info</span><img class='img-fluid' src='" + img + "'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+          //  console.log(item);
+
+            if (item.event_times){
+              var arrow = '<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="News" transform="translate(-1259.000000, -34.000000)" fill="#000000"><g id="Group-4"><g id="Group-3" transform="translate(1212.000000, 30.000000)"><g id="Page-1" transform="translate(47.000000, 4.000000)"><path d="M9.93,3.38633333 L6.18,0.053 C6.11875,-0.00158333333 6.03083333,-0.01575 5.95625,0.0184166667 C5.88125,0.0521666667 5.83333333,0.126333333 5.83333333,0.208416667 L5.83333333,1.66675 L5.20833333,1.66675 C2.385,1.66675 0,3.6705 0,6.04175 C0,7.55466667 1.07416667,9.17258333 2.61208333,9.97633333 C2.6425,9.99258333 2.67541667,10.0005 2.70833333,10.0005 L2.71291667,10.0005 C2.82916667,9.993 2.925,9.90841667 2.925,9.79216667 C2.925,9.72216667 2.89041667,9.65966667 2.83708333,9.62216667 C2.46833333,9.1855 2.08333333,8.47883333 2.08333333,7.91716667 C2.08333333,6.35216667 3.88416667,5.41716667 5.625,5.41716667 C5.67458333,5.41716667 5.72375,5.41591667 5.77208333,5.41425 L5.83333333,5.413 L5.83333333,6.8755 C5.83333333,6.95758333 5.88166667,7.03175 5.95625,7.0655 C6.03083333,7.09925 6.11833333,7.08591667 6.18,7.03091667 L9.93,3.69758333 C9.97458333,3.658 10,3.60133333 10,3.54175 C10,3.48216667 9.97458333,3.42591667 9.93,3.38633333" id="Fill-1"></path></g></g></g></g></g></svg>';
+        return "<div class='col-sm-6 col-md-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id + " ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span>" + arrow + "</span><img class='img-fluid' src='" + item.cover + "'></div><h3>Recurring</h3><h2>" + item.name +"</h2></div></a></div>"
+            } else {
+            var arrow = '<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="News" transform="translate(-1259.000000, -34.000000)" fill="#000000"><g id="Group-4"><g id="Group-3" transform="translate(1212.000000, 30.000000)"><g id="Page-1" transform="translate(47.000000, 4.000000)"><path d="M9.93,3.38633333 L6.18,0.053 C6.11875,-0.00158333333 6.03083333,-0.01575 5.95625,0.0184166667 C5.88125,0.0521666667 5.83333333,0.126333333 5.83333333,0.208416667 L5.83333333,1.66675 L5.20833333,1.66675 C2.385,1.66675 0,3.6705 0,6.04175 C0,7.55466667 1.07416667,9.17258333 2.61208333,9.97633333 C2.6425,9.99258333 2.67541667,10.0005 2.70833333,10.0005 L2.71291667,10.0005 C2.82916667,9.993 2.925,9.90841667 2.925,9.79216667 C2.925,9.72216667 2.89041667,9.65966667 2.83708333,9.62216667 C2.46833333,9.1855 2.08333333,8.47883333 2.08333333,7.91716667 C2.08333333,6.35216667 3.88416667,5.41716667 5.625,5.41716667 C5.67458333,5.41716667 5.72375,5.41591667 5.77208333,5.41425 L5.83333333,5.413 L5.83333333,6.8755 C5.83333333,6.95758333 5.88166667,7.03175 5.95625,7.0655 C6.03083333,7.09925 6.11833333,7.08591667 6.18,7.03091667 L9.93,3.69758333 C9.97458333,3.658 10,3.60133333 10,3.54175 C10,3.48216667 9.97458333,3.42591667 9.93,3.38633333" id="Fill-1"></path></g></g></g></g></g></svg>';
+        return "<div class='col-sm-6 col-md-4'><a class='text-decoration-none event-image' href='https://www.facebook.com/events/" + item.id + " ' target='_blank'><div class='mb-5'><div class='img-container mb-3'><span>" + arrow + "</span><img class='img-fluid' src='" + item.cover + "'></div><h3>" + date.toLocaleDateString("en-US", options) + "<br>" + date.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + " – " + end.toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'}) + "</h3><h2>" + item.name +"</h2></div></a></div>"
+            }
+            
+
+      }
+      function displayEventList(container, pageID, token, parameters){
+        let queryStrings = '?';
+        parameters.forEach((item, index) => {
+          queryStrings += `${item}&`;
+        });
+        FB.api(`/${pageID}/events${queryStrings}`, {access_token : token}, function(response) {
+            if (response && !response.error) {
+              let renderedEvents = '',
+                  coverPhotos = [],
+                  eventsContainer = document.getElementById(container);
+              response.data.forEach((item) => {
+                coverPhotos.push( new Promise((resolve, reject) => {
+                  FB.api(`/${item.id}?fields=cover`, {access_token : token}, function(response) {
+                    if (response && !response.error) {
+                      resolve(response.cover.source);
+                    } else {
+                      //if there is an error getting the cover photo just show no photo
+                      resolve('');
+                    }
+                    });
+                }) );
+              });
+              //when all the cover photos are retrieved
+              Promise.all(coverPhotos).then((values) => {
+                //add the cover photo url to the event
+                response.data.forEach((item, index) => {
+                  item.cover = values[index];
+                  //create the events html
+
+                  renderedEvents += createSingleEvent(item);
+                });
+                //add events to the dom
+                if (eventsContainer){
+                  eventsContainer.innerHTML += renderedEvents;
+                 }
+              });
+            } else {
+              document.querySelector(`${container} .events-error`).classList.remove('hidden');
+            }
+          });
+
+            // $(document).ready(function(){
+            //   var animations = ['bgcolorchange1', 'bgcolorchange2', 'bgcolorchange3', 'bgcolorchange4'];
+            //   $('.event-image').mouseleave(function(){
+            // var css = 'a.event-image:hover .img-container{  animation-name:" +  animations[Math.floor(Math.random()*animations.length)] +"; -webkit-animation-name:" +  animations[Math.floor(Math.random()*animations.length)] +";}
+            // var style = document.createElement('style');
+            // if (style.styleSheet) {
+            //     style.styleSheet.cssText = css;
+            //   } else {
+            //     style.appendChild(document.createTextNode(css));
+            //   }
+            //   document.getElementsByTagName('head')[0].appendChild(style);
+            // });
+
+            // });
+
+          
         }
+      </script>
+      
 
-
-
-
-
-
-</script>
-
-    
-        <div class="container-fluid nav-wrapper fixed">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+    <a href="/" class="navbar-brand d-flex mr-auto smaller always">
+      <div class="logo">
+          <img class="img-fluid before-click" src="http://localhost:4000/assets/images/logo.png" onmouseenter="this.src ='http://localhost:4000/assets/images/logo-animated.gif';" onmouseout="this.src = 'http://localhost:4000/assets/images/logo.png';" />
+      </div>
+    </a>
+    <div class="container-fluid nav-wrapper fixed">
         
-             
-                <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
-                    
-                    <a href="/" class="navbar-brand d-flex mr-auto">
-                      <div class="logo"></div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-        
-                    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
-                      <ul class="navbar-nav w-100 justify-content-center">
-                          
-                          
-                              
-                              
-                              
-                                  <li class="nav-item ">
-                                      <a class="nav-link" href="/parks">Parks</a>
-                                  </li>
-                              
-                          
-                              
-                              
-                              
-                                  <li class="nav-item ">
-                                      <a class="nav-link" href="/events">Events</a>
-                                  </li>
-                              
-                          
-                              
-                              
-                              
-                                  <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partnership</a>
-                                      <ul class="dropdown-menu">
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/about" class="btn btn-primary">About</a>
-                                                  </li>
-                                              
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/news" class="btn btn-primary">News</a>
-                                                  </li>
-                                              
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/faq" class="btn btn-primary">FAQ</a>
-                                                  </li>
-                                              
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/contact" class="btn btn-primary">Contact</a>
-                                                  </li>
-                                              
-                                          
-                                      </ul>
-                                  </li>        
-                              
-                          
-                              
-                              
-                              
-                                  <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participate</a>
-                                      <ul class="dropdown-menu">
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/river-parks-people" class="btn btn-primary">River Parks People</a>
-                                                  </li>
-                                              
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/#" class="btn btn-primary">Work With Us</a>
-                                                  </li>
-                                              
-                                          
-                                              
-                                                  <li>
-                                                      <a href="/#" class="btn btn-primary">Donate</a>
-                                                  </li>
-                                              
-                                          
-                                      </ul>
-                                  </li>        
-                              
-                          
-                      </ul>
-                    </div>
-        
-                    <div class="navbar-collapse collapse nav-right" id="collapsingNavbar3">
-                    
-                          <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
-                            <li class="nav-item">
-                              <a class="nav-link external" href="#">Shop</a>
-                            </li>
-                            <li>
-                              <a class="btn btn-primary" href="#" role="button">Join Us</a>
-                            </li>
-                          </ul>
-        
-                    </div>
-                    
-                </nav>
-                
-              </div>
+        <nav class="navbar navbar-light navbar-expand-lg bg-faded justify-content-center"> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbars">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <svg class="ham hamRotate ham4" viewBox="0 0 120 100" width="80" onclick="this.classList.toggle('active')">
+                  <path
+                        class="line top"
+                        d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                  <path
+                        class="line middle"
+                        d="m 70,50 h -40" />
+                  <path
+                        class="line bottom"
+                        d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                </svg>
+            </button>
+
+            <div class="navbar-collapse collapse w-100 navbars" id="collapsingNavbar3">
+              <ul class="navbar-nav w-100 justify-content-center">
+                  
+                  
+                      
+                      
+                      
+                            
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/parks">Parks</a>
+                                </li>
+                            
+                        
+                  
+                      
+                      
+                      
+                            
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/events">Events</a>
+                                </li>
+                            
+                        
+                  
+                      
+                      
+                      
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Partnership</a>
+                                    <ul class="dropdown-menu">
+                                        
+                                            
+                                                <li>
+                                                    <a href="/about" class="animate-me btn btn-primary">About</a>
+                                                </li>
+                                            
+                                        
+                                            
+                                                <li>
+                                                    <a href="/news" class="animate-me btn btn-primary">News</a>
+                                                </li>
+                                            
+                                        
+                                            
+                                                <li>
+                                                    <a href="/faq" class="animate-me btn btn-primary">FAQ</a>
+                                                </li>
+                                            
+                                        
+                                            
+                                                <li>
+                                                    <a href="/contact" class="animate-me btn btn-primary">Contact</a>
+                                                </li>
+                                            
+                                        
+                                    </ul>
+                                </li>        
+                            
+                        
+                  
+                      
+                      
+                      
+                            
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Participate</a>
+                                    <ul class="dropdown-menu">
+                                        
+                                            
+                                                <li>
+                                                    <a href="/river-parks-people" class="animate-me btn btn-primary">River Parks People</a>
+                                                </li>
+                                            
+                                        
+                                            
+                                            <li>
+                                                    <a href="https://www.indeedjobs.com/memphis-river-parks-partnership-8eb4713/_hl/en_US?cpref=JXWAtnzf3XW5aRnY2g_zouV7xMD8uRK8xQ7ifyvg7Qk" class="animate-me btn btn-primary external" target="_blank">Work With Us</a>
+                                                </li>
+                                            
+                                        
+                                            
+                                            <li>
+                                                    <a href="https://www.flipcause.com/widget/NDkyODE=" class="animate-me btn btn-primary external" target="_blank">Donate</a>
+                                                </li>
+                                            
+                                        
+                                    </ul>
+                                </li>        
+                            
+                        
+                  
+                      
+                      
+                      
+                  
+              </ul>
             </div>
-          </div>
-        </div>
-       
+            <div class="navbar-collapse collapse nav-right position-fixed navbars" id="collapsingNavbar4">
+            
+                    <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                      <li class="nav-item">
+                        <a class="nav-link external" href="https://memphis-river-parks-partnership.myshopify.com" target="_blank">Shop</a>
+                      </li>
+                      <li class="join-us-btn-nav">
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#joinModal">Join Us</a>
+                      </li>
+                    </ul>
+              </div>
+
+            
+        </nav>
+
+
+
+    </div>
     <div class="container-fluid" style="margin-top:78px;">
         <div class="container-fluid hero bg-dark">
     <div class="row m-0">
-        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0 order-2 order-lg-1">
+        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0">
             <div class="p-lg-4 left-content">
                 <h1 class="text-primary mb-2 mb-lg-4 editable">We post all our events on Facebook first.</h1>
-                <a href="#" class="btn btn-primary mt-2 mr-2 mx-auto">Get connected</a>
-                <a href="#" class="btn btn-secondary mt-2 mx-auto">Host your event</a>
+                <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-primary mt-2 mx-1 editable" target="_blank">Get connected</a>
+                <a href="#" class="btn btn-secondary mx-1 mt-2 editable" data-toggle="modal" data-target="#exampleModal">Host your event</a>
             </div>
         </div>
         
-        <div class="col-12 col-lg-8 p-0 order-1 order-lg-2">
-            <div class="hero-img" style="background-image:url('../assets/images/events.png')"></div>
+        <div class="col-12 col-lg-8 p-0">
+            <div class="hero-img" style="background-image:url('/assets/images/events.jpg')"></div>
         </div>
     </div>
 </div>
@@ -271,16 +325,18 @@
         <div class="container pt-4 pb-5">
             <div class="row">
                 <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4">
-                    <h2 class="editable">Lorem past events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+                    <h2 class="editable" href="#">
+                      Past Events
+                    </h2>
                 </div>
             </div>
-            
+             
             <div class="row" id="past-events">
                 <!-- Insert Past Events Here -->
             </div>
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-secondary external editable">
+                    <a href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" class="btn btn-secondary external editable" target="_blank">
                         View More
                     </a>
                 </div>
@@ -290,30 +346,32 @@
 <div class="container-fluid">
 <div class="container py-4">
         <div class="row">
-            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable">
-                <h2 class="editable">Lorem seasonal events ipsum recent dolor sit amet. Consectetur adipisicing elit.</h2>
+            <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-4 offset-lg-4 text-center mb-4 editable" href="https://www.facebook.com/pg/memriverparks/events/?ref=page_internal" target="_blank">
+              <h2>Major seasonal happenings return to the riverfront every year. Find out more information on major events here.</h2>
             </div>
         </div>
         
         
         <div class="row bg-grey mb-3 w-100  mx-auto mb-3">
             <div class="col-12 col-md-6 px-0">
-                <div class="seasonal-img" style="background-image:url('../assets/images/seasonal-placeholder.png');"></div>
+                <div class="seasonal-img" style="background-image:url('/uploads/32073311-10155272314716174-2678934629100027904-n.jpg');"></div>
             </div>
-            <div class="col-sm-10 offset-sm-1 col-md-4 my-auto py-3">
+            <div class="class=col-sm-10 offset-sm-1 offset-md-0 offset-lg-1 col-md-6 col-lg-4 my-auto py-3">
                 <div>
                     <h2>Memphis in May</h2>
                     <p class="lead mb-2">
-                        Fridays from 4:30 - 6:30PM Winter Season:November – February
+                        
+                            Yearly in May<br />
+                        
                     </p>
                     <div class="row">
                         <div class="col-9">
-                            <p class="mb-3">Memphis in May hosts its annual celebrations in Tom Lee Park during the month of May. Lineup and tickets are available at memphisinmay.org.</p>
+                            <p class="mb-3">Memphis in May hosts its annual celebrations in Tom Lee Park during the month of May.</p>
                         </div>
                     </div>
                     
                     
-                    <a href="https://www.memphisinmay.org/" class="btn btn-primary">Get Your Tickets</a>
+                    <a href="https://www.memphisinmay.org/" class="btn btn-primary" target="_blank">Get Your Tickets</a>
                     
                 </div>
             </div>
@@ -321,22 +379,24 @@
         
         <div class="row bg-grey mb-3 w-100  mx-auto mb-3">
             <div class="col-12 col-md-6 px-0">
-                <div class="seasonal-img" style="background-image:url('../assets/images/seasonal-placeholder.png');"></div>
+                <div class="seasonal-img" style="background-image:url('/uploads/wine-on-the-river.jpg');"></div>
             </div>
-            <div class="col-sm-10 offset-sm-1 col-md-4 my-auto py-3">
+            <div class="class=col-sm-10 offset-sm-1 offset-md-0 offset-lg-1 col-md-6 col-lg-4 my-auto py-3">
                 <div>
                     <h2>Wine on the River</h2>
                     <p class="lead mb-2">
-                        Yearly in October
+                        
+                            Yearly in October<br />
+                        
                     </p>
                     <div class="row">
                         <div class="col-9">
-                            <p class="mb-3">Each October, Wine on the River takes place along the riverwalk in Mud Island Park. Tickets are available at wineontherivermemphis.com.</p>
+                            <p class="mb-3">Each October, Wine on the River takes place along the riverwalk in Mud Island Park.</p>
                         </div>
                     </div>
                     
                     
-                    <a href="https://www.wineontherivermemphis.com/" class="btn btn-primary">Get Your Tickets</a>
+                    <a href="https://www.wineontherivermemphis.com/" class="btn btn-primary" target="_blank">Get Your Tickets</a>
                     
                 </div>
             </div>
@@ -344,22 +404,24 @@
         
         <div class="row bg-grey mb-3 w-100  mx-auto mb-3">
             <div class="col-12 col-md-6 px-0">
-                <div class="seasonal-img" style="background-image:url('../assets/images/seasonal-placeholder.png');"></div>
+                <div class="seasonal-img" style="background-image:url('/uploads/dragon-boat-races.jpg');"></div>
             </div>
-            <div class="col-sm-10 offset-sm-1 col-md-4 my-auto py-3">
+            <div class="class=col-sm-10 offset-sm-1 offset-md-0 offset-lg-1 col-md-6 col-lg-4 my-auto py-3">
                 <div>
                     <h2>Duncan-Williams St. Jude Dragon Boat Races</h2>
                     <p class="lead mb-2">
-                        Yearly in May
+                        
+                            Yearly in May<br />
+                        
                     </p>
                     <div class="row">
                         <div class="col-9">
-                            <p class="mb-3">The Duncan-Williams St. Jude dragon boat races take place each May at Mud Island Park. It’s free to attend but boat crews must pay a registration fee. Details and registration is available at stjude.org.</p>
+                            <p class="mb-3">The Duncan-Williams St. Jude dragon boat races take place each May at Mud Island Park. It’s free to attend but boat crews must pay a registration fee.</p>
                         </div>
                     </div>
                     
                     
-                    <a href="#" class="btn btn-primary">Get Notified</a>
+                    <a href="https://www.stjude.org/get-involved/find-an-event/dinners-and-galas/dragon-boat-races.html" class="btn btn-primary" target="_blank">Get On Board</a>
                     
                 </div>
             </div>
@@ -368,25 +430,90 @@
 
         
     </div>
-</div>
+</div></div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog m-auto" role="document">
+          <div class="modal-content text-left bg-dark">
+              
+            
+            <div class="modal-body pb-4">
+
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                            <svg width="16px" height="15px" viewbox="0 0 16 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <defs></defs>
+                                <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Rental-Modal" transform="translate(-510.000000, -345.000000)" fill="#FFFFFF">
+                                        <polygon id="✕" points="525.309082 358.820801 524.129883 360 517.998047 353.868164 511.866211 360 510.697266 358.820801 516.829102 352.688965 510.697266 346.557129 511.866211 345.388184 517.998047 351.52002 524.129883 345.388184 525.309082 346.557129 519.177246 352.688965" />
+                                    </g>
+                                </g>
+                            </svg></span>
+                  </button>
+                <h2>I want to rent a...</h2>
+                <a href="https://rubyzielinski.typeform.com/to/MaSZXe" class="btn btn-primary mr-1 external editable" target="_blank">Park</a>
+                
+                <a href="https://www.partymemphis.com/book-your-party" class="btn btn-primary external editable" target="_blank">Facility</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>
+    <footer class="position-relative">
 <div class="container-fluid bg-grey text-center py-4">
-    <h2 class="editable">
+    <h2 class="editable" href="https://www.indeedjobs.com/memphis-river-parks-partnership-8eb4713/_hl/en_US?cpref=JXWAtnzf3XW5aRnY2g_zouV7xMD8uRK8xQ7ifyvg7Qk" target="_blank">
       Questions, comments or feedback?
     </h2>
-    <a href="#" class="btn btn-primary editable">Let Us Know</a>
+    <a href="mailto:info@memriverparks.org?subject=I%20have%20a%20question%2C%20comment%2C%20or%20some%20feedback." class="btn btn-primary editable">Let Us Know</a>
 </div>
 <div class="container-fluid bg-dark text-center py-4">
-    <a href="#" class="btn btn-primary editable">Sign Up for Updates</a>
+  <!-- <a href="#" class="btn btn-primary editable">Sign Up for Updates</a> -->
+
+
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+            <form action="https://memphisriverparks.us18.list-manage.com/subscribe/post?u=10b75de564f8de0a21197e4cb&amp;id=a14898b162" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                
+            <!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+            <div class="mc-field-group">
+                <label for="mce-EMAIL" class="d-none">Email Address<span class="asterisk">*</span></label>
+                <input type="email" value="" placeholder="Sign Up for Updates" name="Email" class="footer-input required email mb-2 btn btn-primary" id="mce-EMAIL" />
+            </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_10b75de564f8de0a21197e4cb_a14898b162" tabindex="-1" value="" /></div>
+                <div class="clear">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary d-none" />
+                </div>
+            </div></form>
+            </div>
+            
+            <!--End mc_embed_signup-->
+
+
+
+
+
+
+
     <div class="icons my-4">
-        <a href="https://www.facebook.com/memriverparks/"><img src="/assets/images/icon-facebook.svg" /></a>
-        <a href="https://twitter.com/memriverparks"><img src="/assets/images/icon-twitter.svg" /></a>
-        <a href="https://medium.com/memriverparks"><img src="/assets/images/icon-medium.svg" /></a>
-        <a href="https://www.instagram.com/memriverparks/"><img src="/assets/images/icon-instagram.svg" /></a>
+        <a href="fb://profile/870962136249359" target="_blank" id="fb-device"><img src="/assets/images/icon-facebook.svg" /></a>
+        <a href="https://www.facebook.com/memriverparks/" target="_blank" id="fb-web"><img src="/assets/images/icon-facebook.svg" /></a>
+        <a href="https://twitter.com/memriverparks" target="_blank"><img src="/assets/images/icon-twitter.svg" /></a>
+        <a href="https://medium.com/memriverparks" target="_blank"><img src="/assets/images/icon-medium.svg" /></a>
+        <a href="https://www.instagram.com/memriverparks/" target="_blank"><img src="/assets/images/icon-instagram.svg" /></a>
     </div>
-    <p class="pb-3 editable" href="#">
-        Memphis River Parks Partnership<br />22 North Front Street, Suite 960<br />Memphis, TN 38103
+    <p class="pb-3" href="#">
+        
+            Memphis River Parks Partnership<br />
+        
+            22 North Front Street, Suite 960<br />
+        
+            Memphis, TN 38103<br />
+        
     </p>
     <p class="pb-3">
         <a href="mailto:info@memphisriverparks.org">info@memphisriverparks.org</a>

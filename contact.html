@@ -1,21 +1,25 @@
 ---
 layout: internal
 title: Contact
-hero-image: contact-hero.png
+image: /assets/images/contact.jpg
 permalink: /contact/
+description: >-
+  Whether you want to visit the riverfront, host an event, or just ask a
+  question, get in touch with the Partnership here or find a park ranger on your
+  next visit.
 ---
 
 <div class="container-fluid hero">
     <div class="row m-0">
-        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0 order-2 order-lg-1">
+        <div class="col-12 col-lg-4 offset-lg-0 my-lg-auto py-4 py-lg-0">
             <div class="p-lg-4 left-content">
                 <h1 class="text-primary mb-2 mb-lg-4 editable">Come to the River.</h1>
                 <p class="lead editable">Whether you want to visit the riverfront, host an event, or just ask a question, get in touch with the Partnership here or find a park ranger on your next visit.</p>
             </div>
         </div>
         
-        <div class="col-12 col-lg-8 p-0 order-1 order-lg-2">
-            <div class="hero-img" style="background-image:url('../assets/images/{{ page.hero-image }}')"></div>
+        <div class="col-12 col-lg-8 p-0">
+            <div class="hero-img" style="background-image:url('{{ page.image }}')"></div>
         </div>
 </div>
 
@@ -25,15 +29,19 @@ permalink: /contact/
         <div class="container py-5">
             <div class="row py-2">
                     <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
-                        <p class="lead editable">Memphis River Parks Partnership<br>22 North Front Street, Suite 960<br>Memphis, TN 38103</p>
+                        <p class="lead">
+                          {% for item in site.data.global-content.address %}
+                            {{ item }}<br />
+                          {% endfor %}
+                        </p>
                     </div>
                     <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
-                        <p class="lead editable"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+                        <p class="lead"><a href="mailto:{{ site.data.global-content.email }}">{{ site.data.global-content.email }}</a></p>
                         <div class="icons my-2">
-                            <a href="{{ site.facebook }}"><img src="../assets/images/icon-facebook.svg"></a>
-                            <a href="{{ site.twitter }}"><img src="../assets/images/icon-twitter.svg"></a>
-                            <a href="{{ site.medium }}"><img src="../assets/images/icon-medium.svg"></a>
-                            <a href="{{ site.instagram }}"><img src="../assets/images/icon-instagram.svg"></a>
+                            <a href="{{ site.data.global-content.facebook }}"><img src="../assets/images/icon-facebook.svg" /></a>
+                            <a href="{{ site.data.global-content.twitter }}"><img src="../assets/images/icon-twitter.svg" /></a>
+                            <a href="{{ site.data.global-content.medium }}"><img src="../assets/images/icon-medium.svg" /></a>
+                            <a href="{{ site.data.global-content.instagram }}"><img src="../assets/images/icon-instagram.svg" /></a>
                         </div>
                     </div>
                     <div class="col-12 col-md-4 text-center">
@@ -50,12 +58,12 @@ permalink: /contact/
         <div class="container py-4">
                 <div class="row">
                     <div class="col-10 col-sm-6 col-lg-3 order-2 order-md-1">
-                        <h2 class="editable">Work with us!</h2>
-                        <p class="editable">It’s going to take all of us, together, to make the riverfront successful. Find out how to join the Partnership as a volunteer, ambassador or team member.</p>
-                        <a href="#" class="btn btn-primary mt-3 editable">Get More Info</a>
+                        <h2 class="editable" href="https://www.partymemphis.com/book-your-party" target="_blank">Work with us!</h2>
+                        <p class="editable" href="https://www.partymemphis.com/book-your-party" target="_blank">It’s going to take all of us, together, to make the riverfront successful. Find out how to join the Partnership as a volunteer, ambassador or team member.</p>
+                        <a href="/river-parks-people" class="btn btn-primary mt-3 editable">Get More Info</a>
                     </div>
                     <div class="col-md-6 col-lg-8 offset-lg-1 order-1 order-md-2 mb-3 mb-md-0">
-                        <img class="img-fluid editable" src="../assets/images/volunteer-cta.png" />
+                        <img class="img-fluid editable" src="../assets/images/volunteer-cta.png" href="/river-parks-people" />
                     </div>
                 </div>
         </div>

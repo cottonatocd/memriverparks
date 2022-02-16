@@ -1,9 +1,54 @@
 <head>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117662063-2"></script>
+
+        <script>
+
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date());
+
+        
+
+        gtag('config', 'UA-117662063-2');
+
+        </script>
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{{ page.title }}</title>
+
+        <meta name=”description” content="{{ page.description }}">
+
+        <meta property=”og:type” content="website" />
+        <meta property=”og:title” content="{{ page.title }}" />
+        <meta property=”og:description” content="{{ page.description }}" />
+        <meta property=”og:image” content="{{ page.image }}" />
+        <meta property=”og:url” content="{{ site.url }}" />
+        <meta property=”og:site_name” content="{{ site.title }}" />
+
+        <meta name=”twitter:title” content="{{ page.title }}">
+        <meta name=”twitter:description” content="{{ page.description }}">
+        <meta name=”twitter:image” content="{{ page.share-image }}">
+        <meta name=”twitter:site” content=”@memriverparks>
+        <meta name=”twitter:creator” content=”@memriverparks>
+
+        <title>{{ page.title }}{% if page.url != "/" %} | {{ site.title }} {% endif %}</title>
       
         <link rel="stylesheet" href="/css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
+
+        {% if page.favicon %}
+        <link rel="icon" href="{{ site.url }}/assets/images/favicon/{{ page.favicon }}" type="image/gif">
+        {% else %}
+        <link rel="icon" href="{{ site.url }}/assets/images/favicon/1.png" type="image/gif">
+        {% endif %}
+
+
+        
 </head>

@@ -17,8 +17,14 @@
     - title: River Parks People
       url: /river-parks-people
     - title: Work With Us
-      url: /#
-      type: external
+      url: >-
+        https://www.indeed.com/jobs?q=Memphis%20River%20Parks%20Partnership&from=vj&l=Memphis%2C%20TN&vjk=0855106a28e04bc2
+      external: true
     - title: Donate
-      url: /#
-      type: external
+      url: https://memphisriverparks.app.neoncrm.com/forms/standard-donation-form
+      external: true
+- title: Shop
+  url: >-
+    https://memphisriverparks.z2systems.com/np/clients/memphisriverparks/giftstore.jsp
+  external: true
+  main-nav: false

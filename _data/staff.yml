@@ -1,16 +1,56 @@
-- name: Lauren Ipsom
-  title: Title of Titling
-  image: headshot-placeholder.png
-  alt_text: Lauren Ipsom, Memphis River Parks
-- name: Lorn Ipsom
-  title: Title of Titling
-  image: headshot-placeholder.png
-- name: Lauren Ipsom
-  title: Title of Titling
-  image: headshot-placeholder.png
-- name: Lauren Ipsom
-  title: Title of Titling
-  image: headshot-placeholder.png
-- name: Lauren Ipsom
-  title: Title of Titling
-  image: headshot-placeholder.png
+- name: George Abbott
+  title: Director of External Affairs
+  image: /uploads/george2.jpg
+  alt_text:
+- name: Greg Allen
+  title: River Parks Ranger
+  image: /uploads/greg-1.jpg
+  alt_text:
+- name: Jessie Avant
+  title: River Parks Ranger
+  image: /uploads/jesse2.jpg
+  alt_text:
+- name: Everett Bates
+  title: River Parks Specialist
+  image: /uploads/everett.jpg
+  alt_text:
+- name: Jamal Boddie
+  title: Hyde Fellow In Community Engagement
+  image: /uploads/jamal2.jpeg
+  alt_text:
+- name: Joshua Bynum
+  title: River Parks Ranger - Lead
+  image: /uploads/josh.jpg
+  alt_text:
+- name: Carol Coletta
+  title: President & CEO
+  image: /uploads/carol.jpg
+  alt_text:
+- name: Art Davis
+  title: Chief Operating Officer
+  image: /uploads/art.jpg
+  alt_text:
+- name: Kammie Glenn
+  title: River Parks Ranger - Lead
+  image: /uploads/kammie.jpg
+  alt_text:
+- name: Grace Harwood
+  title: Executive Services Administrator
+  image: /uploads/grace.jpg
+  alt_text:
+- name: Nancy Harwood
+  title: Advancement Manager
+  image: /uploads/nancy2.jpeg
+  alt_text:
+- name: Raymon Terry
+  title: River Parks Ranger
+  image: /uploads/raymon.jpg
+  alt_text:
+- name: Jim Reeder
+  title:
+  image: /uploads/jim-reeder.png
+  alt_text:
+- name: Rodger Todd
+  title: River Parks Specialist
+  image: /uploads/roger.jpg
+  alt_text: Memphis River Parks Partnership
